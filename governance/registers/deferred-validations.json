@@ -57,10 +57,10 @@
     "status": "DEFERRED",
     "severity": "D2",
     "owner": "Michael Maillet",
-    "summary": "Fresh clean-checkout local reproduction; owner package WP-004",
+    "summary": "Independent clean-environment reproduction remains deferred; author fresh local clone passed fe3be9d; owner package WP-004",
     "requirements": [],
-    "evidence": [],
-    "disposition": "Await maintainer decision or later package evidence",
+    "evidence": ["governance/evidence/s1-author-verification/runs/20261020T165931Z-1d88bcbe7f93/manifest.json"],
+    "disposition": "Author local replay recorded; independent review, locked environment and full WP-004 criteria still required",
     "blocking_gate": "G1",
     "approval_ref": ""
   },

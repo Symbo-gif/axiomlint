@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:foundation:local-run:0.1",
+  "title": "AxiomLint foundation local-run",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "DEVELOPMENT",
+        "ACCEPTANCE_CANDIDATE"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "commit": {
+      "type": "string"
+    },
+    "dirty": {
+      "type": "boolean"
+    },
+    "source_tree_sha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_tree_after_sha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "python": {
+      "type": "string",
+      "minLength": 1
+    },
+    "platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "machine": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment_policy": {
+      "const": "ALLOWLIST_NO_CREDENTIALS"
+    },
+    "started_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "title": "AxiomLint foundation gate-command",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "argv": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "exit_code": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "PASS",
+              "FAIL",
+              "TIMEOUT",
+              "ERROR"
+            ]
+          },
+          "wall_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "stdout_sha256": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "stderr_sha256": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "stdout_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "stderr_bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "name",
+          "argv",
+          "exit_code",
+          "status",
+          "wall_seconds",
+          "stdout_sha256",
+          "stderr_sha256",
+          "stdout_bytes",
+          "stderr_bytes"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 4
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "kind",
+    "status",
+    "commit",
+    "dirty",
+    "source_tree_sha256",
+    "source_tree_after_sha256",
+    "python",
+    "platform",
+    "machine",
+    "environment_policy",
+    "started_utc",
+    "commands",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

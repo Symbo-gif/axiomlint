@@ -138,12 +138,14 @@ class GovernanceTests(unittest.TestCase):
         self.assert_problem("differs from pinned baseline")
 
     def test_closed_session_requires_report_and_sha(self):
-        self.mutate("governance/sessions/index.json", lambda x: x[0].update(status="CLOSED"))
+        # Negative fixtures must explicitly remove fields, not assume live records are empty.
+        self.mutate("governance/sessions/index.json",
+                    lambda x: x[0].update(status="CLOSED", commit="", report=""))
         self.assert_problem("closed session needs commit SHA")
+        self.assert_problem("invalid repository reference")
 
     def test_d1_d2_waiver_prohibited(self):
         risks = load_json(self.root / "governance/registers/risks.json")
         value = {**risks[0], "id": "WAIVE-001", "category": "WAIVER"}
         (self.root / "governance/registers/waivers.json").write_text(json.dumps([value]))
         self.assert_problem("D1/D2 waiver prohibited")
-

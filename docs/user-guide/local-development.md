@@ -45,6 +45,7 @@ report. This authoring session must not invent that review.
 ## Environment portability
 
 Implemented/tested environment is to be recorded from actual laptop runs.
-Windows support, fresh Linux checkout, locked environments, Nix/OCI and package
-installation are deferred. The optional pre-commit configuration uses a local
+An author-run fresh local checkout passed the recorded suite; that is not an
+independent environment or S2 review. Windows, locked environments, Nix/OCI and
+package installation remain deferred. The optional pre-commit configuration uses a local
 hook but is not installed. No hosted workflow is present.

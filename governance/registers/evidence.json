@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "EVID-S1-001",
+    "category": "EVIDENCE",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Author clean-laptop verification: 106 tests, zero failures or skips; not independent audit",
+    "requirements": ["REQ-EVID-003"],
+    "evidence": ["governance/evidence/s1-author-verification/runs/20261020T165930Z-4e0d9add3254/manifest.json"],
+    "disposition": "Raw run retained; independent verification and human acceptance pending",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "EVID-S1-002",
+    "category": "EVIDENCE",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Author fresh local clone: 106 tests, exact same commit and source fingerprint",
+    "requirements": ["REQ-EVID-003"],
+    "evidence": ["governance/evidence/s1-author-verification/runs/20261020T165931Z-1d88bcbe7f93/manifest.json"],
+    "disposition": "Same laptop and author context; not independent environment, S2 or complete WP-004 acceptance",
+    "blocking_gate": "G1",
+    "approval_ref": ""
+  }
+]

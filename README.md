@@ -43,6 +43,7 @@ closure, independent audit, release authorization, or a correctness proof.
 - [Requirements](governance/requirements/requirements.json)
 - [Work-package register](governance/work-packages/index.json)
 - [Current state](governance/STATE.md)
+- [Implementation and verification handoff](HANDOFF.md)
 - [Local checks](docs/user-guide/local-development.md)
 - [Research and adoption rationale](docs/research/foundation-decisions.md)
 - [Original plan](docs/reference/axiomlint-plan.md)
@@ -55,4 +56,3 @@ require recorded maintainer ratification; see the adoption deviation.
 
 The name follows the attached plan and remains provisional. No legal clearance
 or later assistant-suggested rename is inferred as a maintainer decision.
-
