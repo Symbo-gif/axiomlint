@@ -26,7 +26,9 @@ class RunVerifierTests(unittest.TestCase):
                 "stderr_sha256": sha256(b""), "stdout_bytes": len(stdout), "stderr_bytes": 0,
             })
         self.manifest = {
-            "schema_version": "0.1", "run_id": "fixture-only", "kind": "DEVELOPMENT",
+            "schema_version": "0.2", "run_id": "fixture-only", "kind": "DEVELOPMENT",
+            "source_identity_algorithm": "sha256-path-bytes-gitmode-v1",
+            "manifest_schema_sha256": sha256((ROOT / "schemas/local-run.schema.json").read_bytes()),
             "status": "PASS", "commit": "1" * 40, "dirty": False,
             "source_tree_sha256": "2" * 64, "source_tree_after_sha256": "2" * 64,
             "python": "fixture", "platform": "fixture", "machine": "fixture",
@@ -34,6 +36,9 @@ class RunVerifierTests(unittest.TestCase):
             "started_utc": "2026-10-20T00:00:00Z", "commands": commands,
             "limitations": ["Synthetic unit-test fixture, not real accepted evidence"],
         }
+        (self.directory / "manifest.schema.json").write_bytes(
+            (ROOT / "schemas/local-run.schema.json").read_bytes()
+        )
         self.save()
 
     def tearDown(self):
@@ -59,6 +64,10 @@ class RunVerifierTests(unittest.TestCase):
     def test_missing_log_detected(self):
         (self.directory / "tests.stderr.log").unlink()
         self.assertTrue(verify(self.directory))
+
+    def test_schema_snapshot_corruption_detected(self):
+        (self.directory / "manifest.schema.json").write_text("{}")
+        self.assertTrue(any("Schema snapshot" in p for p in verify(self.directory)))
 
     def test_command_inventory_cannot_be_replaced(self):
         self.manifest["commands"][0]["name"] = "invented"
@@ -96,4 +105,3 @@ class RunVerifierTests(unittest.TestCase):
             )
             self.save()
             self.assertTrue(any("test execution" in p for p in verify(self.directory)))
-

@@ -32,6 +32,14 @@ def verify(directory: Path, root: Path = ROOT, check_current: bool = False) -> l
             errors.append("Manifest checksum mismatch")
         manifest = load_json(manifest_path)
         validate(manifest, load_json(root / "schemas/local-run.schema.json"))
+        snapshot = directory / "manifest.schema.json"
+        if snapshot.is_symlink() or not snapshot.is_file():
+            raise InvalidRecord("Missing or symlink schema snapshot")
+        snapshot_bytes = snapshot.read_bytes()
+        if sha256(snapshot_bytes) != manifest["manifest_schema_sha256"]:
+            errors.append("Schema snapshot digest mismatch")
+        if snapshot_bytes != (root / "schemas/local-run.schema.json").read_bytes():
+            errors.append("Schema snapshot differs from supported pinned schema")
         if manifest["status"] != "PASS":
             errors.append("Run did not pass")
         if manifest["source_tree_sha256"] != manifest["source_tree_after_sha256"]:
@@ -95,4 +103,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

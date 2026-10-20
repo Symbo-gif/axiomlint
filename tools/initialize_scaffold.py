@@ -41,10 +41,10 @@ def enum(*values: str) -> dict:
     return string(enum=list(values))
 
 
-def schema(name: str, body: dict) -> None:
+def schema(name: str, body: dict, version: str = "0.1") -> None:
     add(f"schemas/{name}.schema.json", {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$id": f"urn:axiomlint:foundation:{name}:0.1",
+        "$id": f"urn:axiomlint:foundation:{name}:{version}",
         "title": f"AxiomLint foundation {name}", **body,
     })
 
@@ -110,7 +110,9 @@ def main() -> None:
     command_schema = json.loads(OUTPUTS["schemas/gate-command.schema.json"])
     command_schema = {k: v for k, v in command_schema.items() if not k.startswith("$")}
     schema("local-run", obj({
-        "schema_version": {"const": "0.1"}, "run_id": string(),
+        "schema_version": {"const": "0.2"}, "run_id": string(),
+        "source_identity_algorithm": {"const": "sha256-path-bytes-gitmode-v1"},
+        "manifest_schema_sha256": string(pattern=r"^[0-9a-f]{64}$"),
         "kind": enum("DEVELOPMENT", "ACCEPTANCE_CANDIDATE"),
         "status": enum("PASS", "FAIL"), "commit": {"type": "string"},
         "dirty": {"type": "boolean"}, "source_tree_sha256": string(pattern=r"^[0-9a-f]{64}$"),
@@ -119,7 +121,7 @@ def main() -> None:
         "environment_policy": {"const": "ALLOWLIST_NO_CREDENTIALS"},
         "started_utc": string(), "commands": array(command_schema, 4),
         "limitations": array(string(), 1),
-    }))
+    }), version="0.2")
     add("config/project.json", {
         "schema_version": "0.1", "name": "AxiomLint", "maintainer": "Michael Maillet",
         "profile": "RESEARCH_HIGH_ASSURANCE", "approval": "PENDING",
@@ -387,4 +389,3 @@ capability or restoring a prior baseline; accepted records use errata.
 
 if __name__ == "__main__":
     main()
-

@@ -77,6 +77,21 @@ class GateTests(unittest.TestCase):
         (self.root / "untracked-old").rename(self.root / "untracked-new")
         self.assertNotEqual(before[2], source_identity(self.root)[2])
 
+    def test_umask_readwrite_permissions_do_not_change_git_source_identity(self):
+        self.make_git()
+        path = self.root / "source.py"
+        path.chmod(0o644)
+        before = source_identity(self.root)
+        path.chmod(0o664)
+        after = source_identity(self.root)
+        self.assertEqual(before, after)
+
+    def test_executable_bit_changes_source_identity(self):
+        self.make_git()
+        before = source_identity(self.root)
+        (self.root / "source.py").chmod(0o755)
+        self.assertNotEqual(before[2], source_identity(self.root)[2])
+
     def test_filename_with_newline_is_unambiguous(self):
         self.make_git()
         (self.root / "with\nnewline.txt").write_text("data")

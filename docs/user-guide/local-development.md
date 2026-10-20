@@ -25,7 +25,8 @@ dirty/unversioned tree and is still not an independent approval.
 
 Do not use a shell pipe that hides the command's exit status. If displaying logs
 with tee, use `set -o pipefail`. Source-tree fingerprints exclude Git-ignored
-artifacts but include untracked nonignored files and file names. Credentials
+artifacts but include untracked nonignored files, file names and the Git
+user-executable mode, not umask-dependent read/write permissions. Credentials
 and the complete host environment are never captured.
 
 The verifier checks manifest/schema, raw log digests/sizes, exact command

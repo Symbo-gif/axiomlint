@@ -1,11 +1,18 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:axiomlint:foundation:local-run:0.1",
+  "$id": "urn:axiomlint:foundation:local-run:0.2",
   "title": "AxiomLint foundation local-run",
   "type": "object",
   "properties": {
     "schema_version": {
-      "const": "0.1"
+      "const": "0.2"
+    },
+    "source_identity_algorithm": {
+      "const": "sha256-path-bytes-gitmode-v1"
+    },
+    "manifest_schema_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
     },
     "run_id": {
       "type": "string",
@@ -142,6 +149,8 @@
   },
   "required": [
     "schema_version",
+    "source_identity_algorithm",
+    "manifest_schema_sha256",
     "run_id",
     "kind",
     "status",

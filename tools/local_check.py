@@ -40,9 +40,10 @@ def source_identity(root: Path) -> tuple[str, bool, str]:
             raise ValueError(f"Source symlink prohibited: {name!r}")
         if not path.is_file():
             raise ValueError(f"Source missing/nonregular: {name!r}")
-        # Encode file identity including permissions and path, not concatenated content alone.
+        # Git source mode tracks user-executable status, not umask-dependent read/write bits.
+        # Full host access permissions belong to environment/security evidence, not source identity.
         content = path.read_bytes()
-        mode = path.stat().st_mode & 0o777
+        mode = 0o100755 if path.stat().st_mode & 0o100 else 0o100644
         digest.update(len(name).to_bytes(8, "big"))
         digest.update(name)
         digest.update(mode.to_bytes(4, "big"))
@@ -132,8 +133,12 @@ def main(argv: list[str] | None = None) -> int:
     except (OSError, ValueError, subprocess.SubprocessError):
         after_tree, unchanged = "0" * 64, False
     passed = unchanged and all(command["status"] == "PASS" for command in commands)
+    schema_path = ROOT / "schemas/local-run.schema.json"
+    schema_bytes = schema_path.read_bytes()
     manifest = {
-        "schema_version": "0.1", "run_id": run_id,
+        "schema_version": "0.2", "run_id": run_id,
+        "source_identity_algorithm": "sha256-path-bytes-gitmode-v1",
+        "manifest_schema_sha256": sha256(schema_bytes),
         "kind": "ACCEPTANCE_CANDIDATE" if args.require_clean else "DEVELOPMENT",
         "status": "PASS" if passed else "FAIL", "commit": commit, "dirty": dirty,
         "source_tree_sha256": tree, "source_tree_after_sha256": after_tree,
@@ -149,10 +154,11 @@ def main(argv: list[str] | None = None) -> int:
             "Local unsigned digests do not provide authenticated malicious-host protection",
         ],
     }
-    validate(manifest, load_json(ROOT / "schemas/local-run.schema.json"))
+    validate(manifest, load_json(schema_path))
     if directory is not None:
         content = canonical_json(manifest)
         (directory / "manifest.json").write_bytes(content)
+        (directory / "manifest.schema.json").write_bytes(schema_bytes)
         (directory / "manifest.sha256").write_text(sha256(content) + "\n", encoding="ascii")
         print(f"RUN_DIRECTORY={directory}")
         print(f"MANIFEST_SHA256={sha256(content)}")
@@ -162,4 +168,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -19,7 +19,10 @@ the foundation suite. No numerical coverage percentage is claimed without a
 coverage tool and recorded numerator/denominator.
 
 The source fingerprint includes untracked nonignored files and paths using
-Git's NUL-delimited listing. Refuse symlinks. Bind outputs to commit plus exact
+Git's NUL-delimited listing. Hash names, bytes and Git's user-executable mode;
+do not conflate umask-dependent read/write bits with source changes. Full host
+permission policy is separate environment/security evidence. Refuse symlinks.
+Bind outputs to commit plus exact
 tree digest and dirty state. Recheck source identity after commands; mutation
 during the run fails the gate. Development runs can be dirty. A successful
 development run does not pass acceptance.
@@ -45,4 +48,3 @@ Windows checks, package build/install, locked dependency environment, Nix/OCI,
 format/lint/type/coverage, secrets/SCA/SBOM/signing, hostile-runner probes and
 all backend conformance remain tracked future work. Unavailable checks are
 DEFERRED, never silently counted as passing.
-
