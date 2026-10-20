@@ -1,0 +1,5 @@
+# DESIGN ONLY: WP-004 must provide a real reviewed flake and generated lock.
+# Pin nixpkgs to an immutable revision and record the narHash through Nix.
+# Declare Python and approved tools; prove the environment builds locally.
+# No dummy hash or floating branch is presented as a reproducible environment.
+

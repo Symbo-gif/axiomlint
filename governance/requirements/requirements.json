@@ -1,0 +1,223 @@
+[
+  {
+    "id": "REQ-GOV-001",
+    "title": "S1-S4 order and independent audit",
+    "package": "WP-001",
+    "source": "Plan: Governing profile, Work-package rules, Audit independence",
+    "rationale": "No self-review or fabricated closure",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Schema/semantic mutation tests plus later independent audit",
+    "evidence": [
+      "src/axiomlint/governance.py",
+      "tests/test_governance.py"
+    ]
+  },
+  {
+    "id": "REQ-GOV-002",
+    "title": "Only one active package with declared dependencies",
+    "package": "WP-001",
+    "source": "Plan: Work-package rules",
+    "rationale": "Prevent undeclared parallel advancement",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Dependency and active-count mutation tests",
+    "evidence": [
+      "src/axiomlint/governance.py",
+      "tests/test_governance.py"
+    ]
+  },
+  {
+    "id": "REQ-GOV-003",
+    "title": "Human approvals remain explicit and pending",
+    "package": "WP-001",
+    "source": "Plan: Authority hierarchy",
+    "rationale": "An agent cannot self-ratify governance",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Premature-closure negative tests and maintainer review",
+    "evidence": [
+      "governance/charter/CHARTER.md",
+      "tests/test_governance.py"
+    ]
+  },
+  {
+    "id": "REQ-LOCAL-001",
+    "title": "No hosted checks or network during foundation tests",
+    "package": "WP-004",
+    "source": "User instruction 2026-10-20",
+    "rationale": "Respect authorized local-only scope",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Policy/hygiene checks; inspect actual local commands",
+    "evidence": [
+      "tools/hygiene_check.py",
+      "tests/test_gate.py"
+    ]
+  },
+  {
+    "id": "REQ-EVID-001",
+    "title": "Schema subset rejects malformed and unsupported records",
+    "package": "WP-005",
+    "source": "Plan: WP-005",
+    "rationale": "Prevent permissive false-validity",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Positive, negative, duplicate and unsupported-keyword fixtures",
+    "evidence": [
+      "src/axiomlint/schema.py",
+      "tests/test_schema.py"
+    ]
+  },
+  {
+    "id": "REQ-EVID-002",
+    "title": "Content-addressed evidence rejects corruption and unsafe paths",
+    "package": "WP-005",
+    "source": "Plan: WP-005",
+    "rationale": "Tie evidence bytes to stable content identity",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Digest, corruption, missing, symlink and idempotence tests",
+    "evidence": [
+      "src/axiomlint/evidence/store.py",
+      "tests/test_store.py"
+    ]
+  },
+  {
+    "id": "REQ-EVID-003",
+    "title": "Bind local logs to exact commit and source tree",
+    "package": "WP-004",
+    "source": "Plan: Required record fields; AMD-001",
+    "rationale": "Prevent stale or dirty acceptance",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Fingerprint/dirty-state tests and actual local-run manifest",
+    "evidence": [
+      "tools/local_check.py",
+      "tests/test_gate.py"
+    ]
+  },
+  {
+    "id": "REQ-SAFE-001",
+    "title": "Subject execution disabled without audited sandbox",
+    "package": "WP-006",
+    "source": "Plan: WP-006 and hostile-code policy",
+    "rationale": "Avoid executing hostile input on host",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Runner refuses all calls; capability tests",
+    "evidence": [
+      "src/axiomlint/runner/__init__.py",
+      "tests/test_intake_cli.py"
+    ]
+  },
+  {
+    "id": "REQ-INTAKE-001",
+    "title": "Inventory never imports or runs source",
+    "package": "WP-007",
+    "source": "Plan: WP-007; bootstrap scope",
+    "rationale": "Nonexecuting maintainer-controlled metadata only",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Malicious top-level side-effect fixture remains unexecuted",
+    "evidence": [
+      "src/axiomlint/intake/static.py",
+      "tests/test_intake_cli.py"
+    ]
+  },
+  {
+    "id": "REQ-CLAIM-001",
+    "title": "Unavailable checks never imply NO_FINDING or proof",
+    "package": "WP-009",
+    "source": "Plan: Product claims and soundness discipline",
+    "rationale": "Preserve epistemic boundaries",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "CLI status/inventory tests; future per-adapter conformance",
+    "evidence": [
+      "src/axiomlint/cli.py",
+      "tests/test_intake_cli.py"
+    ]
+  },
+  {
+    "id": "REQ-SEM-001",
+    "title": "Formal claims require declared semantics and correspondence",
+    "package": "WP-010",
+    "source": "Plan: Semantic correspondence",
+    "rationale": "A model theorem is not a source theorem",
+    "owner": "Michael Maillet",
+    "status": "DRAFT",
+    "verification": "Later translator conformance and independent correspondence review",
+    "evidence": [
+      "docs/supported-semantics/PyRS-0.md"
+    ]
+  },
+  {
+    "id": "REQ-PRIV-001",
+    "title": "No telemetry, environment snapshots or remote model calls",
+    "package": "WP-003",
+    "source": "Plan: Privacy and licensing",
+    "rationale": "Prevent unintended source/credential disclosure",
+    "owner": "Michael Maillet",
+    "status": "IMPLEMENTED",
+    "verification": "Allowlisted child environment and disabled-capability tests",
+    "evidence": [
+      "governance/standards/security-and-privacy.md",
+      "tests/test_gate.py"
+    ]
+  },
+  {
+    "id": "REQ-BENCH-001",
+    "title": "Freeze experimental protocol before outcome access",
+    "package": "WP-026",
+    "source": "Plan: Benchmark protocol and E0-E6",
+    "rationale": "Avoid leakage and post-hoc thresholds",
+    "owner": "Michael Maillet",
+    "status": "DRAFT",
+    "verification": "Later independent preregistration and frozen protocol digest",
+    "evidence": [
+      "governance/standards/methodology.md",
+      "governance/templates/preregistration.md"
+    ]
+  },
+  {
+    "id": "REQ-LIC-001",
+    "title": "FOSS-only mandatory core with per-artifact license review",
+    "package": "WP-001",
+    "source": "Plan: Free/open-source stack and exclusions",
+    "rationale": "Avoid mandatory restricted engines/rules",
+    "owner": "Michael Maillet",
+    "status": "DRAFT",
+    "verification": "License/tool inventory review before each adoption",
+    "evidence": [
+      "LICENSE",
+      "governance/standards/security-and-privacy.md"
+    ]
+  },
+  {
+    "id": "REQ-ENV-001",
+    "title": "Pinned reproducible Linux and supported-platform environments",
+    "package": "WP-004",
+    "source": "Plan: WP-004",
+    "rationale": "A stdlib smoke run is not a locked environment",
+    "owner": "Michael Maillet",
+    "status": "DEFERRED",
+    "verification": "Later local locks, Nix/OCI and fresh-checkout reproduction",
+    "evidence": [
+      "environments/README.md"
+    ]
+  },
+  {
+    "id": "REQ-RELEASE-001",
+    "title": "No release before independent audit and complete acceptance",
+    "package": "WP-036",
+    "source": "Plan: G8 and WP-036",
+    "rationale": "Prevent release readiness by assertion",
+    "owner": "Michael Maillet",
+    "status": "DRAFT",
+    "verification": "Release checklist, signed artifacts and independent approval",
+    "evidence": [
+      "governance/templates/release-checklist.md"
+    ]
+  }
+]

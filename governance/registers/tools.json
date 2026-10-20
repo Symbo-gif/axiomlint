@@ -1,0 +1,28 @@
+[
+  {
+    "id": "TOOL-001",
+    "category": "TOOL",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Python standard library; exact runtime recorded per local run",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "TOOL-002",
+    "category": "TOOL",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Git source identity; exact executable version recorded in handoff",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  }
+]

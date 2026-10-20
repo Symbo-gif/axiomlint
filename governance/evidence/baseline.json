@@ -1,0 +1,7 @@
+{
+  "source_plan_sha256": "889bac243118ed4f614ee6a377af6bbde8d1653ab36c9c101f4a722bbf2470cd",
+  "framework_url": "https://github.com/Symbo-gif/Methodology-Workflow-Governance",
+  "framework_commit": "d8d1d0d513bef6484cef587fc58ca3fa16fb4f2a",
+  "adoption": "PROJECT_ADAPTATION_NOT_UNMODIFIED_VENDOR",
+  "framework_license": "MIT; copyright 2026 Michael Maillet"
+}

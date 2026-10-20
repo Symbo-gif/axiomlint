@@ -1,0 +1,50 @@
+[
+  {
+    "id": "SESSION-WP-001-S1",
+    "package": "WP-001",
+    "stage": "S1",
+    "status": "IN_PROGRESS",
+    "actor": "Computer authoring context",
+    "context_id": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": "governance/sessions/WP-001-S1.md"
+  },
+  {
+    "id": "SESSION-WP-001-S2",
+    "package": "WP-001",
+    "stage": "S2",
+    "status": "BLOCKED",
+    "actor": "",
+    "context_id": "",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": ""
+  },
+  {
+    "id": "SESSION-WP-001-S3",
+    "package": "WP-001",
+    "stage": "S3",
+    "status": "BLOCKED",
+    "actor": "",
+    "context_id": "",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": ""
+  },
+  {
+    "id": "SESSION-WP-001-S4",
+    "package": "WP-001",
+    "stage": "S4",
+    "status": "BLOCKED",
+    "actor": "",
+    "context_id": "",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": ""
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:foundation:session:0.1",
+  "title": "AxiomLint foundation session",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9-]*[0-9]$"
+    },
+    "package": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^WP-[0-9]{3}$"
+    },
+    "stage": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "IN_PROGRESS",
+        "BLOCKED",
+        "PLANNED",
+        "CLOSED"
+      ]
+    },
+    "actor": {
+      "type": "string"
+    },
+    "context_id": {
+      "type": "string"
+    },
+    "independent": {
+      "type": "boolean"
+    },
+    "commit": {
+      "type": "string"
+    },
+    "reviewed_commit": {
+      "type": "string"
+    },
+    "report": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "package",
+    "stage",
+    "status",
+    "actor",
+    "context_id",
+    "independent",
+    "commit",
+    "reviewed_commit",
+    "report"
+  ],
+  "additionalProperties": false
+}

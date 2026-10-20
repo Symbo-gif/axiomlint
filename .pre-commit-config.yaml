@@ -1,0 +1,11 @@
+# Optional. No hooks are installed automatically and no remote hooks are fetched.
+repos:
+  - repo: local
+    hooks:
+      - id: axiomlint-local-check
+        name: AxiomLint local foundation checks
+        entry: python3 tools/local_check.py --no-record
+        language: system
+        pass_filenames: false
+        always_run: true
+

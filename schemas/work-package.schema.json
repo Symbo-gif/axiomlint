@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:foundation:work-package:0.1",
+  "title": "AxiomLint foundation work-package",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^WP-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "PLANNED",
+        "ACTIVE",
+        "AUDIT_PENDING",
+        "CLOSED",
+        "BLOCKED"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "PENDING",
+        "USER_AUTHORIZED_DRAFTS",
+        "APPROVED"
+      ]
+    },
+    "approval_ref": {
+      "type": "string"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "declaration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acceptance_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "closure_approval_ref": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "status",
+    "owner",
+    "approval",
+    "approval_ref",
+    "dependencies",
+    "requirements",
+    "declaration",
+    "acceptance_evidence",
+    "closure_approval_ref"
+  ],
+  "additionalProperties": false
+}

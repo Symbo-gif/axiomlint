@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:foundation:register-item:0.1",
+  "title": "AxiomLint foundation register-item",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9-]*[0-9]$"
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "DECISION",
+        "DEVIATION",
+        "RISK",
+        "ASSUMPTION",
+        "FINDING",
+        "TOOL",
+        "TCB",
+        "CORPUS",
+        "WAIVER",
+        "EVIDENCE",
+        "EXCLUSION",
+        "RELEASE",
+        "DEFERRED_VALIDATION"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "OPEN",
+        "PENDING",
+        "DEFERRED",
+        "VERIFIED",
+        "APPROVED",
+        "REJECTED"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "NA"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "disposition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocking_gate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_ref": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "status",
+    "severity",
+    "owner",
+    "summary",
+    "requirements",
+    "evidence",
+    "disposition",
+    "blocking_gate",
+    "approval_ref"
+  ],
+  "additionalProperties": false
+}

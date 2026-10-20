@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ASM-001",
+    "category": "ASSUMPTION",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Laptop user and store parent trusted; no hostile concurrent writes",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "ASM-002",
+    "category": "ASSUMPTION",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Repository tests are maintainer-controlled, not untrusted review subjects",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "ASM-003",
+    "category": "ASSUMPTION",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Python >=3.12 and Git available; package installation not needed",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  }
+]

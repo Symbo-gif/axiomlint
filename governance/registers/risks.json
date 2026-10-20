@@ -1,0 +1,67 @@
+[
+  {
+    "id": "RISK-001",
+    "category": "RISK",
+    "status": "OPEN",
+    "severity": "D2",
+    "owner": "Michael Maillet",
+    "summary": "Same-user local host can rewrite evidence and manifests",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "RISK-002",
+    "category": "RISK",
+    "status": "OPEN",
+    "severity": "D2",
+    "owner": "Michael Maillet",
+    "summary": "AST parser resource exhaustion on hostile inputs",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G1",
+    "approval_ref": ""
+  },
+  {
+    "id": "RISK-003",
+    "category": "RISK",
+    "status": "OPEN",
+    "severity": "D2",
+    "owner": "Michael Maillet",
+    "summary": "Unreviewed source-model translation may overstate assurance",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G4",
+    "approval_ref": ""
+  },
+  {
+    "id": "RISK-004",
+    "category": "RISK",
+    "status": "OPEN",
+    "severity": "D2",
+    "owner": "Michael Maillet",
+    "summary": "Private holdout leakage or invalid benchmark labels",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G6",
+    "approval_ref": ""
+  },
+  {
+    "id": "RISK-005",
+    "category": "RISK",
+    "status": "OPEN",
+    "severity": "D3",
+    "owner": "Michael Maillet",
+    "summary": "Core license and name not independently cleared",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G8",
+    "approval_ref": ""
+  }
+]

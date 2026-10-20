@@ -1,0 +1,618 @@
+[
+  {
+    "id": "WP-001",
+    "title": "Charter and authority",
+    "status": "ACTIVE",
+    "owner": "Michael Maillet",
+    "approval": "USER_AUTHORIZED_DRAFTS",
+    "approval_ref": "governance/decisions/authorization.md",
+    "dependencies": [],
+    "requirements": [
+      "REQ-GOV-001",
+      "REQ-GOV-002",
+      "REQ-GOV-003",
+      "REQ-LIC-001"
+    ],
+    "declaration": "governance/work-packages/WP-001.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-002",
+    "title": "Requirements and standards crosswalk",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-001"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-002.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-003",
+    "title": "Threat model and trust case",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-002"
+    ],
+    "requirements": [
+      "REQ-PRIV-001"
+    ],
+    "declaration": "governance/work-packages/WP-003.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-004",
+    "title": "Repository and environment bootstrap",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-003"
+    ],
+    "requirements": [
+      "REQ-LOCAL-001",
+      "REQ-EVID-003",
+      "REQ-ENV-001"
+    ],
+    "declaration": "governance/work-packages/WP-004.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-005",
+    "title": "Schemas and immutable evidence store",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-004"
+    ],
+    "requirements": [
+      "REQ-EVID-001",
+      "REQ-EVID-002"
+    ],
+    "declaration": "governance/work-packages/WP-005.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-006",
+    "title": "Safe runner",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-005"
+    ],
+    "requirements": [
+      "REQ-SAFE-001"
+    ],
+    "declaration": "governance/work-packages/WP-006.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-007",
+    "title": "Intake and source model",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-006"
+    ],
+    "requirements": [
+      "REQ-INTAKE-001"
+    ],
+    "declaration": "governance/work-packages/WP-007.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-008",
+    "title": "Deterministic analyzer adapters",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-007"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-008.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-009",
+    "title": "Finding fusion and reporting",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-008"
+    ],
+    "requirements": [
+      "REQ-CLAIM-001"
+    ],
+    "declaration": "governance/work-packages/WP-009.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-010",
+    "title": "Contract and property model",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-009"
+    ],
+    "requirements": [
+      "REQ-SEM-001"
+    ],
+    "declaration": "governance/work-packages/WP-010.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-011",
+    "title": "Hypothesis and mutation validation",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-010"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-011.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-012",
+    "title": "CrossHair symbolic execution",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-011"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-012.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-013",
+    "title": "SpecIR-to-SMT semantics",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-012"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-013.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-014",
+    "title": "Z3 backend",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-013"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-014.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-015",
+    "title": "Solver diversity",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-014"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-015.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-016",
+    "title": "SymPy backend",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-015"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-016.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-017",
+    "title": "Sage/Maxima diversity adapter",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-016"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-017.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-018",
+    "title": "Dimensional and numerical analysis",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-017"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-018.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-019",
+    "title": "Lean project and proof policy",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-018"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-019.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-020",
+    "title": "SpecIR-to-Lean translation",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-019"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-020.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-021",
+    "title": "Proof construction and replay",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-020"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-021.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-022",
+    "title": "Source correspondence pilot",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-021"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-022.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-023",
+    "title": "LLM reviewer adapter",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-022"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-023.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-024",
+    "title": "Evidence-guided review planner",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-023"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-024.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-025",
+    "title": "Calibrated verdict engine",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-024"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-025.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-026",
+    "title": "Corpus policy and taxonomy",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-025"
+    ],
+    "requirements": [
+      "REQ-BENCH-001"
+    ],
+    "declaration": "governance/work-packages/WP-026.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-027",
+    "title": "Seed corpus and oracle creation",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-026"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-027.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-028",
+    "title": "Benchmark harness",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-027"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-028.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-029",
+    "title": "Metrics and statistics",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-028"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-029.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-030",
+    "title": "Internal component validation",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-029"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-030.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-031",
+    "title": "Ablation campaign",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-030"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-031.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-032",
+    "title": "Leading-system comparison",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-031"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-032.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-033",
+    "title": "Robustness and adversarial campaign",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-032"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-033.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-034",
+    "title": "Security and supply-chain hardening",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-033"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-034.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-035",
+    "title": "Usability and integration",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-034"
+    ],
+    "requirements": [
+      "REQ-GOV-001"
+    ],
+    "declaration": "governance/work-packages/WP-035.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  },
+  {
+    "id": "WP-036",
+    "title": "Release candidate and independent audit",
+    "status": "PLANNED",
+    "owner": "Michael Maillet",
+    "approval": "PENDING",
+    "approval_ref": "",
+    "dependencies": [
+      "WP-035"
+    ],
+    "requirements": [
+      "REQ-RELEASE-001"
+    ],
+    "declaration": "governance/work-packages/WP-036.md",
+    "acceptance_evidence": [],
+    "closure_approval_ref": ""
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:foundation:project:0.1",
+  "title": "AxiomLint foundation project",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "maintainer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "RESEARCH_HIGH_ASSURANCE"
+      ]
+    },
+    "approval": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "PENDING",
+        "USER_AUTHORIZED_DRAFTS",
+        "APPROVED"
+      ]
+    },
+    "hosted_ci": {
+      "const": false
+    },
+    "subject_execution": {
+      "const": false
+    },
+    "telemetry": {
+      "const": false
+    },
+    "network_during_checks": {
+      "const": false
+    },
+    "max_active_packages": {
+      "const": 1
+    },
+    "local_gate": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "amendment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_framework_commit": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "source_plan_sha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "name",
+    "maintainer",
+    "profile",
+    "approval",
+    "hosted_ci",
+    "subject_execution",
+    "telemetry",
+    "network_during_checks",
+    "max_active_packages",
+    "local_gate",
+    "amendment",
+    "baseline_framework_commit",
+    "source_plan_sha256"
+  ],
+  "additionalProperties": false
+}

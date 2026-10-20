@@ -1,0 +1,32 @@
+[
+  {
+    "id": "DEV-001",
+    "category": "DEVIATION",
+    "status": "OPEN",
+    "severity": "D2",
+    "owner": "Michael Maillet",
+    "summary": "Scaffolding and charter drafts before formal baseline ratification",
+    "requirements": [],
+    "evidence": [
+      "governance/decisions/authorization.md"
+    ],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "DEV-002",
+    "category": "DEVIATION",
+    "status": "OPEN",
+    "severity": "D2",
+    "owner": "Michael Maillet",
+    "summary": "Local-only override conflicts with upstream mandatory-CI tailoring wording",
+    "requirements": [],
+    "evidence": [
+      "governance/charter/AMD-001-local-only.md"
+    ],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  }
+]

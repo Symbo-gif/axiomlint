@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1",
+  "name": "AxiomLint",
+  "maintainer": "Michael Maillet",
+  "profile": "RESEARCH_HIGH_ASSURANCE",
+  "approval": "PENDING",
+  "hosted_ci": false,
+  "subject_execution": false,
+  "telemetry": false,
+  "network_during_checks": false,
+  "max_active_packages": 1,
+  "local_gate": [
+    "python3",
+    "tools/local_check.py",
+    "--require-clean"
+  ],
+  "amendment": "governance/charter/AMD-001-local-only.md",
+  "baseline_framework_commit": "d8d1d0d513bef6484cef587fc58ca3fa16fb4f2a",
+  "source_plan_sha256": "889bac243118ed4f614ee6a377af6bbde8d1653ab36c9c101f4a722bbf2470cd"
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:foundation:gate-command:0.1",
+  "title": "AxiomLint foundation gate-command",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "argv": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "PASS",
+        "FAIL",
+        "TIMEOUT",
+        "ERROR"
+      ]
+    },
+    "wall_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "stdout_sha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "stderr_sha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "stdout_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "stderr_bytes": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "name",
+    "argv",
+    "exit_code",
+    "status",
+    "wall_seconds",
+    "stdout_sha256",
+    "stderr_sha256",
+    "stdout_bytes",
+    "stderr_bytes"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,7 @@
+# DESIGN ONLY: WP-004 must replace this with a pinned, reviewed Containerfile.
+# FROM <approved-python-image>@sha256:<approved-digest>
+# Copy exact source and offline locked dependencies.
+# Create/use a non-root UID; do not copy secrets or host credentials.
+# Network deny, read-only source, scratch, caps, syscalls and resource limits are
+# runtime policies verified in WP-006, not properties conferred by this recipe.
+

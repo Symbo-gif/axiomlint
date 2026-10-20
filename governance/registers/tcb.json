@@ -1,0 +1,41 @@
+[
+  {
+    "id": "TCB-001",
+    "category": "TCB",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Host kernel, filesystem, Python runtime and Git",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "TCB-002",
+    "category": "TCB",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Schema/governance validator, local gate and source fingerprint code",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "TCB-003",
+    "category": "TCB",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Evidence store and SHA-256 implementation",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "DEC-001",
+    "category": "DECISION",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Use AxiomLint from current attached plan as provisional name",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "DEC-002",
+    "category": "DECISION",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Proposed authoritative local-only acceptance",
+    "requirements": [],
+    "evidence": [
+      "governance/charter/AMD-001-local-only.md"
+    ],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  },
+  {
+    "id": "DEC-003",
+    "category": "DECISION",
+    "status": "PENDING",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Keep zero-dependency foundation and disabled subject execution",
+    "requirements": [],
+    "evidence": [],
+    "disposition": "Await maintainer decision or later package evidence",
+    "blocking_gate": "G0",
+    "approval_ref": ""
+  }
+]
