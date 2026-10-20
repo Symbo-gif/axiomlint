@@ -13,6 +13,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from hygiene_check import check as hygiene_check
 from local_check import child_environment, command_inventory, invoke, source_identity
+import local_check
+import run_tests
 
 
 class GateTests(unittest.TestCase):
@@ -155,3 +157,22 @@ class GateTests(unittest.TestCase):
         (self.root / "README.md").write_text("[Missing](missing.md)")
         self.assertTrue(any("broken link" in x for x in hygiene_check(self.root)))
 
+    def test_acceptance_refuses_dirty_tree_before_commands(self):
+        self.make_git()
+        (self.root / "untracked").write_text("dirty")
+        with patch.object(local_check, "ROOT", self.root), patch.object(
+            local_check, "invoke"
+        ) as invoked, contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(local_check.main(["--require-clean"]), 1)
+            invoked.assert_not_called()
+
+    def test_acceptance_cannot_disable_record_capture(self):
+        with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as error:
+            local_check.main(["--require-clean", "--no-record"])
+        self.assertEqual(error.exception.code, 2)
+
+    def test_empty_test_selection_fails(self):
+        empty = unittest.TestSuite()
+        with patch.object(unittest.defaultTestLoader, "discover", return_value=empty):
+            with contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(run_tests.run(), 1)

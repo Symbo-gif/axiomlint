@@ -128,3 +128,35 @@ class SchemaTests(unittest.TestCase):
             path.write_text(json.dumps(value), encoding="utf-8")
             self.assertEqual(load_json(path), value)
 
+    def test_exponent_overflow_is_not_finite_json(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "record.json"
+            path.write_text('{"value":1e9999}')
+            with self.assertRaises(InvalidRecord):
+                load_json(path)
+
+    def test_nonfinite_native_values_rejected(self):
+        for value in (float("nan"), float("inf"), {1: "nonstring-key"}):
+            with self.assertRaises(InvalidRecord):
+                validate(value, {})
+
+    def test_nested_boolean_numeric_equality_not_conflated(self):
+        for value, schema in (
+            ([True], {"const": [1]}),
+            ({"x": False}, {"enum": [{"x": 0}]}),
+        ):
+            with self.assertRaises(InvalidRecord):
+                validate(value, schema)
+
+    def test_malformed_supported_keyword_types_fail_cleanly(self):
+        for schema in (
+            {"type": ["string", "null"]}, {"pattern": 1},
+            {"description": False}, {"$schema": "http://unsupported.invalid/dialect"},
+        ):
+            with self.assertRaises(InvalidRecord):
+                check_schema(schema)
+
+    def test_numeric_enum_duplicate_rejected_boolean_remains_distinct(self):
+        with self.assertRaises(InvalidRecord):
+            check_schema({"enum": [1, 1.0]})
+        check_schema({"enum": [True, 1]})

@@ -4,6 +4,7 @@ Run commands from the laptop project root. No install is needed.
 
 ```sh
 python3 tools/local_check.py
+python3 tools/verify_local_run.py artifacts/gates/RUN-ID --check-current-source
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 PYTHONPATH=src python3 -m axiomlint status
 PYTHONPATH=src python3 -m axiomlint inventory examples/absolute.py
@@ -27,6 +28,12 @@ with tee, use `set -o pipefail`. Source-tree fingerprints exclude Git-ignored
 artifacts but include untracked nonignored files and file names. Credentials
 and the complete host environment are never captured.
 
+The verifier checks manifest/schema, raw log digests/sizes, exact command
+inventory, exit/status consistency and nonempty test counts. With
+`--check-current-source`, it also compares the current Git/source-tree identity.
+It is a separate byte-integrity check, not a different reviewer or authenticated
+signature. Historical evidence can be checked without current-source matching.
+
 ## Independent review
 
 Hand the reviewer the S1 commit, full package contract, requirements, raw gate
@@ -40,4 +47,3 @@ Implemented/tested environment is to be recorded from actual laptop runs.
 Windows support, fresh Linux checkout, locked environments, Nix/OCI and package
 installation are deferred. The optional pre-commit configuration uses a local
 hook but is not installed. No hosted workflow is present.
-

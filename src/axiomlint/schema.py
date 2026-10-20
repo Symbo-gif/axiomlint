@@ -5,6 +5,7 @@ The schemas are portable to a full validator in WP-005.
 """
 
 import json
+import math
 import re
 from pathlib import Path
 from typing import Any
@@ -35,22 +36,64 @@ def load_json(path: Path) -> Any:
         raise InvalidRecord(f"Non-JSON numeric constant: {value}")
 
     try:
-        return json.loads(
+        value = json.loads(
             path.read_text(encoding="utf-8"),
             object_pairs_hook=pairs, parse_constant=bad_constant,
         )
+        check_json_value(value)
+        return value
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         raise InvalidRecord(f"{path}: {exc}") from exc
+
+
+def check_json_value(value: Any) -> None:
+    """Reject values outside the JSON data model, including exponent overflow."""
+    if value is None or type(value) in (str, bool, int):
+        return
+    if type(value) is float and math.isfinite(value):
+        return
+    if isinstance(value, list):
+        for item in value:
+            check_json_value(item)
+        return
+    if isinstance(value, dict) and all(isinstance(k, str) for k in value):
+        for item in value.values():
+            check_json_value(item)
+        return
+    raise InvalidRecord("Value is not finite, string-keyed JSON data")
+
+
+def json_equal(a: Any, b: Any) -> bool:
+    """JSON equality, distinguishing Booleans from numbers at every depth."""
+    if isinstance(a, bool) != isinstance(b, bool):
+        return False
+    if type(a) in (int, float) and type(b) in (int, float):
+        return a == b
+    if type(a) is not type(b):
+        return False
+    if isinstance(a, list):
+        return len(a) == len(b) and all(json_equal(x, y) for x, y in zip(a, b))
+    if isinstance(a, dict):
+        return a.keys() == b.keys() and all(json_equal(a[k], b[k]) for k in a)
+    return a == b
 
 
 def check_schema(schema: Any) -> None:
     if not isinstance(schema, dict):
         raise InvalidRecord("Only object schemas are supported")
+    check_json_value(schema)
     extra = set(schema) - KEYWORDS
     if extra:
         raise InvalidRecord(f"Unsupported schema keywords: {sorted(extra)}")
-    if "type" in schema and schema["type"] not in TYPES:
+    if "type" in schema and (
+        not isinstance(schema["type"], str) or schema["type"] not in TYPES
+    ):
         raise InvalidRecord("Unsupported schema type")
+    for key in ("$schema", "$id", "title", "description"):
+        if key in schema and not isinstance(schema[key], str):
+            raise InvalidRecord(f"{key} must be a string")
+    if "$schema" in schema and schema["$schema"] != "https://json-schema.org/draft/2020-12/schema":
+        raise InvalidRecord("Unsupported declared schema dialect")
     if "additionalProperties" in schema and not isinstance(schema["additionalProperties"], bool):
         raise InvalidRecord("additionalProperties must be boolean in this vocabulary")
     for key in ("minItems", "minLength", "maxLength"):
@@ -60,6 +103,10 @@ def check_schema(schema: Any) -> None:
         raise InvalidRecord("Invalid minimum")
     if "enum" in schema and (not isinstance(schema["enum"], list) or not schema["enum"]):
         raise InvalidRecord("enum must be a nonempty array")
+    if "enum" in schema:
+        for i, item in enumerate(schema["enum"]):
+            if any(json_equal(item, other) for other in schema["enum"][:i]):
+                raise InvalidRecord("Duplicate enum value")
     required = schema.get("required", [])
     if not isinstance(required, list) or any(not isinstance(x, str) for x in required):
         raise InvalidRecord("required must contain strings")
@@ -73,6 +120,8 @@ def check_schema(schema: Any) -> None:
     if "items" in schema:
         check_schema(schema["items"])
     if "pattern" in schema:
+        if not isinstance(schema["pattern"], str):
+            raise InvalidRecord("pattern must be a string")
         try:
             re.compile(schema["pattern"])
         except (re.error, TypeError) as exc:
@@ -81,6 +130,7 @@ def check_schema(schema: Any) -> None:
 
 def validate(value: Any, schema: dict[str, Any], path: str = "$") -> None:
     check_schema(schema)
+    check_json_value(value)
     expected = schema.get("type")
     matches = {
         "object": isinstance(value, dict), "array": isinstance(value, list),
@@ -90,14 +140,9 @@ def validate(value: Any, schema: dict[str, Any], path: str = "$") -> None:
     }
     if expected and not matches[expected]:
         raise InvalidRecord(f"{path}: expected {expected}")
-    # Python considers True == 1; JSON Schema does not.
-    def equal(a: Any, b: Any) -> bool:
-        if isinstance(a, bool) != isinstance(b, bool):
-            return False
-        return a == b
-    if "const" in schema and not equal(value, schema["const"]):
+    if "const" in schema and not json_equal(value, schema["const"]):
         raise InvalidRecord(f"{path}: wrong constant")
-    if "enum" in schema and not any(equal(value, x) for x in schema["enum"]):
+    if "enum" in schema and not any(json_equal(value, x) for x in schema["enum"]):
         raise InvalidRecord(f"{path}: outside enum")
     if isinstance(value, dict):
         props = schema.get("properties", {})
@@ -124,4 +169,3 @@ def validate(value: Any, schema: dict[str, Any], path: str = "$") -> None:
             raise InvalidRecord(f"{path}: pattern mismatch")
     if type(value) in (int, float) and "minimum" in schema and value < schema["minimum"]:
         raise InvalidRecord(f"{path}: below minimum")
-
