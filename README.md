@@ -44,6 +44,8 @@ closure, independent audit, release authorization, or a correctness proof.
 - [Work-package register](governance/work-packages/index.json)
 - [Current state](governance/STATE.md)
 - [Implementation and verification handoff](HANDOFF.md)
+- [All 144 individual session briefs](governance/session-briefs/README.md)
+- [Four-session masterbook](docs/planning/axiomlint-session-briefs-masterbook.md)
 - [Local checks](docs/user-guide/local-development.md)
 - [Research and adoption rationale](docs/research/foundation-decisions.md)
 - [Original plan](docs/reference/axiomlint-plan.md)

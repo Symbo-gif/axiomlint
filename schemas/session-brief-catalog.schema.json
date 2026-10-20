@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:planning:session-brief-catalog:0.1",
+  "title": "Draft session brief catalogue, not live execution state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "status", "approval", "baseline_commit",
+               "package_count", "brief_count", "session_order", "briefs", "inputs",
+               "overview", "masterbook"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "kind": {"const": "SESSION_BRIEF_PLAN"},
+    "status": {"const": "DRAFT_NOT_AUTHORIZED"},
+    "approval": {"const": "PENDING"},
+    "baseline_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "package_count": {"const": 36},
+    "brief_count": {"const": 144},
+    "session_order": {"const": ["S1", "S2", "S3", "S4"]},
+    "briefs": {
+      "type": "array", "minItems": 144,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "package", "stage", "status", "path", "sha256",
+                     "predecessor", "successor", "requirements", "contract_sha256", "declaration"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^BRIEF-WP-[0-9]{3}-S[1-4]$"},
+          "package": {"type": "string", "pattern": "^WP-[0-9]{3}$"},
+          "stage": {"enum": ["S1", "S2", "S3", "S4"]},
+          "status": {"const": "DRAFT_NOT_AUTHORIZED"},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "predecessor": {"type": "string"},
+          "successor": {"type": "string"},
+          "requirements": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "declaration": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "inputs": {
+      "type": "array", "minItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "overview": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "masterbook": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

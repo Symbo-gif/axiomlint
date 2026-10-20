@@ -1,0 +1,2231 @@
+{
+  "schema_version": "0.1",
+  "kind": "SESSION_BRIEF_PLAN",
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "approval": "PENDING",
+  "baseline_commit": "083f21c4b12a60c8556138d26d0aee516eb24d2b",
+  "package_count": 36,
+  "brief_count": 144,
+  "session_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "briefs": [
+    {
+      "id": "BRIEF-WP-001-S1",
+      "package": "WP-001",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-001/S1.md",
+      "sha256": "eaf84b61a397e2588ad4bc1724a3069c60c00efea0db45df24689f6a5cf1e7a6",
+      "predecessor": "",
+      "successor": "WP-001-S2",
+      "requirements": [
+        "REQ-GOV-001",
+        "REQ-GOV-002",
+        "REQ-GOV-003",
+        "REQ-LIC-001"
+      ],
+      "contract_sha256": "b2ebafecb7211c165214d8b63f23649993c805d67ab5854b281bab3e2937c978",
+      "declaration": "governance/work-packages/WP-001.md"
+    },
+    {
+      "id": "BRIEF-WP-001-S2",
+      "package": "WP-001",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-001/S2.md",
+      "sha256": "f727a014f1fb2af9f7d29e243f1b331fad7f3ee0fb2403326d7204fecd290f78",
+      "predecessor": "WP-001-S1",
+      "successor": "WP-001-S3",
+      "requirements": [
+        "REQ-GOV-001",
+        "REQ-GOV-002",
+        "REQ-GOV-003",
+        "REQ-LIC-001"
+      ],
+      "contract_sha256": "b2ebafecb7211c165214d8b63f23649993c805d67ab5854b281bab3e2937c978",
+      "declaration": "governance/work-packages/WP-001.md"
+    },
+    {
+      "id": "BRIEF-WP-001-S3",
+      "package": "WP-001",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-001/S3.md",
+      "sha256": "4ed610b22827ed24b5da0b78780761ccaf63da90f2311448792b13d559d51a8f",
+      "predecessor": "WP-001-S2",
+      "successor": "WP-001-S4",
+      "requirements": [
+        "REQ-GOV-001",
+        "REQ-GOV-002",
+        "REQ-GOV-003",
+        "REQ-LIC-001"
+      ],
+      "contract_sha256": "b2ebafecb7211c165214d8b63f23649993c805d67ab5854b281bab3e2937c978",
+      "declaration": "governance/work-packages/WP-001.md"
+    },
+    {
+      "id": "BRIEF-WP-001-S4",
+      "package": "WP-001",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-001/S4.md",
+      "sha256": "a28aa8f30afa6b19be0bb3073a48dd766fd6f981375330a43505e423925f6818",
+      "predecessor": "WP-001-S3",
+      "successor": "WP-002-S1",
+      "requirements": [
+        "REQ-GOV-001",
+        "REQ-GOV-002",
+        "REQ-GOV-003",
+        "REQ-LIC-001"
+      ],
+      "contract_sha256": "b2ebafecb7211c165214d8b63f23649993c805d67ab5854b281bab3e2937c978",
+      "declaration": "governance/work-packages/WP-001.md"
+    },
+    {
+      "id": "BRIEF-WP-002-S1",
+      "package": "WP-002",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-002/S1.md",
+      "sha256": "b52458e5852d5f16c023d9ae3f69e11e50cb20b54edaf1505fb33ee30bada5bb",
+      "predecessor": "WP-001-S4",
+      "successor": "WP-002-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ee4b77db1b7eedbe119c073ff3371ca44c4aa63d6677d41b96248710f7efe4d6",
+      "declaration": "governance/work-packages/WP-002.md"
+    },
+    {
+      "id": "BRIEF-WP-002-S2",
+      "package": "WP-002",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-002/S2.md",
+      "sha256": "61ecb8e4742ad3e4cc93f0fc635d88f66a8849e75d0945935986b7beb1281b3f",
+      "predecessor": "WP-002-S1",
+      "successor": "WP-002-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ee4b77db1b7eedbe119c073ff3371ca44c4aa63d6677d41b96248710f7efe4d6",
+      "declaration": "governance/work-packages/WP-002.md"
+    },
+    {
+      "id": "BRIEF-WP-002-S3",
+      "package": "WP-002",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-002/S3.md",
+      "sha256": "eb6041c480468fc7ede9fc5e58a24ca0cd29ecfb59c52b2bb9bd5dfc81c119b4",
+      "predecessor": "WP-002-S2",
+      "successor": "WP-002-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ee4b77db1b7eedbe119c073ff3371ca44c4aa63d6677d41b96248710f7efe4d6",
+      "declaration": "governance/work-packages/WP-002.md"
+    },
+    {
+      "id": "BRIEF-WP-002-S4",
+      "package": "WP-002",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-002/S4.md",
+      "sha256": "139365b91eff1843e6113b230132ef4e3cd4a5ce2500e4852c98978a424fdfd8",
+      "predecessor": "WP-002-S3",
+      "successor": "WP-003-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ee4b77db1b7eedbe119c073ff3371ca44c4aa63d6677d41b96248710f7efe4d6",
+      "declaration": "governance/work-packages/WP-002.md"
+    },
+    {
+      "id": "BRIEF-WP-003-S1",
+      "package": "WP-003",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-003/S1.md",
+      "sha256": "791d12e2d30f021706e582213d5f8c2abef7f6c2c2e2c105051f8d87a8508047",
+      "predecessor": "WP-002-S4",
+      "successor": "WP-003-S2",
+      "requirements": [
+        "REQ-PRIV-001"
+      ],
+      "contract_sha256": "7b2e5cb56586da789caf459ae366f5fc2fd1f88392ec77623ebdb330b4c6ed0b",
+      "declaration": "governance/work-packages/WP-003.md"
+    },
+    {
+      "id": "BRIEF-WP-003-S2",
+      "package": "WP-003",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-003/S2.md",
+      "sha256": "8b9db2fd87f3f6bc73055405f57c73edbba93a340c0ff2d1066cf3a2addde342",
+      "predecessor": "WP-003-S1",
+      "successor": "WP-003-S3",
+      "requirements": [
+        "REQ-PRIV-001"
+      ],
+      "contract_sha256": "7b2e5cb56586da789caf459ae366f5fc2fd1f88392ec77623ebdb330b4c6ed0b",
+      "declaration": "governance/work-packages/WP-003.md"
+    },
+    {
+      "id": "BRIEF-WP-003-S3",
+      "package": "WP-003",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-003/S3.md",
+      "sha256": "443a90d2339f6ed6e219f87081d89676487c008de3c8b864c8b3bbeb778cd959",
+      "predecessor": "WP-003-S2",
+      "successor": "WP-003-S4",
+      "requirements": [
+        "REQ-PRIV-001"
+      ],
+      "contract_sha256": "7b2e5cb56586da789caf459ae366f5fc2fd1f88392ec77623ebdb330b4c6ed0b",
+      "declaration": "governance/work-packages/WP-003.md"
+    },
+    {
+      "id": "BRIEF-WP-003-S4",
+      "package": "WP-003",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-003/S4.md",
+      "sha256": "c2f6061b1105fa6bce6f5ea90412cc4690a6740bb1852324c8256d11e9a58b9d",
+      "predecessor": "WP-003-S3",
+      "successor": "WP-004-S1",
+      "requirements": [
+        "REQ-PRIV-001"
+      ],
+      "contract_sha256": "7b2e5cb56586da789caf459ae366f5fc2fd1f88392ec77623ebdb330b4c6ed0b",
+      "declaration": "governance/work-packages/WP-003.md"
+    },
+    {
+      "id": "BRIEF-WP-004-S1",
+      "package": "WP-004",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-004/S1.md",
+      "sha256": "e4e09a0da4d7eff2b087d636b1b8d95d3eeb8ccb0c70497c8fd0aeab90b8cf20",
+      "predecessor": "WP-003-S4",
+      "successor": "WP-004-S2",
+      "requirements": [
+        "REQ-LOCAL-001",
+        "REQ-EVID-003",
+        "REQ-ENV-001"
+      ],
+      "contract_sha256": "f95578a941917e93a2cbacbe53a55c7a653c6dd34dbd2d5b1af43850aa3ebd48",
+      "declaration": "governance/work-packages/WP-004.md"
+    },
+    {
+      "id": "BRIEF-WP-004-S2",
+      "package": "WP-004",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-004/S2.md",
+      "sha256": "91db57500cbe24d3fcd7242e91b7ebf241b87a257c86e30567e7d64a86e764c5",
+      "predecessor": "WP-004-S1",
+      "successor": "WP-004-S3",
+      "requirements": [
+        "REQ-LOCAL-001",
+        "REQ-EVID-003",
+        "REQ-ENV-001"
+      ],
+      "contract_sha256": "f95578a941917e93a2cbacbe53a55c7a653c6dd34dbd2d5b1af43850aa3ebd48",
+      "declaration": "governance/work-packages/WP-004.md"
+    },
+    {
+      "id": "BRIEF-WP-004-S3",
+      "package": "WP-004",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-004/S3.md",
+      "sha256": "1c0b6aca7b2642bebea07c5e3c9348aaf6def304681543d7ca96023b415a589c",
+      "predecessor": "WP-004-S2",
+      "successor": "WP-004-S4",
+      "requirements": [
+        "REQ-LOCAL-001",
+        "REQ-EVID-003",
+        "REQ-ENV-001"
+      ],
+      "contract_sha256": "f95578a941917e93a2cbacbe53a55c7a653c6dd34dbd2d5b1af43850aa3ebd48",
+      "declaration": "governance/work-packages/WP-004.md"
+    },
+    {
+      "id": "BRIEF-WP-004-S4",
+      "package": "WP-004",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-004/S4.md",
+      "sha256": "b2191e7fdc718f53b23d9e57f72c1e4fb03227b45a0db17f5a94d591f419d3c2",
+      "predecessor": "WP-004-S3",
+      "successor": "WP-005-S1",
+      "requirements": [
+        "REQ-LOCAL-001",
+        "REQ-EVID-003",
+        "REQ-ENV-001"
+      ],
+      "contract_sha256": "f95578a941917e93a2cbacbe53a55c7a653c6dd34dbd2d5b1af43850aa3ebd48",
+      "declaration": "governance/work-packages/WP-004.md"
+    },
+    {
+      "id": "BRIEF-WP-005-S1",
+      "package": "WP-005",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-005/S1.md",
+      "sha256": "403d95f23c7381af06ce8e99d68d85d36dda8e43cc7faf61413494ecefd389a3",
+      "predecessor": "WP-004-S4",
+      "successor": "WP-005-S2",
+      "requirements": [
+        "REQ-EVID-001",
+        "REQ-EVID-002"
+      ],
+      "contract_sha256": "4229663a2429a83e80e4777f90bcbe7466704e3951f28bd81f95ba5aee672b8d",
+      "declaration": "governance/work-packages/WP-005.md"
+    },
+    {
+      "id": "BRIEF-WP-005-S2",
+      "package": "WP-005",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-005/S2.md",
+      "sha256": "758df639a45ff9d235afe410114fff14700bcd415461e24ea7d8f5eaa7ffad3a",
+      "predecessor": "WP-005-S1",
+      "successor": "WP-005-S3",
+      "requirements": [
+        "REQ-EVID-001",
+        "REQ-EVID-002"
+      ],
+      "contract_sha256": "4229663a2429a83e80e4777f90bcbe7466704e3951f28bd81f95ba5aee672b8d",
+      "declaration": "governance/work-packages/WP-005.md"
+    },
+    {
+      "id": "BRIEF-WP-005-S3",
+      "package": "WP-005",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-005/S3.md",
+      "sha256": "fecb3cde9d0c636392d1b8e898bea1aa5e12f18cb1a7846bed79b0a52020a8b0",
+      "predecessor": "WP-005-S2",
+      "successor": "WP-005-S4",
+      "requirements": [
+        "REQ-EVID-001",
+        "REQ-EVID-002"
+      ],
+      "contract_sha256": "4229663a2429a83e80e4777f90bcbe7466704e3951f28bd81f95ba5aee672b8d",
+      "declaration": "governance/work-packages/WP-005.md"
+    },
+    {
+      "id": "BRIEF-WP-005-S4",
+      "package": "WP-005",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-005/S4.md",
+      "sha256": "14dfa1b8c097702b95ed2b0611a4ad361ad4fb30e1a69bf653948a94f3200b43",
+      "predecessor": "WP-005-S3",
+      "successor": "WP-006-S1",
+      "requirements": [
+        "REQ-EVID-001",
+        "REQ-EVID-002"
+      ],
+      "contract_sha256": "4229663a2429a83e80e4777f90bcbe7466704e3951f28bd81f95ba5aee672b8d",
+      "declaration": "governance/work-packages/WP-005.md"
+    },
+    {
+      "id": "BRIEF-WP-006-S1",
+      "package": "WP-006",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-006/S1.md",
+      "sha256": "6a36e1fc13852471e032be2ba9a1639a22e14d7cd3d012c9c90edc9d0d524b6d",
+      "predecessor": "WP-005-S4",
+      "successor": "WP-006-S2",
+      "requirements": [
+        "REQ-SAFE-001"
+      ],
+      "contract_sha256": "5b8760de6197016ab4e0ef97e280d5c10c921da5ed0a20742500dfd94e09182c",
+      "declaration": "governance/work-packages/WP-006.md"
+    },
+    {
+      "id": "BRIEF-WP-006-S2",
+      "package": "WP-006",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-006/S2.md",
+      "sha256": "0fb12141ded2441474bed4ec47db07fde810de9714abaa1eff1a0c4022c8f170",
+      "predecessor": "WP-006-S1",
+      "successor": "WP-006-S3",
+      "requirements": [
+        "REQ-SAFE-001"
+      ],
+      "contract_sha256": "5b8760de6197016ab4e0ef97e280d5c10c921da5ed0a20742500dfd94e09182c",
+      "declaration": "governance/work-packages/WP-006.md"
+    },
+    {
+      "id": "BRIEF-WP-006-S3",
+      "package": "WP-006",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-006/S3.md",
+      "sha256": "238ab4b77bde68384945875a80f89be968304905e32b8ea5768a4c835959536b",
+      "predecessor": "WP-006-S2",
+      "successor": "WP-006-S4",
+      "requirements": [
+        "REQ-SAFE-001"
+      ],
+      "contract_sha256": "5b8760de6197016ab4e0ef97e280d5c10c921da5ed0a20742500dfd94e09182c",
+      "declaration": "governance/work-packages/WP-006.md"
+    },
+    {
+      "id": "BRIEF-WP-006-S4",
+      "package": "WP-006",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-006/S4.md",
+      "sha256": "14ff44705a5c56a02d75cd11b38aa3b56ef9bc4aacac045c0a47b94c2bbacf35",
+      "predecessor": "WP-006-S3",
+      "successor": "WP-007-S1",
+      "requirements": [
+        "REQ-SAFE-001"
+      ],
+      "contract_sha256": "5b8760de6197016ab4e0ef97e280d5c10c921da5ed0a20742500dfd94e09182c",
+      "declaration": "governance/work-packages/WP-006.md"
+    },
+    {
+      "id": "BRIEF-WP-007-S1",
+      "package": "WP-007",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-007/S1.md",
+      "sha256": "335429d5a2a365a6d5864759e939365770b565f557f2318deabc1fde66cf9074",
+      "predecessor": "WP-006-S4",
+      "successor": "WP-007-S2",
+      "requirements": [
+        "REQ-INTAKE-001"
+      ],
+      "contract_sha256": "5c71fb1b80850de4870925bb8d387aa5433d7fab2e1d58e4c0c9cd0b69f63bb9",
+      "declaration": "governance/work-packages/WP-007.md"
+    },
+    {
+      "id": "BRIEF-WP-007-S2",
+      "package": "WP-007",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-007/S2.md",
+      "sha256": "391d050756ea69d7b16c4f6bfcb92ba5803ba30f9601d7d5f4ba1ce89b29d8f0",
+      "predecessor": "WP-007-S1",
+      "successor": "WP-007-S3",
+      "requirements": [
+        "REQ-INTAKE-001"
+      ],
+      "contract_sha256": "5c71fb1b80850de4870925bb8d387aa5433d7fab2e1d58e4c0c9cd0b69f63bb9",
+      "declaration": "governance/work-packages/WP-007.md"
+    },
+    {
+      "id": "BRIEF-WP-007-S3",
+      "package": "WP-007",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-007/S3.md",
+      "sha256": "9dc00fab61ac7b21114a6ba12453e6dd74eaa6ac112f4e913e0d9097ea0add09",
+      "predecessor": "WP-007-S2",
+      "successor": "WP-007-S4",
+      "requirements": [
+        "REQ-INTAKE-001"
+      ],
+      "contract_sha256": "5c71fb1b80850de4870925bb8d387aa5433d7fab2e1d58e4c0c9cd0b69f63bb9",
+      "declaration": "governance/work-packages/WP-007.md"
+    },
+    {
+      "id": "BRIEF-WP-007-S4",
+      "package": "WP-007",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-007/S4.md",
+      "sha256": "91030238a1908e18ce72feb8d3165670a6f88e4a4fcfc1e397442dc7de2c09e7",
+      "predecessor": "WP-007-S3",
+      "successor": "WP-008-S1",
+      "requirements": [
+        "REQ-INTAKE-001"
+      ],
+      "contract_sha256": "5c71fb1b80850de4870925bb8d387aa5433d7fab2e1d58e4c0c9cd0b69f63bb9",
+      "declaration": "governance/work-packages/WP-007.md"
+    },
+    {
+      "id": "BRIEF-WP-008-S1",
+      "package": "WP-008",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-008/S1.md",
+      "sha256": "54ef66f24c0dffeb9e90368daebb882d5b6a5d2196e52807ef95eea3630aae37",
+      "predecessor": "WP-007-S4",
+      "successor": "WP-008-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "12b61c4d522b33dc7ea5f21348aed0bef37eca9cbef6f3dfad537e232da8154c",
+      "declaration": "governance/work-packages/WP-008.md"
+    },
+    {
+      "id": "BRIEF-WP-008-S2",
+      "package": "WP-008",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-008/S2.md",
+      "sha256": "3a1582f55f7d6533be82f61a488134efd0f383dea487725b9f0e32d349ff4053",
+      "predecessor": "WP-008-S1",
+      "successor": "WP-008-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "12b61c4d522b33dc7ea5f21348aed0bef37eca9cbef6f3dfad537e232da8154c",
+      "declaration": "governance/work-packages/WP-008.md"
+    },
+    {
+      "id": "BRIEF-WP-008-S3",
+      "package": "WP-008",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-008/S3.md",
+      "sha256": "dc5480b1aabf20928b89e4191071d7743c325c3c40c77026424bcb10aff4bf7d",
+      "predecessor": "WP-008-S2",
+      "successor": "WP-008-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "12b61c4d522b33dc7ea5f21348aed0bef37eca9cbef6f3dfad537e232da8154c",
+      "declaration": "governance/work-packages/WP-008.md"
+    },
+    {
+      "id": "BRIEF-WP-008-S4",
+      "package": "WP-008",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-008/S4.md",
+      "sha256": "c5ec3fb3926f3e12a99bd4d045898edf7e00ffa3e7e21c6b8e091c2335eb6b28",
+      "predecessor": "WP-008-S3",
+      "successor": "WP-009-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "12b61c4d522b33dc7ea5f21348aed0bef37eca9cbef6f3dfad537e232da8154c",
+      "declaration": "governance/work-packages/WP-008.md"
+    },
+    {
+      "id": "BRIEF-WP-009-S1",
+      "package": "WP-009",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-009/S1.md",
+      "sha256": "40cdb18028c2f5fcb1e43cd9f8f6826fd07476bd013d43dec0dab0fe8fcd2cb3",
+      "predecessor": "WP-008-S4",
+      "successor": "WP-009-S2",
+      "requirements": [
+        "REQ-CLAIM-001"
+      ],
+      "contract_sha256": "6b51c71f4b7bf1515a1e2a8e57ed3b6b3e1b99476443b6e0f8358639586e405b",
+      "declaration": "governance/work-packages/WP-009.md"
+    },
+    {
+      "id": "BRIEF-WP-009-S2",
+      "package": "WP-009",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-009/S2.md",
+      "sha256": "0024425b9eaab783d04792065885400bcdd5391fc7d1d013d9fe7ab746807314",
+      "predecessor": "WP-009-S1",
+      "successor": "WP-009-S3",
+      "requirements": [
+        "REQ-CLAIM-001"
+      ],
+      "contract_sha256": "6b51c71f4b7bf1515a1e2a8e57ed3b6b3e1b99476443b6e0f8358639586e405b",
+      "declaration": "governance/work-packages/WP-009.md"
+    },
+    {
+      "id": "BRIEF-WP-009-S3",
+      "package": "WP-009",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-009/S3.md",
+      "sha256": "3279424df4a9437de014f1b8731a0ff3952f86e39e2c3a3620bcd2bf4b533247",
+      "predecessor": "WP-009-S2",
+      "successor": "WP-009-S4",
+      "requirements": [
+        "REQ-CLAIM-001"
+      ],
+      "contract_sha256": "6b51c71f4b7bf1515a1e2a8e57ed3b6b3e1b99476443b6e0f8358639586e405b",
+      "declaration": "governance/work-packages/WP-009.md"
+    },
+    {
+      "id": "BRIEF-WP-009-S4",
+      "package": "WP-009",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-009/S4.md",
+      "sha256": "e1d6c67e2712208a1ff86beba0a09653ac7d0592d4df73cf46c599ce17d1c941",
+      "predecessor": "WP-009-S3",
+      "successor": "WP-010-S1",
+      "requirements": [
+        "REQ-CLAIM-001"
+      ],
+      "contract_sha256": "6b51c71f4b7bf1515a1e2a8e57ed3b6b3e1b99476443b6e0f8358639586e405b",
+      "declaration": "governance/work-packages/WP-009.md"
+    },
+    {
+      "id": "BRIEF-WP-010-S1",
+      "package": "WP-010",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-010/S1.md",
+      "sha256": "fe1ed9e26f2c5bf29f5f514e964bb09f21bc572e7287296d482f3c732b76bb8b",
+      "predecessor": "WP-009-S4",
+      "successor": "WP-010-S2",
+      "requirements": [
+        "REQ-SEM-001"
+      ],
+      "contract_sha256": "aac09d2abfeb6df266312e9298251fe7c2c10c80f928c64bb89ac40616648260",
+      "declaration": "governance/work-packages/WP-010.md"
+    },
+    {
+      "id": "BRIEF-WP-010-S2",
+      "package": "WP-010",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-010/S2.md",
+      "sha256": "dfaeeccea15828eb7ceddd5ae4b4c0b313784770347b1c5cba7276d6b05623f6",
+      "predecessor": "WP-010-S1",
+      "successor": "WP-010-S3",
+      "requirements": [
+        "REQ-SEM-001"
+      ],
+      "contract_sha256": "aac09d2abfeb6df266312e9298251fe7c2c10c80f928c64bb89ac40616648260",
+      "declaration": "governance/work-packages/WP-010.md"
+    },
+    {
+      "id": "BRIEF-WP-010-S3",
+      "package": "WP-010",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-010/S3.md",
+      "sha256": "21369bb7f8558f8bedbddd503e9c5b0932f4e6cbed5cbf6673e3054140641535",
+      "predecessor": "WP-010-S2",
+      "successor": "WP-010-S4",
+      "requirements": [
+        "REQ-SEM-001"
+      ],
+      "contract_sha256": "aac09d2abfeb6df266312e9298251fe7c2c10c80f928c64bb89ac40616648260",
+      "declaration": "governance/work-packages/WP-010.md"
+    },
+    {
+      "id": "BRIEF-WP-010-S4",
+      "package": "WP-010",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-010/S4.md",
+      "sha256": "6105aa978733d0b479f3f4fa8d2d85b9899e4b835bf5071f87070c7e25461e30",
+      "predecessor": "WP-010-S3",
+      "successor": "WP-011-S1",
+      "requirements": [
+        "REQ-SEM-001"
+      ],
+      "contract_sha256": "aac09d2abfeb6df266312e9298251fe7c2c10c80f928c64bb89ac40616648260",
+      "declaration": "governance/work-packages/WP-010.md"
+    },
+    {
+      "id": "BRIEF-WP-011-S1",
+      "package": "WP-011",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-011/S1.md",
+      "sha256": "bb83ecf5f39b3a423518943bce5a0ccd954c9bd51955008731a085174d4c5c38",
+      "predecessor": "WP-010-S4",
+      "successor": "WP-011-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "181a3f45765c0ea98b5a15fed818c29b7694f226031b100582d593d8c5ecd6f8",
+      "declaration": "governance/work-packages/WP-011.md"
+    },
+    {
+      "id": "BRIEF-WP-011-S2",
+      "package": "WP-011",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-011/S2.md",
+      "sha256": "18f6fef2bc026b3c40a9af9c55b5c7415521988a52b4f8364d5201a853aa7d2d",
+      "predecessor": "WP-011-S1",
+      "successor": "WP-011-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "181a3f45765c0ea98b5a15fed818c29b7694f226031b100582d593d8c5ecd6f8",
+      "declaration": "governance/work-packages/WP-011.md"
+    },
+    {
+      "id": "BRIEF-WP-011-S3",
+      "package": "WP-011",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-011/S3.md",
+      "sha256": "cdae350af7734507e8ec61d4cb31f0483dd4532fb90ee4acdac760acc665e09e",
+      "predecessor": "WP-011-S2",
+      "successor": "WP-011-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "181a3f45765c0ea98b5a15fed818c29b7694f226031b100582d593d8c5ecd6f8",
+      "declaration": "governance/work-packages/WP-011.md"
+    },
+    {
+      "id": "BRIEF-WP-011-S4",
+      "package": "WP-011",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-011/S4.md",
+      "sha256": "cf9a96cf4947d88c4099327a34b637d9bf413d3243c0fe52a464dba22b27848b",
+      "predecessor": "WP-011-S3",
+      "successor": "WP-012-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "181a3f45765c0ea98b5a15fed818c29b7694f226031b100582d593d8c5ecd6f8",
+      "declaration": "governance/work-packages/WP-011.md"
+    },
+    {
+      "id": "BRIEF-WP-012-S1",
+      "package": "WP-012",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-012/S1.md",
+      "sha256": "f78cd7cd2e2011b66de5db006bc160b3a6eac1eb533c35204781e7dc597bb477",
+      "predecessor": "WP-011-S4",
+      "successor": "WP-012-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d8a47af9a3cefe233e42af0e43fea4903695876cac91be1fe4f6ad1bdb1c4e24",
+      "declaration": "governance/work-packages/WP-012.md"
+    },
+    {
+      "id": "BRIEF-WP-012-S2",
+      "package": "WP-012",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-012/S2.md",
+      "sha256": "12fdd4501e2427a7363345fd29ae0cba1fa6d43ecb91a13d161de3a7f8a22a92",
+      "predecessor": "WP-012-S1",
+      "successor": "WP-012-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d8a47af9a3cefe233e42af0e43fea4903695876cac91be1fe4f6ad1bdb1c4e24",
+      "declaration": "governance/work-packages/WP-012.md"
+    },
+    {
+      "id": "BRIEF-WP-012-S3",
+      "package": "WP-012",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-012/S3.md",
+      "sha256": "0944ddb753aaa3b656d022d104f3e9354dd334f6550a0d62a42cf3b41f364b19",
+      "predecessor": "WP-012-S2",
+      "successor": "WP-012-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d8a47af9a3cefe233e42af0e43fea4903695876cac91be1fe4f6ad1bdb1c4e24",
+      "declaration": "governance/work-packages/WP-012.md"
+    },
+    {
+      "id": "BRIEF-WP-012-S4",
+      "package": "WP-012",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-012/S4.md",
+      "sha256": "22a6d9b0d7c8d6e35ddbaa89e663b74c2dad9fe6f92fb102b2b2f908f8f03d77",
+      "predecessor": "WP-012-S3",
+      "successor": "WP-013-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d8a47af9a3cefe233e42af0e43fea4903695876cac91be1fe4f6ad1bdb1c4e24",
+      "declaration": "governance/work-packages/WP-012.md"
+    },
+    {
+      "id": "BRIEF-WP-013-S1",
+      "package": "WP-013",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-013/S1.md",
+      "sha256": "bab7b6be81c21200cfec20cffda4363795ea7cad42a9e41b7f4c6c15ef4809b8",
+      "predecessor": "WP-012-S4",
+      "successor": "WP-013-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "79d72092f297998fbdf5e44a3a2e3888842f19036c98d1c233c5a99364dc7a68",
+      "declaration": "governance/work-packages/WP-013.md"
+    },
+    {
+      "id": "BRIEF-WP-013-S2",
+      "package": "WP-013",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-013/S2.md",
+      "sha256": "ffbb9c855c43e4aa13419c48b3a08a638e1f61362e886a9f2aea61d0ede7cdcc",
+      "predecessor": "WP-013-S1",
+      "successor": "WP-013-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "79d72092f297998fbdf5e44a3a2e3888842f19036c98d1c233c5a99364dc7a68",
+      "declaration": "governance/work-packages/WP-013.md"
+    },
+    {
+      "id": "BRIEF-WP-013-S3",
+      "package": "WP-013",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-013/S3.md",
+      "sha256": "d238f24e0d8e3adae8ce66a0867e638c755340832c9844213bc1c19bcb6737bc",
+      "predecessor": "WP-013-S2",
+      "successor": "WP-013-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "79d72092f297998fbdf5e44a3a2e3888842f19036c98d1c233c5a99364dc7a68",
+      "declaration": "governance/work-packages/WP-013.md"
+    },
+    {
+      "id": "BRIEF-WP-013-S4",
+      "package": "WP-013",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-013/S4.md",
+      "sha256": "a771259f1dfc936c777cd64ee57ba1a54b6e5dbb8014faa1625c97b3aaa3fdca",
+      "predecessor": "WP-013-S3",
+      "successor": "WP-014-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "79d72092f297998fbdf5e44a3a2e3888842f19036c98d1c233c5a99364dc7a68",
+      "declaration": "governance/work-packages/WP-013.md"
+    },
+    {
+      "id": "BRIEF-WP-014-S1",
+      "package": "WP-014",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-014/S1.md",
+      "sha256": "bd0b926eb1b6027d7351607d9a10c50931a01154b6db050e3f78b8e4e8be00fe",
+      "predecessor": "WP-013-S4",
+      "successor": "WP-014-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ad51c6adf2c2f5788c891b9e08c1a501324316d218a4b6ec814c9e0006fe8617",
+      "declaration": "governance/work-packages/WP-014.md"
+    },
+    {
+      "id": "BRIEF-WP-014-S2",
+      "package": "WP-014",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-014/S2.md",
+      "sha256": "e94924bb9226093f56c92619ae416b729c64976596e393b2117ed8194aab5b20",
+      "predecessor": "WP-014-S1",
+      "successor": "WP-014-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ad51c6adf2c2f5788c891b9e08c1a501324316d218a4b6ec814c9e0006fe8617",
+      "declaration": "governance/work-packages/WP-014.md"
+    },
+    {
+      "id": "BRIEF-WP-014-S3",
+      "package": "WP-014",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-014/S3.md",
+      "sha256": "920e603fe1126a3ceceef5a051302b1bc5c07af7f8203c852be79a034d98df7b",
+      "predecessor": "WP-014-S2",
+      "successor": "WP-014-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ad51c6adf2c2f5788c891b9e08c1a501324316d218a4b6ec814c9e0006fe8617",
+      "declaration": "governance/work-packages/WP-014.md"
+    },
+    {
+      "id": "BRIEF-WP-014-S4",
+      "package": "WP-014",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-014/S4.md",
+      "sha256": "70978374e3e0f14f6d770ec4c65382ad0d2591df8231c3ad7c432223ff3fb400",
+      "predecessor": "WP-014-S3",
+      "successor": "WP-015-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "ad51c6adf2c2f5788c891b9e08c1a501324316d218a4b6ec814c9e0006fe8617",
+      "declaration": "governance/work-packages/WP-014.md"
+    },
+    {
+      "id": "BRIEF-WP-015-S1",
+      "package": "WP-015",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-015/S1.md",
+      "sha256": "297baaadefaac84312ed7b3e520d8b34696d80f21602e6ca0423757ad228b985",
+      "predecessor": "WP-014-S4",
+      "successor": "WP-015-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "e72723e13c332edd606109c9ca804d99e9b8a8d465393eda088d1e5616007778",
+      "declaration": "governance/work-packages/WP-015.md"
+    },
+    {
+      "id": "BRIEF-WP-015-S2",
+      "package": "WP-015",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-015/S2.md",
+      "sha256": "a37e09b25db364a5be24d2ec06f25672f6156e01cfe9ac8c0b66fa9baf2dfc1d",
+      "predecessor": "WP-015-S1",
+      "successor": "WP-015-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "e72723e13c332edd606109c9ca804d99e9b8a8d465393eda088d1e5616007778",
+      "declaration": "governance/work-packages/WP-015.md"
+    },
+    {
+      "id": "BRIEF-WP-015-S3",
+      "package": "WP-015",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-015/S3.md",
+      "sha256": "1e19eb423ae510173a2d983fe62fd45a05b1bce0877fff03f2f12520c7de82bc",
+      "predecessor": "WP-015-S2",
+      "successor": "WP-015-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "e72723e13c332edd606109c9ca804d99e9b8a8d465393eda088d1e5616007778",
+      "declaration": "governance/work-packages/WP-015.md"
+    },
+    {
+      "id": "BRIEF-WP-015-S4",
+      "package": "WP-015",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-015/S4.md",
+      "sha256": "d4486005e61d1b5c289a01b67372a5a26648cef9ab08f8e1041415f0e5b07c0a",
+      "predecessor": "WP-015-S3",
+      "successor": "WP-016-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "e72723e13c332edd606109c9ca804d99e9b8a8d465393eda088d1e5616007778",
+      "declaration": "governance/work-packages/WP-015.md"
+    },
+    {
+      "id": "BRIEF-WP-016-S1",
+      "package": "WP-016",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-016/S1.md",
+      "sha256": "d35a28ca37c3a80e66ae81d7a3675cca8f24f9388cadc34db3e785809a8dae67",
+      "predecessor": "WP-015-S4",
+      "successor": "WP-016-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "380919d42732a6cdc4248b5cf0c387342515e663c3b20ea875bf84d81f698a1d",
+      "declaration": "governance/work-packages/WP-016.md"
+    },
+    {
+      "id": "BRIEF-WP-016-S2",
+      "package": "WP-016",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-016/S2.md",
+      "sha256": "5588c6101e8adde775740f1aa2bde8a30aea4c709517d43af42ce87f37f70a47",
+      "predecessor": "WP-016-S1",
+      "successor": "WP-016-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "380919d42732a6cdc4248b5cf0c387342515e663c3b20ea875bf84d81f698a1d",
+      "declaration": "governance/work-packages/WP-016.md"
+    },
+    {
+      "id": "BRIEF-WP-016-S3",
+      "package": "WP-016",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-016/S3.md",
+      "sha256": "80dae7da446533f9d2ac50634401b24706250c1c1f5ca9e7007274211aa4ac4a",
+      "predecessor": "WP-016-S2",
+      "successor": "WP-016-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "380919d42732a6cdc4248b5cf0c387342515e663c3b20ea875bf84d81f698a1d",
+      "declaration": "governance/work-packages/WP-016.md"
+    },
+    {
+      "id": "BRIEF-WP-016-S4",
+      "package": "WP-016",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-016/S4.md",
+      "sha256": "92826c4c58f05697c28aa9a9971f62b254d4eba511f7a9084e04bc560646288d",
+      "predecessor": "WP-016-S3",
+      "successor": "WP-017-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "380919d42732a6cdc4248b5cf0c387342515e663c3b20ea875bf84d81f698a1d",
+      "declaration": "governance/work-packages/WP-016.md"
+    },
+    {
+      "id": "BRIEF-WP-017-S1",
+      "package": "WP-017",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-017/S1.md",
+      "sha256": "6447e9607999c8a0ea311dac04b6f79afc31411b632a7d6c025f6b14e1666045",
+      "predecessor": "WP-016-S4",
+      "successor": "WP-017-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "249a96173f1b1e5da9411bca08504b5d8416478301b4ea35807626137e374fed",
+      "declaration": "governance/work-packages/WP-017.md"
+    },
+    {
+      "id": "BRIEF-WP-017-S2",
+      "package": "WP-017",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-017/S2.md",
+      "sha256": "b09dda07112c1cde50007c21b76990047e9f1e726b87a1683963e38e18cdc07c",
+      "predecessor": "WP-017-S1",
+      "successor": "WP-017-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "249a96173f1b1e5da9411bca08504b5d8416478301b4ea35807626137e374fed",
+      "declaration": "governance/work-packages/WP-017.md"
+    },
+    {
+      "id": "BRIEF-WP-017-S3",
+      "package": "WP-017",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-017/S3.md",
+      "sha256": "4cd37daeb61e8cd39144310957e0ab10bdc5471173285e60bf86f9caf018ef28",
+      "predecessor": "WP-017-S2",
+      "successor": "WP-017-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "249a96173f1b1e5da9411bca08504b5d8416478301b4ea35807626137e374fed",
+      "declaration": "governance/work-packages/WP-017.md"
+    },
+    {
+      "id": "BRIEF-WP-017-S4",
+      "package": "WP-017",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-017/S4.md",
+      "sha256": "b11d5325d87ac79d5a0ec7e9ebee635e022337281aeb6e60322aca7dc1757501",
+      "predecessor": "WP-017-S3",
+      "successor": "WP-018-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "249a96173f1b1e5da9411bca08504b5d8416478301b4ea35807626137e374fed",
+      "declaration": "governance/work-packages/WP-017.md"
+    },
+    {
+      "id": "BRIEF-WP-018-S1",
+      "package": "WP-018",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-018/S1.md",
+      "sha256": "a0ad6f289ec8b26059d12ff00b8e9bb491c2def7ef429696606f4b3e56465840",
+      "predecessor": "WP-017-S4",
+      "successor": "WP-018-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "3e17ffa73ee75dfe0f8dfadb3336fd40876a2751fc2c1fb6c21ff85cab753dde",
+      "declaration": "governance/work-packages/WP-018.md"
+    },
+    {
+      "id": "BRIEF-WP-018-S2",
+      "package": "WP-018",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-018/S2.md",
+      "sha256": "64c8f875556f7564cfcb2ccee57df8c6945aa37de2e9f0f790fc7f63ab5ca82e",
+      "predecessor": "WP-018-S1",
+      "successor": "WP-018-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "3e17ffa73ee75dfe0f8dfadb3336fd40876a2751fc2c1fb6c21ff85cab753dde",
+      "declaration": "governance/work-packages/WP-018.md"
+    },
+    {
+      "id": "BRIEF-WP-018-S3",
+      "package": "WP-018",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-018/S3.md",
+      "sha256": "59349b1a9fbfabee8a707f2121a67cf67fe9a3e28410e72a36731b3d90dd855d",
+      "predecessor": "WP-018-S2",
+      "successor": "WP-018-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "3e17ffa73ee75dfe0f8dfadb3336fd40876a2751fc2c1fb6c21ff85cab753dde",
+      "declaration": "governance/work-packages/WP-018.md"
+    },
+    {
+      "id": "BRIEF-WP-018-S4",
+      "package": "WP-018",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-018/S4.md",
+      "sha256": "e603b82fb84eeb0be3cae0ed75cc6f237318f3fd67cda403def0f0c63f9aa045",
+      "predecessor": "WP-018-S3",
+      "successor": "WP-019-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "3e17ffa73ee75dfe0f8dfadb3336fd40876a2751fc2c1fb6c21ff85cab753dde",
+      "declaration": "governance/work-packages/WP-018.md"
+    },
+    {
+      "id": "BRIEF-WP-019-S1",
+      "package": "WP-019",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-019/S1.md",
+      "sha256": "63ff581b7ea3d1475f9761a3d1c9bd18315c9b7eb5a7a87ea7a759645cf52801",
+      "predecessor": "WP-018-S4",
+      "successor": "WP-019-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a42480f7e2fc05884fd49495de0edc5f455c208a7659fbeb6ad43042b4529af",
+      "declaration": "governance/work-packages/WP-019.md"
+    },
+    {
+      "id": "BRIEF-WP-019-S2",
+      "package": "WP-019",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-019/S2.md",
+      "sha256": "690854611916623dc1a73af40c3c357a3cfa9cc96b9801a502de3500a5d937d6",
+      "predecessor": "WP-019-S1",
+      "successor": "WP-019-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a42480f7e2fc05884fd49495de0edc5f455c208a7659fbeb6ad43042b4529af",
+      "declaration": "governance/work-packages/WP-019.md"
+    },
+    {
+      "id": "BRIEF-WP-019-S3",
+      "package": "WP-019",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-019/S3.md",
+      "sha256": "5bd5133a3dfc5d42eb014f1337a2c447e9983e636a43af355d2cd3277bf6e672",
+      "predecessor": "WP-019-S2",
+      "successor": "WP-019-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a42480f7e2fc05884fd49495de0edc5f455c208a7659fbeb6ad43042b4529af",
+      "declaration": "governance/work-packages/WP-019.md"
+    },
+    {
+      "id": "BRIEF-WP-019-S4",
+      "package": "WP-019",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-019/S4.md",
+      "sha256": "2e17893e8aa66c287c0adbe8cb09608a7a5cde06fa6f5a4ca7c0170887792e37",
+      "predecessor": "WP-019-S3",
+      "successor": "WP-020-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a42480f7e2fc05884fd49495de0edc5f455c208a7659fbeb6ad43042b4529af",
+      "declaration": "governance/work-packages/WP-019.md"
+    },
+    {
+      "id": "BRIEF-WP-020-S1",
+      "package": "WP-020",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-020/S1.md",
+      "sha256": "aee2de1595eb118ad7c993afcb325b297443944630a5f914771d55b7973e6a93",
+      "predecessor": "WP-019-S4",
+      "successor": "WP-020-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c37662bae3a5864e83cd60af134e08da203dd7e8931335f318542788de8ac450",
+      "declaration": "governance/work-packages/WP-020.md"
+    },
+    {
+      "id": "BRIEF-WP-020-S2",
+      "package": "WP-020",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-020/S2.md",
+      "sha256": "e9aaff65286b2ba85ef65aafb47b327158e273cc3fb1f4d43f5fc5b2647d45ee",
+      "predecessor": "WP-020-S1",
+      "successor": "WP-020-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c37662bae3a5864e83cd60af134e08da203dd7e8931335f318542788de8ac450",
+      "declaration": "governance/work-packages/WP-020.md"
+    },
+    {
+      "id": "BRIEF-WP-020-S3",
+      "package": "WP-020",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-020/S3.md",
+      "sha256": "3dd6df75073c7a5c59a64aae87a4ac715cd10a9661bf7bf900f9f6fc0fee8f20",
+      "predecessor": "WP-020-S2",
+      "successor": "WP-020-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c37662bae3a5864e83cd60af134e08da203dd7e8931335f318542788de8ac450",
+      "declaration": "governance/work-packages/WP-020.md"
+    },
+    {
+      "id": "BRIEF-WP-020-S4",
+      "package": "WP-020",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-020/S4.md",
+      "sha256": "508a58ce8196cfaf31dce9700427d5666d51aa53a6abd28176dae14d87b07ab1",
+      "predecessor": "WP-020-S3",
+      "successor": "WP-021-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c37662bae3a5864e83cd60af134e08da203dd7e8931335f318542788de8ac450",
+      "declaration": "governance/work-packages/WP-020.md"
+    },
+    {
+      "id": "BRIEF-WP-021-S1",
+      "package": "WP-021",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-021/S1.md",
+      "sha256": "0667b726ea704ece5048ce25b6f6a6a4bafb7dd9847c380691556a90dba57c5b",
+      "predecessor": "WP-020-S4",
+      "successor": "WP-021-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "9b006a834a63b73700d8dd276ea358acd1f12367016d457633412cc3f9201692",
+      "declaration": "governance/work-packages/WP-021.md"
+    },
+    {
+      "id": "BRIEF-WP-021-S2",
+      "package": "WP-021",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-021/S2.md",
+      "sha256": "80a56fd01c769ed0ff0ec1f7bf5a8feb87315f5e76a0fa7c74f3b16501cdbcf5",
+      "predecessor": "WP-021-S1",
+      "successor": "WP-021-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "9b006a834a63b73700d8dd276ea358acd1f12367016d457633412cc3f9201692",
+      "declaration": "governance/work-packages/WP-021.md"
+    },
+    {
+      "id": "BRIEF-WP-021-S3",
+      "package": "WP-021",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-021/S3.md",
+      "sha256": "510fc0b1e668857dbd3b4f36eb43cf523209befb3924b0bdc48c065cee56f8fe",
+      "predecessor": "WP-021-S2",
+      "successor": "WP-021-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "9b006a834a63b73700d8dd276ea358acd1f12367016d457633412cc3f9201692",
+      "declaration": "governance/work-packages/WP-021.md"
+    },
+    {
+      "id": "BRIEF-WP-021-S4",
+      "package": "WP-021",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-021/S4.md",
+      "sha256": "5acf942ecef8a449897df0ed4113cbf0677c032829cb0ec93e2dc919611035e6",
+      "predecessor": "WP-021-S3",
+      "successor": "WP-022-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "9b006a834a63b73700d8dd276ea358acd1f12367016d457633412cc3f9201692",
+      "declaration": "governance/work-packages/WP-021.md"
+    },
+    {
+      "id": "BRIEF-WP-022-S1",
+      "package": "WP-022",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-022/S1.md",
+      "sha256": "8a6fe0c4c51a06d7eff612a376aaf7044fee83c3293f0ebbec8f19deea29fb80",
+      "predecessor": "WP-021-S4",
+      "successor": "WP-022-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d7f2b81c51f98ab66bab28a78d551c5b7e036397438143e685edf548e4af1cf9",
+      "declaration": "governance/work-packages/WP-022.md"
+    },
+    {
+      "id": "BRIEF-WP-022-S2",
+      "package": "WP-022",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-022/S2.md",
+      "sha256": "f0928a660ac287a45b16a7f9d5e8ab7c1a5a6487eea57a485cad045e2693ea7a",
+      "predecessor": "WP-022-S1",
+      "successor": "WP-022-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d7f2b81c51f98ab66bab28a78d551c5b7e036397438143e685edf548e4af1cf9",
+      "declaration": "governance/work-packages/WP-022.md"
+    },
+    {
+      "id": "BRIEF-WP-022-S3",
+      "package": "WP-022",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-022/S3.md",
+      "sha256": "abd4216db92dc27889d6c575a578ac7c89bd8ab462dcadef13d55b1ddf64a900",
+      "predecessor": "WP-022-S2",
+      "successor": "WP-022-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d7f2b81c51f98ab66bab28a78d551c5b7e036397438143e685edf548e4af1cf9",
+      "declaration": "governance/work-packages/WP-022.md"
+    },
+    {
+      "id": "BRIEF-WP-022-S4",
+      "package": "WP-022",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-022/S4.md",
+      "sha256": "c36d01be8b9b54d7f4e45b30c99d419e9d1bb534bcabf56d3d6849ac5a8e3de3",
+      "predecessor": "WP-022-S3",
+      "successor": "WP-023-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "d7f2b81c51f98ab66bab28a78d551c5b7e036397438143e685edf548e4af1cf9",
+      "declaration": "governance/work-packages/WP-022.md"
+    },
+    {
+      "id": "BRIEF-WP-023-S1",
+      "package": "WP-023",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-023/S1.md",
+      "sha256": "ea5cccd708141812e5a01feae9bfe4aea6bfd38727e2b052957c09c4f7b6fb6f",
+      "predecessor": "WP-022-S4",
+      "successor": "WP-023-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "6f947993780bc32e4f37b841d82eed20722d478e7665d72b6dc98fe4a8f67e7b",
+      "declaration": "governance/work-packages/WP-023.md"
+    },
+    {
+      "id": "BRIEF-WP-023-S2",
+      "package": "WP-023",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-023/S2.md",
+      "sha256": "a8dcc2d21bec473b5180052fa9db1224c304de6dcd5bb3b867ee39d2353897c4",
+      "predecessor": "WP-023-S1",
+      "successor": "WP-023-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "6f947993780bc32e4f37b841d82eed20722d478e7665d72b6dc98fe4a8f67e7b",
+      "declaration": "governance/work-packages/WP-023.md"
+    },
+    {
+      "id": "BRIEF-WP-023-S3",
+      "package": "WP-023",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-023/S3.md",
+      "sha256": "0fcaa484159f27997aa6de186c1d4cd047b7a8f77f59a06633c2e4385f3c09a8",
+      "predecessor": "WP-023-S2",
+      "successor": "WP-023-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "6f947993780bc32e4f37b841d82eed20722d478e7665d72b6dc98fe4a8f67e7b",
+      "declaration": "governance/work-packages/WP-023.md"
+    },
+    {
+      "id": "BRIEF-WP-023-S4",
+      "package": "WP-023",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-023/S4.md",
+      "sha256": "cc6d1d942f6d76fe8bd4d721a840b122a7608d8cae6c789d0eaa28d50c6ab214",
+      "predecessor": "WP-023-S3",
+      "successor": "WP-024-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "6f947993780bc32e4f37b841d82eed20722d478e7665d72b6dc98fe4a8f67e7b",
+      "declaration": "governance/work-packages/WP-023.md"
+    },
+    {
+      "id": "BRIEF-WP-024-S1",
+      "package": "WP-024",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-024/S1.md",
+      "sha256": "257cb46bf4efbbecb2b5bc31c4e2684cc6d382ff6c5633838285baece2060a85",
+      "predecessor": "WP-023-S4",
+      "successor": "WP-024-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a819258526f80650ce9bf837548490c7251585a82ada296a8700074a4e967d6",
+      "declaration": "governance/work-packages/WP-024.md"
+    },
+    {
+      "id": "BRIEF-WP-024-S2",
+      "package": "WP-024",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-024/S2.md",
+      "sha256": "0037ecc928a13957e866530bebb4f94d4e500b426dfda3c2c90123f54f0597f5",
+      "predecessor": "WP-024-S1",
+      "successor": "WP-024-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a819258526f80650ce9bf837548490c7251585a82ada296a8700074a4e967d6",
+      "declaration": "governance/work-packages/WP-024.md"
+    },
+    {
+      "id": "BRIEF-WP-024-S3",
+      "package": "WP-024",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-024/S3.md",
+      "sha256": "f2e90fa9fc37b4efb56c99bcb9430c93d79302227d6302161d08604f3ff23f67",
+      "predecessor": "WP-024-S2",
+      "successor": "WP-024-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a819258526f80650ce9bf837548490c7251585a82ada296a8700074a4e967d6",
+      "declaration": "governance/work-packages/WP-024.md"
+    },
+    {
+      "id": "BRIEF-WP-024-S4",
+      "package": "WP-024",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-024/S4.md",
+      "sha256": "c0f20924e9e29badaa137423c36b837f88ce33d77160945c151bea7ebc9d9014",
+      "predecessor": "WP-024-S3",
+      "successor": "WP-025-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a819258526f80650ce9bf837548490c7251585a82ada296a8700074a4e967d6",
+      "declaration": "governance/work-packages/WP-024.md"
+    },
+    {
+      "id": "BRIEF-WP-025-S1",
+      "package": "WP-025",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-025/S1.md",
+      "sha256": "36af1636925070d123f5bd94adbdba9e7b09d70b4efa5ae547216e8f0abb7eff",
+      "predecessor": "WP-024-S4",
+      "successor": "WP-025-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "97754349fbcea8809bb76ff947148c4a3ada582a2200c46796bae66d58ce4fc9",
+      "declaration": "governance/work-packages/WP-025.md"
+    },
+    {
+      "id": "BRIEF-WP-025-S2",
+      "package": "WP-025",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-025/S2.md",
+      "sha256": "384634e4f39231b5b49a1ba14de1037750ae1b3fa7d811f96b3140e3a1c1f684",
+      "predecessor": "WP-025-S1",
+      "successor": "WP-025-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "97754349fbcea8809bb76ff947148c4a3ada582a2200c46796bae66d58ce4fc9",
+      "declaration": "governance/work-packages/WP-025.md"
+    },
+    {
+      "id": "BRIEF-WP-025-S3",
+      "package": "WP-025",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-025/S3.md",
+      "sha256": "8cfb45c8b27a331682148cda9cacb866f99e017043da27e0ab60cb976f78a04f",
+      "predecessor": "WP-025-S2",
+      "successor": "WP-025-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "97754349fbcea8809bb76ff947148c4a3ada582a2200c46796bae66d58ce4fc9",
+      "declaration": "governance/work-packages/WP-025.md"
+    },
+    {
+      "id": "BRIEF-WP-025-S4",
+      "package": "WP-025",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-025/S4.md",
+      "sha256": "1258b47e8eb5d15d7397dadbbc7f31dda15ebcc50afafcac87044996677100dd",
+      "predecessor": "WP-025-S3",
+      "successor": "WP-026-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "97754349fbcea8809bb76ff947148c4a3ada582a2200c46796bae66d58ce4fc9",
+      "declaration": "governance/work-packages/WP-025.md"
+    },
+    {
+      "id": "BRIEF-WP-026-S1",
+      "package": "WP-026",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-026/S1.md",
+      "sha256": "db1da223b2d38d00c628ac056a0008885591011ee5de7525b8bc11194a4d83a1",
+      "predecessor": "WP-025-S4",
+      "successor": "WP-026-S2",
+      "requirements": [
+        "REQ-BENCH-001"
+      ],
+      "contract_sha256": "327238654f52461c3b18290fa7f333e5b23ffe13a2272fdca03ec212f6eee511",
+      "declaration": "governance/work-packages/WP-026.md"
+    },
+    {
+      "id": "BRIEF-WP-026-S2",
+      "package": "WP-026",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-026/S2.md",
+      "sha256": "331e3f98d38aa215a9ee6b189af80d72d3f261641e350979b7bdfce7aa1c4016",
+      "predecessor": "WP-026-S1",
+      "successor": "WP-026-S3",
+      "requirements": [
+        "REQ-BENCH-001"
+      ],
+      "contract_sha256": "327238654f52461c3b18290fa7f333e5b23ffe13a2272fdca03ec212f6eee511",
+      "declaration": "governance/work-packages/WP-026.md"
+    },
+    {
+      "id": "BRIEF-WP-026-S3",
+      "package": "WP-026",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-026/S3.md",
+      "sha256": "12e73b5ccfa546e1a69ca183b5dfc82b790b796c4048f8172053848874effe3c",
+      "predecessor": "WP-026-S2",
+      "successor": "WP-026-S4",
+      "requirements": [
+        "REQ-BENCH-001"
+      ],
+      "contract_sha256": "327238654f52461c3b18290fa7f333e5b23ffe13a2272fdca03ec212f6eee511",
+      "declaration": "governance/work-packages/WP-026.md"
+    },
+    {
+      "id": "BRIEF-WP-026-S4",
+      "package": "WP-026",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-026/S4.md",
+      "sha256": "43b684af3b31302b6e47f68ba952190f99a05293670383c9ddfd561c9fec7cb7",
+      "predecessor": "WP-026-S3",
+      "successor": "WP-027-S1",
+      "requirements": [
+        "REQ-BENCH-001"
+      ],
+      "contract_sha256": "327238654f52461c3b18290fa7f333e5b23ffe13a2272fdca03ec212f6eee511",
+      "declaration": "governance/work-packages/WP-026.md"
+    },
+    {
+      "id": "BRIEF-WP-027-S1",
+      "package": "WP-027",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-027/S1.md",
+      "sha256": "5a2870c8b78b6ba20be0067e67e61c458fc71cf71dfc0a21fed57d25e1fcf636",
+      "predecessor": "WP-026-S4",
+      "successor": "WP-027-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "0fc90e508ef9056b40622a0440266194772ea7c22738bfaee936c9ebade7f229",
+      "declaration": "governance/work-packages/WP-027.md"
+    },
+    {
+      "id": "BRIEF-WP-027-S2",
+      "package": "WP-027",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-027/S2.md",
+      "sha256": "42305ee454de58af931f1c762c68dad0a3699cd3155cedad078d0eec6a9bc57c",
+      "predecessor": "WP-027-S1",
+      "successor": "WP-027-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "0fc90e508ef9056b40622a0440266194772ea7c22738bfaee936c9ebade7f229",
+      "declaration": "governance/work-packages/WP-027.md"
+    },
+    {
+      "id": "BRIEF-WP-027-S3",
+      "package": "WP-027",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-027/S3.md",
+      "sha256": "c2423a45d480280fcbeaa8c7e4e021b7702bd7f3b22cf0381974651806d77cd2",
+      "predecessor": "WP-027-S2",
+      "successor": "WP-027-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "0fc90e508ef9056b40622a0440266194772ea7c22738bfaee936c9ebade7f229",
+      "declaration": "governance/work-packages/WP-027.md"
+    },
+    {
+      "id": "BRIEF-WP-027-S4",
+      "package": "WP-027",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-027/S4.md",
+      "sha256": "9035b1a67275edf6da5fc2820fb01ee540c43dec0520431206564ccd2dc1d276",
+      "predecessor": "WP-027-S3",
+      "successor": "WP-028-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "0fc90e508ef9056b40622a0440266194772ea7c22738bfaee936c9ebade7f229",
+      "declaration": "governance/work-packages/WP-027.md"
+    },
+    {
+      "id": "BRIEF-WP-028-S1",
+      "package": "WP-028",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-028/S1.md",
+      "sha256": "64a26b8c78ea322fd49b241f98972da107b3785edf3c27685b0f163331c45ae6",
+      "predecessor": "WP-027-S4",
+      "successor": "WP-028-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a090cb674cf3244f2356780413c21b702814dab6751f29ede71d5a76801042d",
+      "declaration": "governance/work-packages/WP-028.md"
+    },
+    {
+      "id": "BRIEF-WP-028-S2",
+      "package": "WP-028",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-028/S2.md",
+      "sha256": "ae96dc5f57481be2bdd92ad579f8e695558e12d937ab1fc48f7b8638155cb6ef",
+      "predecessor": "WP-028-S1",
+      "successor": "WP-028-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a090cb674cf3244f2356780413c21b702814dab6751f29ede71d5a76801042d",
+      "declaration": "governance/work-packages/WP-028.md"
+    },
+    {
+      "id": "BRIEF-WP-028-S3",
+      "package": "WP-028",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-028/S3.md",
+      "sha256": "2a48cb62044679702c0e936a0527e52c19b3b68d921e8d7f3145e1d35f761950",
+      "predecessor": "WP-028-S2",
+      "successor": "WP-028-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a090cb674cf3244f2356780413c21b702814dab6751f29ede71d5a76801042d",
+      "declaration": "governance/work-packages/WP-028.md"
+    },
+    {
+      "id": "BRIEF-WP-028-S4",
+      "package": "WP-028",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-028/S4.md",
+      "sha256": "a3e0e30a2404ad01b8baf7ae9dee4fcdea14e6585c9a2898070f513ce745c7e5",
+      "predecessor": "WP-028-S3",
+      "successor": "WP-029-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "5a090cb674cf3244f2356780413c21b702814dab6751f29ede71d5a76801042d",
+      "declaration": "governance/work-packages/WP-028.md"
+    },
+    {
+      "id": "BRIEF-WP-029-S1",
+      "package": "WP-029",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-029/S1.md",
+      "sha256": "628b737ba9c57f4e4e9716c3a66ae89cc62e89c4ec0d59cfdf36658aa12c72f5",
+      "predecessor": "WP-028-S4",
+      "successor": "WP-029-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1ada1790ac4ecf5d7fcfef9f735a34869b21ae7b118ddc9797d68c42e503ad2b",
+      "declaration": "governance/work-packages/WP-029.md"
+    },
+    {
+      "id": "BRIEF-WP-029-S2",
+      "package": "WP-029",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-029/S2.md",
+      "sha256": "5850ac8d398c0771c692b0e030f41fda903175227a70c20804b3891efaadb4d7",
+      "predecessor": "WP-029-S1",
+      "successor": "WP-029-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1ada1790ac4ecf5d7fcfef9f735a34869b21ae7b118ddc9797d68c42e503ad2b",
+      "declaration": "governance/work-packages/WP-029.md"
+    },
+    {
+      "id": "BRIEF-WP-029-S3",
+      "package": "WP-029",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-029/S3.md",
+      "sha256": "948edf63a3791e42cc01d44eb79b0e06b46b03dc6b7ad94a81d37edcd1f6d5ce",
+      "predecessor": "WP-029-S2",
+      "successor": "WP-029-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1ada1790ac4ecf5d7fcfef9f735a34869b21ae7b118ddc9797d68c42e503ad2b",
+      "declaration": "governance/work-packages/WP-029.md"
+    },
+    {
+      "id": "BRIEF-WP-029-S4",
+      "package": "WP-029",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-029/S4.md",
+      "sha256": "7336da80ad3c071d31983e104f7cc18a5bfac09d8923549723132240e44a3708",
+      "predecessor": "WP-029-S3",
+      "successor": "WP-030-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1ada1790ac4ecf5d7fcfef9f735a34869b21ae7b118ddc9797d68c42e503ad2b",
+      "declaration": "governance/work-packages/WP-029.md"
+    },
+    {
+      "id": "BRIEF-WP-030-S1",
+      "package": "WP-030",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-030/S1.md",
+      "sha256": "aab2c6780e30d83542d0c53863d450e7c1e38bf5a5d5cc0515137ec9f1221532",
+      "predecessor": "WP-029-S4",
+      "successor": "WP-030-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1f691232d6d188f235485bb757237528d65e8dfc75d23f4b4178a2ffe4245ca1",
+      "declaration": "governance/work-packages/WP-030.md"
+    },
+    {
+      "id": "BRIEF-WP-030-S2",
+      "package": "WP-030",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-030/S2.md",
+      "sha256": "fcf7f940828916ba6100e384f3ddaf4b10b960dba0883210f2c707a9dfff9074",
+      "predecessor": "WP-030-S1",
+      "successor": "WP-030-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1f691232d6d188f235485bb757237528d65e8dfc75d23f4b4178a2ffe4245ca1",
+      "declaration": "governance/work-packages/WP-030.md"
+    },
+    {
+      "id": "BRIEF-WP-030-S3",
+      "package": "WP-030",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-030/S3.md",
+      "sha256": "935f22e1adefb14886f66127c48901842f773fcb264d5887b07ab686238ad5f0",
+      "predecessor": "WP-030-S2",
+      "successor": "WP-030-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1f691232d6d188f235485bb757237528d65e8dfc75d23f4b4178a2ffe4245ca1",
+      "declaration": "governance/work-packages/WP-030.md"
+    },
+    {
+      "id": "BRIEF-WP-030-S4",
+      "package": "WP-030",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-030/S4.md",
+      "sha256": "ac4bfe27cd63aa7d03e3936d4ff8b7ebfcc7c062a26951568b4b5e57987b11c4",
+      "predecessor": "WP-030-S3",
+      "successor": "WP-031-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1f691232d6d188f235485bb757237528d65e8dfc75d23f4b4178a2ffe4245ca1",
+      "declaration": "governance/work-packages/WP-030.md"
+    },
+    {
+      "id": "BRIEF-WP-031-S1",
+      "package": "WP-031",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-031/S1.md",
+      "sha256": "4c4f7df210336ecba579bbf8210c9063c5c8b9412dae908fb49c96842726083e",
+      "predecessor": "WP-030-S4",
+      "successor": "WP-031-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fd97ad5339079bad392e6fb792ecfa571bfdd6f57b8d8b800273198f8c8ad0db",
+      "declaration": "governance/work-packages/WP-031.md"
+    },
+    {
+      "id": "BRIEF-WP-031-S2",
+      "package": "WP-031",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-031/S2.md",
+      "sha256": "da31a1f24eda835d8264111cad795d4f2072aa72ef709f88d084c4313f48bce7",
+      "predecessor": "WP-031-S1",
+      "successor": "WP-031-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fd97ad5339079bad392e6fb792ecfa571bfdd6f57b8d8b800273198f8c8ad0db",
+      "declaration": "governance/work-packages/WP-031.md"
+    },
+    {
+      "id": "BRIEF-WP-031-S3",
+      "package": "WP-031",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-031/S3.md",
+      "sha256": "b46389e23ff86ab8c26a329c75d14c378f4b1a40a005deee6a5357f567a0255a",
+      "predecessor": "WP-031-S2",
+      "successor": "WP-031-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fd97ad5339079bad392e6fb792ecfa571bfdd6f57b8d8b800273198f8c8ad0db",
+      "declaration": "governance/work-packages/WP-031.md"
+    },
+    {
+      "id": "BRIEF-WP-031-S4",
+      "package": "WP-031",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-031/S4.md",
+      "sha256": "936499206202c50963085a2cac715f47336711e62ef2209498d22acbc9caa774",
+      "predecessor": "WP-031-S3",
+      "successor": "WP-032-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fd97ad5339079bad392e6fb792ecfa571bfdd6f57b8d8b800273198f8c8ad0db",
+      "declaration": "governance/work-packages/WP-031.md"
+    },
+    {
+      "id": "BRIEF-WP-032-S1",
+      "package": "WP-032",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-032/S1.md",
+      "sha256": "84a1aec88d2a343d62222618249b13bef75ac76f7cbeadd632591038e067b743",
+      "predecessor": "WP-031-S4",
+      "successor": "WP-032-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fc56da8a8f6f0c29b864ca84a1ff38dd7f54a046f35bf61f0a562f9c8ff21c17",
+      "declaration": "governance/work-packages/WP-032.md"
+    },
+    {
+      "id": "BRIEF-WP-032-S2",
+      "package": "WP-032",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-032/S2.md",
+      "sha256": "4987be927922a8c198529566da1e5693223c704681f45e1762891c841c8c477d",
+      "predecessor": "WP-032-S1",
+      "successor": "WP-032-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fc56da8a8f6f0c29b864ca84a1ff38dd7f54a046f35bf61f0a562f9c8ff21c17",
+      "declaration": "governance/work-packages/WP-032.md"
+    },
+    {
+      "id": "BRIEF-WP-032-S3",
+      "package": "WP-032",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-032/S3.md",
+      "sha256": "bab7ba78d61c3a669c9450df99404d99e797522d8c66c700d4299ec8a72c37a6",
+      "predecessor": "WP-032-S2",
+      "successor": "WP-032-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fc56da8a8f6f0c29b864ca84a1ff38dd7f54a046f35bf61f0a562f9c8ff21c17",
+      "declaration": "governance/work-packages/WP-032.md"
+    },
+    {
+      "id": "BRIEF-WP-032-S4",
+      "package": "WP-032",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-032/S4.md",
+      "sha256": "94b4c20a0d24e00c949457da210a5f8176eed4474acff6a7245586e51cdab954",
+      "predecessor": "WP-032-S3",
+      "successor": "WP-033-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "fc56da8a8f6f0c29b864ca84a1ff38dd7f54a046f35bf61f0a562f9c8ff21c17",
+      "declaration": "governance/work-packages/WP-032.md"
+    },
+    {
+      "id": "BRIEF-WP-033-S1",
+      "package": "WP-033",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-033/S1.md",
+      "sha256": "031902180abe269bc35bbef3a4d436760c2929a36a1b6830a248898384dcd962",
+      "predecessor": "WP-032-S4",
+      "successor": "WP-033-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1152ee08e2eb7710fb48fd4e43a4dbf1af9d529eedb4a351df3384356081773f",
+      "declaration": "governance/work-packages/WP-033.md"
+    },
+    {
+      "id": "BRIEF-WP-033-S2",
+      "package": "WP-033",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-033/S2.md",
+      "sha256": "0430ebd6a0cb3d69fa5bab908ca84748b27a1c23ab0d5dd0887b2bb292b0c2d8",
+      "predecessor": "WP-033-S1",
+      "successor": "WP-033-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1152ee08e2eb7710fb48fd4e43a4dbf1af9d529eedb4a351df3384356081773f",
+      "declaration": "governance/work-packages/WP-033.md"
+    },
+    {
+      "id": "BRIEF-WP-033-S3",
+      "package": "WP-033",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-033/S3.md",
+      "sha256": "248d9d2c4461aff0fcfe58cde9bd8708200e4dcfcd078b40f280ac021752f655",
+      "predecessor": "WP-033-S2",
+      "successor": "WP-033-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1152ee08e2eb7710fb48fd4e43a4dbf1af9d529eedb4a351df3384356081773f",
+      "declaration": "governance/work-packages/WP-033.md"
+    },
+    {
+      "id": "BRIEF-WP-033-S4",
+      "package": "WP-033",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-033/S4.md",
+      "sha256": "8fcd17af2468153da3fe571f4651f962260b14ad8eec9a0c9d13fd36b20294dc",
+      "predecessor": "WP-033-S3",
+      "successor": "WP-034-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1152ee08e2eb7710fb48fd4e43a4dbf1af9d529eedb4a351df3384356081773f",
+      "declaration": "governance/work-packages/WP-033.md"
+    },
+    {
+      "id": "BRIEF-WP-034-S1",
+      "package": "WP-034",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-034/S1.md",
+      "sha256": "8ad3c048ddbd2d0fec94ed5ca748a74407c813c97e78ed9ef4ad03743e9bf5be",
+      "predecessor": "WP-033-S4",
+      "successor": "WP-034-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1d3fdd1dc37e570db0e06dd23a196a691dacf16fad297921cf23d0c2fc30e051",
+      "declaration": "governance/work-packages/WP-034.md"
+    },
+    {
+      "id": "BRIEF-WP-034-S2",
+      "package": "WP-034",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-034/S2.md",
+      "sha256": "1f67b2f6bedf30c1cb0b0f297708c2f53825f86249a9acbc05f88a97f21473c0",
+      "predecessor": "WP-034-S1",
+      "successor": "WP-034-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1d3fdd1dc37e570db0e06dd23a196a691dacf16fad297921cf23d0c2fc30e051",
+      "declaration": "governance/work-packages/WP-034.md"
+    },
+    {
+      "id": "BRIEF-WP-034-S3",
+      "package": "WP-034",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-034/S3.md",
+      "sha256": "1e05201184ff1afed0b8d4eb0f31c6583dceea0d13672ffccbfd188decd946b9",
+      "predecessor": "WP-034-S2",
+      "successor": "WP-034-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1d3fdd1dc37e570db0e06dd23a196a691dacf16fad297921cf23d0c2fc30e051",
+      "declaration": "governance/work-packages/WP-034.md"
+    },
+    {
+      "id": "BRIEF-WP-034-S4",
+      "package": "WP-034",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-034/S4.md",
+      "sha256": "7a98237e073e103d99c8b7398186a245a2c750c70381866ea50630708b97da03",
+      "predecessor": "WP-034-S3",
+      "successor": "WP-035-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "1d3fdd1dc37e570db0e06dd23a196a691dacf16fad297921cf23d0c2fc30e051",
+      "declaration": "governance/work-packages/WP-034.md"
+    },
+    {
+      "id": "BRIEF-WP-035-S1",
+      "package": "WP-035",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-035/S1.md",
+      "sha256": "91eaacb2e2bf4a9c099201ab2c5b2c5932b808d91ae43db9003888cd1dbf1170",
+      "predecessor": "WP-034-S4",
+      "successor": "WP-035-S2",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c924d1d8bd66e4d47aa430134454b3f4e899605faff42ff821f9dd27b3569496",
+      "declaration": "governance/work-packages/WP-035.md"
+    },
+    {
+      "id": "BRIEF-WP-035-S2",
+      "package": "WP-035",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-035/S2.md",
+      "sha256": "45bf4d121e3cc5198b470c1b1674904ad015f442547a5b6369bf4e922ac758b7",
+      "predecessor": "WP-035-S1",
+      "successor": "WP-035-S3",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c924d1d8bd66e4d47aa430134454b3f4e899605faff42ff821f9dd27b3569496",
+      "declaration": "governance/work-packages/WP-035.md"
+    },
+    {
+      "id": "BRIEF-WP-035-S3",
+      "package": "WP-035",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-035/S3.md",
+      "sha256": "fb88a98b7351c24b7864e7a360601a804873300e377900b0dfa592f7d8c236c5",
+      "predecessor": "WP-035-S2",
+      "successor": "WP-035-S4",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c924d1d8bd66e4d47aa430134454b3f4e899605faff42ff821f9dd27b3569496",
+      "declaration": "governance/work-packages/WP-035.md"
+    },
+    {
+      "id": "BRIEF-WP-035-S4",
+      "package": "WP-035",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-035/S4.md",
+      "sha256": "2d436d503ad0dc1dcdff096a40af3d183a75d91a4f837bdadeae483ea58824b8",
+      "predecessor": "WP-035-S3",
+      "successor": "WP-036-S1",
+      "requirements": [
+        "REQ-GOV-001"
+      ],
+      "contract_sha256": "c924d1d8bd66e4d47aa430134454b3f4e899605faff42ff821f9dd27b3569496",
+      "declaration": "governance/work-packages/WP-035.md"
+    },
+    {
+      "id": "BRIEF-WP-036-S1",
+      "package": "WP-036",
+      "stage": "S1",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-036/S1.md",
+      "sha256": "1579be0f944fedd0d24aa3cfbc2705480070ea720f6984e9992c375636096df0",
+      "predecessor": "WP-035-S4",
+      "successor": "WP-036-S2",
+      "requirements": [
+        "REQ-RELEASE-001"
+      ],
+      "contract_sha256": "97b5a2d10b41b4a6a3f797be1f7aa2db8a64f95222629ca8508083fd939c7b2b",
+      "declaration": "governance/work-packages/WP-036.md"
+    },
+    {
+      "id": "BRIEF-WP-036-S2",
+      "package": "WP-036",
+      "stage": "S2",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-036/S2.md",
+      "sha256": "537526040ee7a2b838f1f4b36c129a10754c4a3e3d4e07d8b8618c4e5139630b",
+      "predecessor": "WP-036-S1",
+      "successor": "WP-036-S3",
+      "requirements": [
+        "REQ-RELEASE-001"
+      ],
+      "contract_sha256": "97b5a2d10b41b4a6a3f797be1f7aa2db8a64f95222629ca8508083fd939c7b2b",
+      "declaration": "governance/work-packages/WP-036.md"
+    },
+    {
+      "id": "BRIEF-WP-036-S3",
+      "package": "WP-036",
+      "stage": "S3",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-036/S3.md",
+      "sha256": "c4b1e3c97081c6afd1fae8f12bf8ea68fde63c374c6de00691613616f958a7ab",
+      "predecessor": "WP-036-S2",
+      "successor": "WP-036-S4",
+      "requirements": [
+        "REQ-RELEASE-001"
+      ],
+      "contract_sha256": "97b5a2d10b41b4a6a3f797be1f7aa2db8a64f95222629ca8508083fd939c7b2b",
+      "declaration": "governance/work-packages/WP-036.md"
+    },
+    {
+      "id": "BRIEF-WP-036-S4",
+      "package": "WP-036",
+      "stage": "S4",
+      "status": "DRAFT_NOT_AUTHORIZED",
+      "path": "governance/session-briefs/WP-036/S4.md",
+      "sha256": "ac52ea0feb52efbb48acebffd88efc3f6555afe80b4fb7f3b2fdbcc3ed101b61",
+      "predecessor": "WP-036-S3",
+      "successor": "",
+      "requirements": [
+        "REQ-RELEASE-001"
+      ],
+      "contract_sha256": "97b5a2d10b41b4a6a3f797be1f7aa2db8a64f95222629ca8508083fd939c7b2b",
+      "declaration": "governance/work-packages/WP-036.md"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tools/session_brief_profiles.py",
+      "sha256": "d207099120704ce2acc877fe98d2e7ad1ba872e83b28e46da695d5e60c6e6e04"
+    },
+    {
+      "path": "tools/render_session_briefs.py",
+      "sha256": "0b09919df9fa1112c36aeaf70747bad765f91f47e6f40223c3f4abd9ebd834b1"
+    },
+    {
+      "path": "governance/session-briefs/PROTOCOL.md",
+      "sha256": "19a349a87d06de754e4af60b1243c2b7a0e1b8c36738436979922e75113b56fe"
+    },
+    {
+      "path": "docs/research/session-brief-design.md",
+      "sha256": "4c51ddc8671557999b01504d5c1e24dbf710e9b5bbafe2509ff67273eb4aab2b"
+    },
+    {
+      "path": "schemas/session-brief-catalog.schema.json",
+      "sha256": "56dd0e2d8f0177a48cb5e0102ed64eda09cd7200e770fda0c3360cb4cab0707b"
+    }
+  ],
+  "overview": {
+    "path": "governance/session-briefs/README.md",
+    "sha256": "c92f73a075e4991fb38a4143e56dd9711cae906d97b60e95c3fe4b9cb1264aa9"
+  },
+  "masterbook": {
+    "path": "docs/planning/axiomlint-session-briefs-masterbook.md",
+    "sha256": "9daeef929c3b4f85af437e32a56d302c3636d60a2e3f99dc3271111cbb78459b"
+  }
+}
