@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1",
+  "id": "AUTH-DELEGATE-001",
+  "status": "RECORDED_WITH_EXISTING_RESERVATIONS",
+  "principal": "Michael Maillet",
+  "delegate": "Computer assistant acting as disclosed delegate",
+  "authority_evidence": "governance/decisions/DEC-004-delegated-authority.md",
+  "user_statement": "yes, and i give you authority to make decisions on my behalf so long as they strictly adhere to established governance and methodologies and it is rigorously scientific",
+  "source_observed_at_utc": "2026-10-21T00:03:54Z",
+  "conversation_id": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+  "immediate_scope": [
+    "IMPLEMENTATION_CHOICES_WITHIN_APPROVED_SCOPE",
+    "LOCAL_ENGINEERING_VERIFICATION",
+    "CONSERVATIVE_METHOD_SELECTION_AND_ABSTENTION",
+    "PREPARING_DECLARATIONS_AND_AMENDMENTS",
+    "EVIDENCE_RETENTION_AND_UNSUPPORTED_WORK_STOP"
+  ],
+  "not_implied": [
+    "CHARTER_OR_AMENDMENT_RATIFICATION",
+    "AUTHOR_SELF_APPROVAL",
+    "INDEPENDENT_AUDIT_OR_PROTOCOL_REVIEW",
+    "RESIDUAL_RISK_ACCEPTANCE",
+    "PACKAGE_OR_GATE_CLOSURE",
+    "E6_CORRESPONDENCE_ACCEPTANCE",
+    "RELEASE_OR_PUBLICATION",
+    "HOST_INSTALLATION_OR_REMOTE_DISCLOSURE"
+  ],
+  "conditions": [
+    "FOLLOW_ESTABLISHED_GOVERNANCE_AND_METHODOLOGY",
+    "RIGOROUS_SCIENTIFIC_REASONING",
+    "PRESERVE_INDEPENDENCE_AND_FOUR_SESSIONS",
+    "NO_FABRICATED_EVIDENCE_OR_APPROVALS",
+    "LOCAL_ONLY_TESTS_NO_HOSTED_CI"
+  ],
+  "ratification": "NOT_A_RATIFICATION"
+}

@@ -39,5 +39,21 @@
     "disposition": "Await maintainer decision or later package evidence",
     "blocking_gate": "G0",
     "approval_ref": ""
+  },
+  {
+    "id": "DEC-004",
+    "category": "DECISION",
+    "status": "APPROVED",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "User explicitly granted conditional decision delegation within existing governance; not charter ratification",
+    "requirements": ["REQ-GOV-003"],
+    "evidence": [
+      "governance/decisions/DEC-004-delegated-authority.md",
+      "governance/decisions/delegated-authority.json"
+    ],
+    "disposition": "The user's grant is recorded as actual authorization; reserved approvals and the proposed AMD-002 remain pending",
+    "blocking_gate": "G0",
+    "approval_ref": "governance/decisions/DEC-004-delegated-authority.md"
   }
 ]

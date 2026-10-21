@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:governance:delegated-authority:0.1",
+  "title": "Recorded user delegation with existing reservations",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "status", "principal", "delegate",
+               "authority_evidence", "user_statement", "source_observed_at_utc",
+               "conversation_id", "immediate_scope", "not_implied", "conditions", "ratification"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "id": {"const": "AUTH-DELEGATE-001"},
+    "status": {"const": "RECORDED_WITH_EXISTING_RESERVATIONS"},
+    "principal": {"const": "Michael Maillet"},
+    "delegate": {"const": "Computer assistant acting as disclosed delegate"},
+    "authority_evidence": {"const": "governance/decisions/DEC-004-delegated-authority.md"},
+    "user_statement": {"type": "string", "minLength": 1},
+    "source_observed_at_utc": {"type": "string", "minLength": 1},
+    "conversation_id": {"type": "string", "minLength": 1},
+    "immediate_scope": {
+      "type": "array", "minItems": 1,
+      "items": {"enum": ["IMPLEMENTATION_CHOICES_WITHIN_APPROVED_SCOPE",
+                         "LOCAL_ENGINEERING_VERIFICATION",
+                         "CONSERVATIVE_METHOD_SELECTION_AND_ABSTENTION",
+                         "PREPARING_DECLARATIONS_AND_AMENDMENTS",
+                         "EVIDENCE_RETENTION_AND_UNSUPPORTED_WORK_STOP"]}
+    },
+    "not_implied": {
+      "const": ["CHARTER_OR_AMENDMENT_RATIFICATION", "AUTHOR_SELF_APPROVAL",
+                "INDEPENDENT_AUDIT_OR_PROTOCOL_REVIEW", "RESIDUAL_RISK_ACCEPTANCE",
+                "PACKAGE_OR_GATE_CLOSURE", "E6_CORRESPONDENCE_ACCEPTANCE",
+                "RELEASE_OR_PUBLICATION", "HOST_INSTALLATION_OR_REMOTE_DISCLOSURE"]
+    },
+    "conditions": {
+      "const": ["FOLLOW_ESTABLISHED_GOVERNANCE_AND_METHODOLOGY",
+                "RIGOROUS_SCIENTIFIC_REASONING", "PRESERVE_INDEPENDENCE_AND_FOUR_SESSIONS",
+                "NO_FABRICATED_EVIDENCE_OR_APPROVALS", "LOCAL_ONLY_TESTS_NO_HOSTED_CI"]
+    },
+    "ratification": {"const": "NOT_A_RATIFICATION"}
+  }
+}
