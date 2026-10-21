@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1",
+  "session_id": "SESSION-WP-001-S3",
+  "package": "WP-001",
+  "stage": "S3",
+  "activity": "INDEPENDENT_DELTA_REVIEW",
+  "round": 1,
+  "actor": "Independent S3 delta reviewer",
+  "context_id": "374e955d-a5d5-46b4-892c-c52335b5c716",
+  "independent": true,
+  "distinct_from": [
+    "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+    "39122e38-95a9-41a1-b210-d98ed7f9618a",
+    "0e8e8253-00be-41e0-9197-dc87c53d3aa1"
+  ],
+  "reviewed_head_commit": "b40f5071f8af0e857d35a59102eb10246daf04d6",
+  "entry_commit": "63bd5f8bc6e66803cd4d5a06c92b6701b1ac09f6",
+  "remediation_commits": [
+    "a6403c34872ba52b61c5bd39581a380cf5b9d66a",
+    "1e1355963854104943e7d1199ea739a2b6767550"
+  ],
+  "reviewed_head_source_tree_sha256": "5390d20c45c400540047bf452e749d7fd866a2ea82365d40ba55fbc04b9439b6",
+  "source_identity_algorithm": "sha256-path-bytes-gitmode-v1",
+  "dirty_before": true,
+  "dirty_before_note": "At entry, four S3 records were 0 bytes on disk and four files (verify_local_run.py, schema.py, findings.json, test_schema.py) were reverted toward 63bd5f8 content, all at mtime 02:08:35 local (~25s after commit b40f507). Same signature as the S3 remediator's recorded entry anomaly; second occurrence, cause unknown. Restored from HEAD blobs under user authorization; tree clean before review work. Committed content was never affected.",
+  "dirty_after": false,
+  "reproduced_gate": {
+    "run_id": "20261021T063000Z-f7a33280e078",
+    "manifest_sha256": "ec361738a130e6e44643f9df8909e4cc9736431f27b317dbe9157e695dca7285",
+    "kind": "ACCEPTANCE_CANDIDATE",
+    "commit": "b40f5071f8af0e857d35a59102eb10246daf04d6",
+    "dirty": false,
+    "discovered": 205,
+    "executed": 205,
+    "skipped": 0,
+    "verify_local_run": "LOCAL_EVIDENCE=PASS; not independent approval"
+  },
+  "recorded_gate_reverified": {
+    "run_id": "20261021T050657Z-73c94738678f",
+    "method": "verify_local_run without --check-current-source",
+    "result": "LOCAL_EVIDENCE=PASS; not independent approval"
+  },
+  "prefix_proof": {
+    "method": "git archive 63bd5f8 to /tmp/wp001-prefix, copied HEAD tests/test_run_verifier.py and tests/test_schema.py only, ran with PYTHONPATH=src",
+    "result": "12 new assertions failed for the intended reason: 2 run-verifier tests (no error for 199/199/5 and 2/2/1 acceptance-candidate counts) and 10 schema subcases (InvalidRecord not raised)",
+    "logs": ["prefix-runverifier.log", "prefix-schema.log"]
+  },
+  "postfix_proof": {
+    "method": "same two test files at b40f507 with PYTHONPATH=src",
+    "result": "43/43 pass (14 run-verifier + 29 schema)",
+    "logs": ["postfix-runverifier.log", "postfix-schema.log"]
+  },
+  "commands": [
+    {"name": "delivery", "argv": ["python3", "tools/check_wp001_delivery.py"], "exit_code": 0, "stdout_sha256": "0aaa5e232e961e772d72c59d56b5d94c5463c49809678809bda20dfe630e8fd2", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"name": "briefs", "argv": ["python3", "tools/check_session_briefs.py"], "exit_code": 0, "stdout_sha256": "a61fe6739c4f8732f433934c0b63ff8c4b1147e5992b6e2cbf1be56aafe81fc5", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"name": "targeted", "argv": ["python3", "tools/run_wp_tests.py", "WP-001"], "exit_code": 0, "counts": "discovered=61 executed=61 skipped=0", "stdout_sha256": "83563443bea0a583ad02aec5fb77458eb8a1015462a3b625965aeb616123ac73", "stderr_sha256": "7dade2f2c466a58e91d1c1b025b78db87c10085b3f2418b23386df8ad7c61b9b"},
+    {"name": "gate", "argv": ["python3", "tools/local_check.py", "--require-clean"], "exit_code": 0, "stdout_sha256": "d39db1e96f032f44df4c04c3d063bde00a386b98718e785df233896fa28aeabb", "stderr_sha256": "9aeb3b8f65f6da74a2121a6bcec28469ca8264ed60e4474b334f7a69d3a7541a"},
+    {"name": "verify-gate", "argv": ["python3", "tools/verify_local_run.py", "artifacts/gates/20261021T063000Z-f7a33280e078", "--check-current-source"], "exit_code": 0, "stdout_sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+  ],
+  "raw_log_directory": "artifacts/wp001-s3-delta-review",
+  "raw_log_sha256": {
+    "briefs.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "briefs.stdout.log": "a61fe6739c4f8732f433934c0b63ff8c4b1147e5992b6e2cbf1be56aafe81fc5",
+    "delivery.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "delivery.stdout.log": "0aaa5e232e961e772d72c59d56b5d94c5463c49809678809bda20dfe630e8fd2",
+    "gate.stderr.log": "9aeb3b8f65f6da74a2121a6bcec28469ca8264ed60e4474b334f7a69d3a7541a",
+    "gate.stdout.log": "d39db1e96f032f44df4c04c3d063bde00a386b98718e785df233896fa28aeabb",
+    "postfix-runverifier.log": "b287d0d1d60d3c3d4629e9139a735eefeb89b6d695d48d00e70404daa6a8692a",
+    "postfix-schema.log": "ec0c79a94e93f2d2b74d0a1269f511fb362c15f9377cfa061d569c55bc57952d",
+    "prefix-runverifier.log": "8add257ea829c08ad363e7ed8d33a06d1f7f4cf49cab6c768485b5747599e064",
+    "prefix-schema.log": "82be9bebf25d376691675e7348531ee48803234bfb47f8018719a950955b9d13",
+    "residual-gap-probe.log": "ea5be4449bc26829675d802e3c4d65a799bc7d900980de840da3bb504f84ebf6",
+    "targeted.stderr.log": "7dade2f2c466a58e91d1c1b025b78db87c10085b3f2418b23386df8ad7c61b9b",
+    "targeted.stdout.log": "83563443bea0a583ad02aec5fb77458eb8a1015462a3b625965aeb616123ac73",
+    "verify-gate.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verify-gate.stdout.log": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043",
+    "verify-recorded-s3-gate.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verify-recorded-s3-gate.stdout.log": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043"
+  },
+  "new_findings": [
+    {
+      "id": "FIND-S3-001",
+      "severity": "D4",
+      "status": "OPEN",
+      "location": "src/axiomlint/schema.py SCALAR_KEYWORD_TYPES / check_schema",
+      "summary": "Keyword-type co-occurrence omits composite keywords: minItems/items (array), required/properties/additionalProperties (object). validate() silently skips them for non-matching value types; demonstrated bypass for all five at reviewed head.",
+      "expected_remedy": "Extend co-occurrence enforcement to composite keywords with regression tests, or obtain authorized disposition, in a further S3 round",
+      "evidence": "artifacts/wp001-s3-delta-review/residual-gap-probe.log"
+    }
+  ],
+  "verdict": "FINDINGS-OPEN",
+  "verdict_note": "FIND-S2-001 and FIND-S2-002 remediations are independently confirmed correct and correctly evidenced; the delta satisfies the named findings. FIND-S3-001 (D4) is an unresolved defect of the same class, reported for another S3 round. No D1/D2 found.",
+  "limitations": [
+    "Review of the delta only; reviewed product source, tests, schemas and registers were never modified",
+    "Local unsigned digests do not defend against a malicious same-user adversary",
+    "Raw logs live under gitignored artifacts/ and are not part of any commit",
+    "Entry anomaly repeated (files truncated/reverted ~25s after commit); cause unknown, investigated only as far as restoring from HEAD blobs",
+    "Residual-gap probe executed as a throwaway unittest against a HEAD export under /tmp, the same trusted-test mechanism as the regression tests; no other subject-code execution",
+    "No subject code execution, backend, network, hosted CI, push or installation"
+  ],
+  "status_effects": {
+    "s3": "DELTA_REVIEWED_FINDINGS_OPEN",
+    "s4": "BLOCKED",
+    "wp001": "ACTIVE",
+    "gates": "BLOCKED",
+    "package_closure_granted": false,
+    "g0_closure_granted": false,
+    "wp002_activation_granted": false,
+    "risk_acceptance_granted": false,
+    "waiver_granted": false,
+    "release_granted": false
+  }
+}
