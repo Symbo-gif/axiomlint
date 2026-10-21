@@ -160,3 +160,33 @@ class SchemaTests(unittest.TestCase):
         with self.assertRaises(InvalidRecord):
             check_schema({"enum": [1, 1.0]})
         check_schema({"enum": [True, 1]})
+
+    def test_scalar_keywords_require_compatible_declared_type(self):
+        """FIND-S2-002: scalar-specific keywords need a matching declared type."""
+        rejected = (
+            {"minimum": 10},
+            {"type": "string", "minimum": 10},
+            {"type": "boolean", "minimum": 0},
+            {"pattern": "^a"},
+            {"type": "integer", "pattern": "^a"},
+            {"minLength": 1},
+            {"type": "number", "maxLength": 3},
+            {"type": "object", "properties": {"x": {"minimum": 0}}},
+        )
+        for schema in rejected:
+            with self.subTest(schema=schema), self.assertRaises(InvalidRecord):
+                check_schema(schema)
+
+    def test_scalar_keywords_with_compatible_type_accepted(self):
+        for schema in (
+            {"type": "integer", "minimum": 0},
+            {"type": "number", "minimum": 0.5},
+            {"type": "string", "pattern": "^a", "minLength": 1, "maxLength": 4},
+        ):
+            with self.subTest(schema=schema):
+                check_schema(schema)
+
+    def test_untyped_value_cannot_bypass_minimum_or_pattern(self):
+        for value, schema in ("sample", {"minimum": 10}), (5, {"pattern": "^z"}):
+            with self.subTest(schema=schema), self.assertRaises(InvalidRecord):
+                validate(value, schema)

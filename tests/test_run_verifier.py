@@ -105,3 +105,30 @@ class RunVerifierTests(unittest.TestCase):
             )
             self.save()
             self.assertTrue(any("test execution" in p for p in verify(self.directory)))
+
+    def set_test_counts(self, output, kind):
+        (self.directory / "tests.stdout.log").write_bytes(output)
+        self.manifest["kind"] = kind
+        self.manifest["commands"][-1].update(
+            stdout_bytes=len(output), stdout_sha256=sha256(output),
+        )
+        self.save()
+
+    def test_acceptance_candidate_partial_skips_rejected(self):
+        """FIND-S2-001: 0 < skipped < executed must fail an acceptance candidate."""
+        self.set_test_counts(
+            b"COUNTS discovered=199 executed=199 skipped=5\n", "ACCEPTANCE_CANDIDATE",
+        )
+        self.assertTrue(any("skipped" in p.lower() for p in verify(self.directory)))
+
+    def test_acceptance_candidate_single_skip_rejected(self):
+        self.set_test_counts(
+            b"COUNTS discovered=2 executed=2 skipped=1\n", "ACCEPTANCE_CANDIDATE",
+        )
+        self.assertTrue(any("skipped" in p.lower() for p in verify(self.directory)))
+
+    def test_acceptance_candidate_zero_skips_passes(self):
+        self.set_test_counts(
+            b"COUNTS discovered=199 executed=199 skipped=0\n", "ACCEPTANCE_CANDIDATE",
+        )
+        self.assertEqual(verify(self.directory), [])

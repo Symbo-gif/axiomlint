@@ -78,6 +78,8 @@ def verify(directory: Path, root: Path = ROOT, check_current: bool = False) -> l
                     discovered, executed, skipped = map(int, counts[0])
                     if discovered <= 0 or executed != discovered or skipped >= executed:
                         errors.append("Empty, incomplete or all-skipped test execution")
+                    elif manifest["kind"] == "ACCEPTANCE_CANDIDATE" and skipped != 0:
+                        errors.append("Acceptance candidate test execution has skipped tests")
         if check_current:
             commit, dirty, tree = source_identity(root)
             if (commit, dirty, tree) != (

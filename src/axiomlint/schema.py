@@ -16,6 +16,12 @@ KEYWORDS = {
     "minLength", "maxLength", "pattern", "minimum",
 }
 TYPES = {"object", "array", "string", "integer", "number", "boolean", "null"}
+SCALAR_KEYWORD_TYPES = {
+    "minimum": {"integer", "number"},
+    "pattern": {"string"},
+    "minLength": {"string"},
+    "maxLength": {"string"},
+}
 
 
 class InvalidRecord(ValueError):
@@ -101,6 +107,9 @@ def check_schema(schema: Any) -> None:
             raise InvalidRecord(f"Invalid {key}")
     if "minimum" in schema and type(schema["minimum"]) not in (int, float):
         raise InvalidRecord("Invalid minimum")
+    for key, allowed in SCALAR_KEYWORD_TYPES.items():
+        if key in schema and schema.get("type") not in allowed:
+            raise InvalidRecord(f"{key} requires a declared type in {sorted(allowed)}")
     if "enum" in schema and (not isinstance(schema["enum"], list) or not schema["enum"]):
         raise InvalidRecord("enum must be a nonempty array")
     if "enum" in schema:

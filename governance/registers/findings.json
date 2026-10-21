@@ -2,15 +2,21 @@
   {
     "id": "FIND-S1-001",
     "category": "FINDING",
-    "status": "PENDING",
+    "status": "VERIFIED",
     "severity": "D3",
     "owner": "Michael Maillet",
     "summary": "S1 self-check found umask-dependent source fingerprints across byte-identical fresh checkouts",
     "requirements": ["REQ-EVID-003"],
-    "evidence": ["tests/test_gate.py", "governance/sessions/WP-001-S1.md"],
-    "disposition": "Fixed in fe3be9da8f7b8ada431b4656ea8e9e1b7ab055c4; regression and local clone passed; independent S2 verification still pending",
+    "evidence": [
+      "tests/test_gate.py",
+      "governance/sessions/WP-001-S1.md",
+      "governance/audits/WP-001/S2-report.md",
+      "governance/audits/WP-001/S2-findings.json",
+      "governance/findings/WP-001/closure-table.md"
+    ],
+    "disposition": "Fixed in fe3be9da8f7b8ada431b4656ea8e9e1b7ab055c4. Independently verified by the S2 auditor (context 39122e38-95a9-41a1-b210-d98ed7f9618a), who re-ran the umask and executable-bit regression tests and cloned fresh trees: 846b0dcbae94b0eb268fe10571c395c90a4f1228 gave source tree SHA-256 81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f and ff38d388331699cd0d7c2a3adc9d1e88d8297e8d gave 740e7097eddc287a8688bc885ea9df8677a60e3c6cfd847886d14f01f294c439, each byte-identical across clones. Register reconciliation only in S3; the fix itself is unchanged. This is an S2 independent verification recorded by the S3 remediator; DEV-001 and DEV-002 remain OPEN and G0 stays blocked",
     "blocking_gate": "G0",
-    "approval_ref": ""
+    "approval_ref": "governance/audits/WP-001/S2-report.md"
   },
   {
     "id": "READINESS-WP001-001",
