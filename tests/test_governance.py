@@ -114,9 +114,12 @@ class GovernanceTests(unittest.TestCase):
         path = self.root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(fixture))
-        self.mutate("governance/sessions/index.json", lambda rows: rows[0].update(
-            status="CLOSED", commit=fixture["reviewed_commit"], report=relative,
-        ))
+        def reset_to_s1_exit(rows):
+            rows[0].update(status="CLOSED", commit=fixture["reviewed_commit"], report=relative)
+            rows[1].update(status="PLANNED", commit="", report="", actor="", context_id="", independent=False, reviewed_commit="")
+            rows[2].update(status="BLOCKED", commit="", report="", actor="", context_id="", independent=False, reviewed_commit="")
+            rows[3].update(status="BLOCKED", commit="", report="", actor="", context_id="", independent=False, reviewed_commit="")
+        self.mutate("governance/sessions/index.json", reset_to_s1_exit)
         return fixture
 
     def test_source_bound_s1_exit_allows_s2_to_remain_blocked(self):

@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1",
+  "session_id": "SESSION-WP-001-S4",
+  "package": "WP-001",
+  "stage": "S4",
+  "status": "IN_PROGRESS",
+  "actor": "Documentation/closure owner",
+  "context_id": "72128125-7e51-4832-93b2-09822b20cfb9",
+  "independent": false,
+  "distinct_from": [
+    "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+    "39122e38-95a9-41a1-b210-d98ed7f9618a",
+    "0e8e8253-00be-41e0-9197-dc87c53d3aa1",
+    "374e955d-a5d5-46b4-892c-c52335b5c716"
+  ],
+  "entry_commit": "cc374d75d7967eb7e3dd7a39d883017a5cf5720d",
+  "reviewed_commit": "0b4dfbf54663bd129e92b2e4819eb63959326117",
+  "s3_exit_record": "governance/execution/WP-001/S3/exit.md",
+  "frozen_brief": "governance/session-briefs/WP-001/S4.md",
+  "dossier": "governance/closures/WP-001.md",
+  "state_report": "governance/state-reports/WP-001-S4.md",
+  "handoff": "governance/execution/WP-001/S4/handoff.md",
+  "commands": [
+    {"name": "delivery", "argv": ["python3", "tools/check_wp001_delivery.py"], "exit_code": 0},
+    {"name": "briefs", "argv": ["python3", "tools/check_session_briefs.py"], "exit_code": 0},
+    {"name": "targeted", "argv": ["python3", "tools/run_wp_tests.py", "WP-001"], "exit_code": 0, "counts": "discovered=61 executed=61 skipped=0"}
+  ],
+  "status_effects": {
+    "s4": "IN_PROGRESS",
+    "wp001": "ACTIVE",
+    "gates": "BLOCKED",
+    "package_closure_granted": false,
+    "g0_closure_granted": false,
+    "wp002_activation_granted": false,
+    "risk_acceptance_granted": false,
+    "waiver_granted": false,
+    "release_granted": false
+  }
+}

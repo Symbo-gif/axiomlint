@@ -1,71 +1,53 @@
 # Current project state
 
-Constitution ratified. WP-001 remains ACTIVE; its S1 is recorded CLOSED under
-the actual separate-context ordinary readiness decision. S2 is PLANNED,
-NOT STARTED; S3/S4 remain BLOCKED. WP-002 through WP-036 remain PLANNED and
-unapproved. G0 through G8 remain BLOCKED; no package is closed.
+Constitution ratified. WP-001 remains ACTIVE; its S1 is CLOSED, S2 is CLOSED,
+and S3 is CLOSED. S4 is ACTIVATED and IN PROGRESS under explicit principal
+authority (session context `72128125-7e51-4832-93b2-09822b20cfb9`).
+DEV-001 and DEV-002 remain OPEN D2/G0. WP-002 through WP-036 remain PLANNED
+and unapproved. G0 through G8 remain BLOCKED; no package is closed.
 
-## Exact implementation and recording identities
+## Exact implementation, audit, remediation, and session identities
 
-Accepted S1 implementation/session commit:
-`846b0dcbae94b0eb268fe10571c395c90a4f1228`.
-Implementation fingerprint:
-`81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f`.
-Actual independent reviewer:
-`independent_wp_001_s1_readiness_decision_mvheckh1`, distinct from implementation
-author context `72131cdc-563c-4d43-a6b3-f37dd1253e0c`.
+### S1 Implementation
+- Commit: `846b0dcbae94b0eb268fe10571c395c90a4f1228`
+- Source tree fingerprint: `81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f`
+- Author context: `72131cdc-563c-4d43-a6b3-f37dd1253e0c`
+- Independent readiness reviewer: `independent_wp_001_s1_readiness_decision_mvheckh1`
+- Decision: `governance/readiness/WP-001/round-3/decision.json` (VERIFIED)
+- Session record: `governance/sessions/WP-001-S1.md`
 
-The actual decision is `governance/readiness/WP-001/round-3/decision.json`,
-SHA-256 `364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338`.
-It permits only bounded exit recording and requires independent verification
-of the actual later recording HEAD before transition completion or S2 entry.
-The later head is not self-hashed into this file, and the implementation's
-test logs do not cover its future metadata bytes.
+### S2 Independent Audit
+- Commit: `63bd5f8bc6e66803cd4d5a06c92b6701b1ac09f6`
+- Auditor context: `39122e38-95a9-41a1-b210-d98ed7f9618a` (independent)
+- Report: `governance/audits/WP-001/S2-report.md`
+- Findings: `governance/audits/WP-001/S2-findings.json` (FIND-S2-001 D3, FIND-S2-002 D4)
+- Verdict: PASS-WITH-FINDINGS
 
-The recording-head verification belongs in the external receipt
-`artifacts/wp001-s1-exit/metadata-verification/decision.json` after actual
-independent execution. Until that exact-head receipt grants PASS, recording
-does not complete the transition or permit S2 entry. A future S2 additionally
-requires actual separate auditor assignment and entry, with its own report
-and commit; none is invented here.
+### S3 Finding Remediation & Independent Delta Review
+- Remediation commits: `a6403c34872ba52b61c5bd39581a380cf5b9d66a`, `1e1355963854104943e7d1199ea739a2b6767550`
+- Remediator documentation commit: `b40f5071f8af0e857d35a59102eb10246daf04d6`
+- Remediator context: `0e8e8253-00be-41e0-9197-dc87c53d3aa1`
+- Independent delta reviewer context: `374e955d-a5d5-46b4-892c-c52335b5c716` (independent)
+- Delta review commit: `0b4dfbf54663bd129e92b2e4819eb63959326117`
+- Delta review report: `governance/audits/WP-001/S3-delta-review-independent.md`
+- Delta review verdict: FINDINGS-OPEN (FIND-S2-001 and FIND-S2-002 verified; new finding FIND-S3-001 D4 reported)
+- S3 exit authorization: GRANTED by principal; FIND-S3-001 carried D4 (owner: Michael Maillet, expiry: WP-005)
+- Exit record: `governance/execution/WP-001/S3/exit.md` and `exit.json`
 
-## Evidence and retained restrictions
+### S4 Documentation and Candidate Acceptance
+- Stage: IN_PROGRESS
+- Context ID: `72128125-7e51-4832-93b2-09822b20cfb9` (distinct)
+- Activity: Traceability, rollback procedures, local acceptance testing, state maintenance
+- Candidate reviewed commit: `0b4dfbf54663bd129e92b2e4819eb63959326117`
+- Records: `governance/execution/WP-001/S4/record.json` and `handoff.md`
 
-Independent implementation checks passed 61 targeted and 199 full-suite tests,
-zero skips, plus delivery/144-brief checks, raw-evidence verification and the
-bounded next-state probe. Independent gate:
-`20261021T021659Z-041f70986662`; manifest SHA-256
-`f1bc431628a37cf44e552d4a9037d010a3e16d5796dc993dab3c7e31df20356f`.
-READINESS-WP001-001 alone is independently VERIFIED, not waived.
+## Evidence and Retained Restrictions
 
-DEV-001 and DEV-002 remain OPEN D2/G0; FIND-S1-001 remains PENDING D3/G0.
-Their mandatory within-package S2/S3 dispositions are not replaced by readiness.
-The independent hierarchy interpretation is in the unchanged round-3 decision;
-no D1/D2 carry into accepted work, material-risk acceptance or unsafe affected
-execution is authorized. WP-002 cannot activate.
-
-The current implementation pin is
-`artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/wp001-s1/AUDIT-TARGET.json`,
-SHA-256 `50ee7bc273411f7cb4129caee25c9bf500c4a8aacde5b25e1aea7e7f13b46e13`.
-The original root pin for d9e6656 remains historical and unchanged.
-The 36-file author artifact snapshot, execution record, original handoff,
-acceptance clauses and all 144 frozen briefs remain unchanged; their author-time
-IN_PROGRESS/PENDING labels are historical, not current readiness decisions.
-The earlier fingerprint milestones and failed attempts remain in the retained
-session/handoff/evidence history, not relabeled as checks of the current head.
-
-## Authority and next stage
-
-APR-001 and `governance/charter/ACTIVE-BASELINE.json` bind the exact principal-ratified
-charter, AMD-001 and AMD-002. APR-002 supplies forward S1 completion scope.
-DEC-006 records the actual independent ordinary readiness decision without
-expanding delegated authority or asking for repeated ratification.
-
-The development gate is narrower than the full assurance stack. Deferred
-lint/type/coverage, lock/environment, schema/SARIF, SCA/SBOM/signing, backend and
-hostile-containment validations remain obligations, not passed or waived checks.
-No subject/backend/model execution, hosted CI, push, installation or release
-is authorized or performed by this transition.
-
-See `governance/execution/WP-001/S1/exit.md` for the exit supplement and
-`governance/execution/WP-001/S2/entry-preparation.md` for conditional S2 preparation.
+- READINESS-WP001-001 is independently VERIFIED.
+- FIND-S1-001 is independently VERIFIED (S2 auditor evidence).
+- FIND-S2-001 (D3) is independently VERIFIED (S3 delta review).
+- FIND-S2-002 (D4) is independently VERIFIED (S3 delta review).
+- FIND-S3-001 (D4) is OPEN, carried under principal authority (expiry: WP-005).
+- DEV-001 and DEV-002 remain OPEN D2/G0 blocking package closure and G0 passage.
+- Package closure, G0 passage, risk acceptance, waivers, release, and WP-002 activation are NOT granted.
+- All testing remains strictly local; no network, hosted CI, or remote model calls.
