@@ -39,5 +39,21 @@
     "disposition": "Independently VERIFIED by the actual separate reviewer at implementation commit 846b0dcbae94b0eb268fe10571c395c90a4f1228: 61 targeted and 199 full-suite tests, raw evidence verification and bounded next-state probe passed. Original BLOCK and access-block records retained. This resolves only the readiness-transition defect; no waiver, inherited finding disposition or S2 claimed",
     "blocking_gate": "S1_EXIT",
     "approval_ref": "governance/readiness/WP-001/round-3/decision.json"
+  },
+  {
+    "id": "FIND-S3-001",
+    "category": "FINDING",
+    "status": "OPEN",
+    "severity": "D4",
+    "owner": "Michael Maillet",
+    "summary": "Keyword-type co-occurrence omits composite keywords: minItems/items (array), required/properties/additionalProperties (object)",
+    "requirements": ["REQ-EVID-003"],
+    "evidence": [
+      "governance/audits/WP-001/S3-delta-review-independent.md",
+      "governance/execution/WP-001/S3/delta-review-record.json"
+    ],
+    "disposition": "CARRIED D4 under explicit principal authority (grant in next-session activation). Bounded scope: composite keywords in check_schema (minItems, items, required, properties, additionalProperties). Expiry: WP-005 schema-engine migration or later authorized remediation round. Compensating controls: all 15 published schemas declare type, so there is no live bypass; regression suite pins scalar-keyword rule. Retained OPEN without claim of fix or independent verification",
+    "blocking_gate": "WP-005",
+    "approval_ref": "governance/audits/WP-001/S3-delta-review-independent.md"
   }
 ]

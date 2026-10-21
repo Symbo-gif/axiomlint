@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1",
+  "kind": "S3_EXIT_RECORD",
+  "package": "WP-001",
+  "stage": "S3",
+  "session_id": "SESSION-WP-001-S3",
+  "status": "CLOSED",
+  "actor": "Next-session agent",
+  "context_id": "72128125-7e51-4832-93b2-09822b20cfb9",
+  "distinct_from": [
+    "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+    "39122e38-95a9-41a1-b210-d98ed7f9618a",
+    "0e8e8253-00be-41e0-9197-dc87c53d3aa1",
+    "374e955d-a5d5-46b4-892c-c52335b5c716"
+  ],
+  "exit_authorization": "Explicit grant from principal in next-session activation prompt",
+  "independent_delta_review": {
+    "round": 1,
+    "reviewer_actor": "Independent S3 delta reviewer",
+    "reviewer_context_id": "374e955d-a5d5-46b4-892c-c52335b5c716",
+    "reviewed_commit": "b40f5071f8af0e857d35a59102eb10246daf04d6",
+    "review_commit": "0b4dfbf54663bd129e92b2e4819eb63959326117",
+    "report": "governance/audits/WP-001/S3-delta-review-independent.md",
+    "record": "governance/execution/WP-001/S3/delta-review-record.json",
+    "verdict": "FINDINGS-OPEN"
+  },
+  "findings": {
+    "FIND-S2-001": {
+      "severity": "D3",
+      "status": "VERIFIED",
+      "reviewer": "374e955d-a5d5-46b4-892c-c52335b5c716"
+    },
+    "FIND-S2-002": {
+      "severity": "D4",
+      "status": "VERIFIED",
+      "reviewer": "374e955d-a5d5-46b4-892c-c52335b5c716"
+    },
+    "FIND-S1-001": {
+      "severity": "D3",
+      "status": "VERIFIED",
+      "basis": "S2 independent auditor report"
+    },
+    "FIND-S3-001": {
+      "severity": "D4",
+      "status": "OPEN",
+      "disposition": "CARRIED",
+      "owner": "Michael Maillet",
+      "bounded_scope": "composite keywords (minItems, items, required, properties, additionalProperties) in check_schema",
+      "expiry": "WP-005 schema-engine migration or later authorized remediation round",
+      "compensating_controls": "All 15 published schemas declare type; regression suite pins scalar-keyword rule",
+      "evidence": "governance/audits/WP-001/S3-delta-review-independent.md"
+    }
+  },
+  "deviations": {
+    "DEV-001": {"severity": "D2", "status": "OPEN", "blocking_gate": "G0"},
+    "DEV-002": {"severity": "D2", "status": "OPEN", "blocking_gate": "G0"}
+  },
+  "status_effects": {
+    "s3": "CLOSED",
+    "s4": "ACTIVATED",
+    "wp001": "ACTIVE",
+    "gates": "BLOCKED",
+    "package_closure_granted": false,
+    "g0_closure_granted": false,
+    "wp002_activation_granted": false,
+    "risk_acceptance_granted": false,
+    "waiver_granted": false,
+    "release_granted": false
+  }
+}
