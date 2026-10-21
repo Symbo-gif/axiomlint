@@ -1,132 +1,38 @@
-# WP-001 S1 independent readiness review — round 3
+# Coordinator-authored portability index: WP-001 S1 round 3
 
-## Decision: APPROVE_S1_EXIT
+This is not the independent review. This index was written by the implementation
+coordinator, not the independent reviewer; it supplies navigation and grants no approval.
+The authoritative unchanged reviewer decision and original report are below.
 
-**I approve ordinary S1 exit for implementation commit `846b0dcbae94b0eb268fe10571c395c90a4f1228`, and only the bounded recording steps in section 7.** The two phase-dependent fixtures identified in round 1 are corrected without changing product validators or weakening their ordering/independence controls; direct laptop reproduction now passes at the hypothetical next lawful state. READINESS-WP001-001 is independently **VERIFIED / RESOLVED for this readiness defect** at this target, not waived or carried. ([Corrected ratification tests, lines 125–146](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_wp_001_ratification.py#L125), [corrected/positive governance tests, lines 90–146](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_governance.py#L90), [independent transition output](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stdout.log))
+- [Original reviewer report, exact raw bytes](review.original.txt): SHA-256
+  `322368a167e4d71e09fbd55b64ffd928b46e57ec4ba2e0a38968ac4a5a547661`.
+- [Actual independent decision](decision.json): SHA-256
+  `364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338`.
+- [Actual transition probe](transition-probe.py).
+- [Byte-preserving raw evidence archive map](archive-map.json).
+- [Prior substantive BLOCK for the earlier target](../round-1/review.md).
+- [Prior access-block record](../round-2-access-block/review.md).
+- [Independent portability scope addendum, original raw report](portability-scope-addendum.original.txt).
+- [Unchanged structured portability scope addendum](portability-scope-addendum.json).
 
-This is **not S2, not package/G0 closure, not WP-002 activation, not acceptance of material risk, and not closure or waiver of DEV-001/DEV-002/FIND-S1-001**. Those inherited items remain unresolved within the active package, for its mandatory separate S2/S3 process. ([Methodology, lines 20–46](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/methodology.md#L20), [actual deviations](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/deviations.json), [actual finding register](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/findings.json))
+The original report source-context filename is
+`/home/user/workspace/review_outputs/WP001-S1-readiness-round3-review.md`.
+The addendum source-context filenames are
+`/home/user/workspace/review_outputs/WP001-S1-readiness-portability-scope-addendum.md`
+and `.json`; original SHA-256 digests are respectively
+`f7e67338044caed53066f3f07f62d70044ed3dfbcee04c6fcc3a1df8415e5208`
+and `3384bd10b76802f5494705b03a7ae284882407e6366ee52778d9c528dffcaf13`.
+The addendum is packaging permission only, not actual later-head verification.
 
-Reviewer: **independent delegated ordinary S1-readiness reviewer**. Actual provided launch task/context identifier: **`independent_wp_001_s1_readiness_decision_mvheckh1`**; no separate UUID is available or invented. Implementation author context: **`72131cdc-563c-4d43-a6b3-f37dd1253e0c`**. The same independent reviewer that issued round 1 now assesses the correction; I did not implement it.
+The original verdict is APPROVE_S1_EXIT for implementation commit
+`846b0dcbae94b0eb268fe10571c395c90a4f1228`, with required independent verification
+of the separate later recording head. The original report is retained as raw
+text because its cloud-workspace hyperlinks identify its authoring context,
+not portable laptop navigation; no original bytes or verdict were rewritten.
 
-Source identity last directly observed at **2026-10-21T02:18:30Z**. Ordinary readiness authority is ratified AMD-002 through ACTIVE-BASELINE/APR-001, with forward S1 scope supplied by APR-002; nothing in this report expands that delegation. ([AMD-002, lines 23–42 and 59–80](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/AMD-002-delegated-decisions.md#L23))
-
-## 1. Actual source and preservation
-
-The authoritative laptop root is `/home/themichael/PerplexityWorkspace/axiomlint`; I discovered the original selected connector schema and used its shell operation directly. Actual HEAD was **`846b0dcbae94b0eb268fe10571c395c90a4f1228`**, clean before and after checks, with fingerprint **`81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f`** under `sha256-path-bytes-gitmode-v1`; the independently generated manifest agrees. ([Independent manifest](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/gates/20261021T021659Z-041f70986662/manifest.json))
-
-The **current versioned author pin** is `artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/wp001-s1/AUDIT-TARGET.json`, SHA-256 **`50ee7bc273411f7cb4129caee25c9bf500c4a8aacde5b25e1aea7e7f13b46e13`**; its commit, fingerprint, brief and artifact-manifest bindings match the actual source. The original `artifacts/wp001-s1/AUDIT-TARGET.json` still has SHA-256 `1b3a8ed588573dcc40e667d8b00b48f8d0b9b433ded7d352ab0e4e1114e4cabc` and remains a historical d9e6656 pin, not the current target. ([New versioned pin](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/wp001-s1/AUDIT-TARGET.json), [original preserved pin](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1/AUDIT-TARGET.json))
-
-The complete binary patch from the round-1 target has SHA-256 **`19fdb7d8b3c3ec01030c7435bb0672d4df96847470aff4e5aa8928eb54b00bff`** and contains 22 files: two changed test files, a PENDING readiness-finding addition, and preserved round-1 reports/probe/raw logs. No source validator, schema, authority, brief, acceptance clause or product contract changed. ([Actual correction tests](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_governance.py), [finding addition](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/findings.json), [preserved round-1 decision](/home/themichael/PerplexityWorkspace/axiomlint/governance/readiness/WP-001/round-1/decision.json))
-
-I checked the preserved actual round-1 report/decision/probe hashes against my originals: respectively `10f85da260ccb3f6ac8f7a174399355c6b770984506ff3201ef25450ec8f81cb`, `150d3f190859bab0110f78f3eafd3e285187b9b1ece8de2966866869e28c0c39`, and `5b90dc24201de83e85326bac48e64b6106e13229ca77d4c336da17d64a50410d`; retained raw-log hashes also match. Round 1's BLOCK remains correct for d9e6656 and is not rewritten into an approval. ([Retained review](/home/themichael/PerplexityWorkspace/axiomlint/governance/readiness/WP-001/round-1/review.md), [retained decision](/home/themichael/PerplexityWorkspace/axiomlint/governance/readiness/WP-001/round-1/decision.json), [retained raw evidence](/home/themichael/PerplexityWorkspace/axiomlint/governance/readiness/WP-001/round-1/raw))
-
-Round 2's access-block report/decision/probe marker are unchanged in the shared sandbox; they are not substantive evidence about the correction. ([Round-2 access record](/home/user/workspace/review_outputs/WP001-S1-readiness-round2-review.md))
-
-## 2. Governing contract and D2 interpretation
-
-In round 1, before source review, I read actual charter, ACTIVE-BASELINE/APR-001, AMD-001/002, normative methodology, declaration, frozen S1 brief, APR-002, execution record/acceptance map, artifact manifest, scope reconciliation and handoff. In this continuation I verified their unchanged actual digests, reread the controlling transition/authority clauses, inspected the entire correction diff and actual preserved records, then reproduced the commands rather than relying on parent counts. ([Round-1 contract-first account](/home/user/workspace/review_outputs/WP001-S1-readiness-review.md), [current handoff, lines 55–91](/home/themichael/PerplexityWorkspace/axiomlint/governance/execution/WP-001/S1/handoff.md#L55))
-
-The exact continuing clauses are:
-
-* **Precedence:** ratified charter/amendments outrank normative standards, which outrank declarations and briefs; “**Conflict blocks affected work**.” ([CHARTER, lines 22–37](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/CHARTER.md#L22))
-* **Delegate and separation:** ordinary readiness may use a disclosed decision “**bound to the exact declaration, source revision and evidence digests**”; its approver must be “**a genuinely separate context from the implementation author**.” ([AMD-002, lines 23–36](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/AMD-002-delegated-decisions.md#L23))
-* **Actual D2 rule:** “**Blocks package closure, claims and releases**”; “**No D1/D2 carry**.” ([Methodology, lines 39–46](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/methodology.md#L39))
-* **Lower brief:** generic stop language includes “**Any D1, unresolved D2**”; S1 exit requires original acceptance “**provisionally demonstrated by nonempty targeted tests plus full local gates**” and disclaims automatic independent audit/package closure. ([Frozen S1 brief, lines 125–137](/home/themichael/PerplexityWorkspace/axiomlint/governance/session-briefs/WP-001/S1.md#L125))
-* **Interpretation route:** generic lower-brief D2 language versus normative package-closure rules requires “**an independent authorized interpretation**,” not author self-resolution. ([Exception procedure, lines 42–46](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/amendments-and-exceptions.md#L42))
-* **No inherited future coverage:** “**separately verify any metadata-only head**” and “**Keep implementation snapshot and later entry/approval metadata identities distinct**.” ([Handoff, lines 66–70](/home/themichael/PerplexityWorkspace/axiomlint/governance/execution/WP-001/S1/handoff.md#L66))
-
-**Independent interpretation, reaffirmed:** retaining unresolved historical items for the mandatory S2/S3 process *inside the same active package* is not carrying D2 into an accepted/closed package or granting residual-risk acceptance. The higher normative rule permits bounded ordinary S1 exit to that process after implementation readiness is actually demonstrated; the lower generic stop must not make its required remediation route impossible. D1 stops, unsafe affected execution, required evidence and reserved decisions remain untouched. ([Ordered sessions and severity rules](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/methodology.md#L20), [reserved prohibitions](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/AMD-002-delegated-decisions.md#L57))
-
-Applied specifically: DEV-001 remains OPEN D2/G0, its prospective constitutional/current-scope authority exists but bootstrap history still needs S2/S3; DEV-002 remains OPEN D2/G0, with the override ratified but implementation/coverage still unverified; FIND-S1-001 remains PENDING D3/G0 despite its observed regression and matching source evidence. This decision does not reject, waive, carry or verify any of those three. WP-002 must not begin with the retained DEV-001 restriction unresolved. ([Actual deviations](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/deviations.json), [actual findings](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/findings.json), [CHARTER, lines 59–61](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/CHARTER.md#L59))
-
-The new readiness defect is different: it impeded the exit mechanism itself, so I blocked it in round 1 rather than using the above interpretation to ignore it; it now has actual correction and independent verification, not a waiver. ([Original blocker](/home/themichael/PerplexityWorkspace/axiomlint/governance/readiness/WP-001/round-1/review.md), [corrected probe output](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stdout.log))
-
-## 3. All eight original acceptance clauses
-
-The original acceptance at plan line 211 is unchanged; the eight-entry map preserves both amendment **and** exception rules as separate obligations without removing any original clause. The following is a readiness determination of provisional S1 demonstration, not S2 acceptance or final package closure. ([Original plan, lines 203–213](/home/themichael/PerplexityWorkspace/axiomlint/docs/reference/axiomlint-plan.md#L203), [actual eight-clause map, lines 23–79](/home/themichael/PerplexityWorkspace/axiomlint/governance/execution/WP-001/S1/record.json#L23))
-
-| Clause | Independent S1 assessment and truthful bound |
-|---|---|
-| C01 Approved charter | **PASS, provisionally demonstrated.** Actual ratified charter/AMD digests, ACTIVE-BASELINE and APR-001 agree; no need to repeat ratification because preserved snapshots retain old labels. This is source consistency, not independent authentication of historical principal communications. ([APR-001](/home/themichael/PerplexityWorkspace/axiomlint/governance/approvals/APR-001-constitutional-ratification.md)) |
-| C02 Authority map | **PASS, provisionally demonstrated.** Map retains hierarchy, reserved owner decisions, separate readiness/audit contexts and consequential-action limits; it does not widen AMD-002. ([Authority map](/home/themichael/PerplexityWorkspace/axiomlint/governance/decisions/authority-map.md)) |
-| C03 License policy | **PASS, policy demonstrated.** MIT project identity and per-material rights/adoption/notice/transitive review rules exist; full installed toolchain/release clearance, future backends and unpinned setuptools are expressly unperformed, not silently accepted. ([License policy](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/license-policy.md), [material inventory](/home/themichael/PerplexityWorkspace/axiomlint/governance/licenses/foundation-materials.json)) |
-| C04 Claim glossary | **PASS, vocabulary demonstrated.** Finding/counterexample/SMT/CAS/Lean/correspondence claims remain distinct; EV-E0–E6 are not truth rankings, formal model results are not Python correctness, and inconclusive/not-run outcomes remain explicit. No scientific or operational promotion follows. ([Claim glossary](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/claim-glossary.md)) |
-| C05 Amendment rules | **PASS, provisionally demonstrated.** Exact baseline/changed-clause binding, proper authority, prospective effect and retained accepted history are explicit; constitutional expansion remains reserved. ([Amendment procedure](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/amendments-and-exceptions.md)) |
-| C06 Exception rules | **PASS with explicit interpretation in section 2.** No D1/D2 carry or material-risk acceptance granted; bounded lower-severity dispositions still need actual approval. Retained inherited items remain unresolved. ([Exception rules](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/amendments-and-exceptions.md#L21)) |
-| C07 Initialized registers | **PASS, initialization demonstrated.** Decision/risk/finding/session records and references validate; the newly PENDING readiness finding honestly records the prior block. Initialization does not approve all entries, accept risk or invent an auditor. ([Actual findings](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/findings.json), [actual sessions](/home/themichael/PerplexityWorkspace/axiomlint/governance/sessions/index.json)) |
-| C08 Governance validator passing | **PASS for bounded S1 readiness.** Current-state validator/full suite passes, and independent next-state probe now confirms corrected fixtures plus retained negative controls. This is still not an approval-authentication system or exhaustive semantic S2 audit. ([Independent manifest](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/gates/20261021T021659Z-041f70986662/manifest.json), [transition output](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stdout.log)) |
-
-The original brief AC-01 authority/single-active positive checks, AC-02 negative order/authorization/independence checks, AC-03 integrity checks and AC-04 truthful scope disclosure remain represented; correction adds explicit next-state regression coverage rather than deleting a failed control. ([Brief ACs](/home/themichael/PerplexityWorkspace/axiomlint/governance/session-briefs/WP-001/S1.md#L80), [governance tests](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_governance.py), [authority tests](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_wp_001_authority.py), [delivery tests](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_wp_001_delivery.py))
-
-## 4. Correction review and finding resolution
-
-**READINESS-WP001-001 — independently VERIFIED for this target.** The ratification test at lines 125–135 now checks before/after session/package bytes and retains APR-001's explicit `PACKAGE_OR_PHASE_CLOSURE` exclusion; the added lines 137–146 test preserves an already-closed synthetic S1. This replaces a phase freeze with the intended no-automatic-state-mutation invariant. ([Actual ratification test](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_wp_001_ratification.py#L125))
-
-The ordering negative fixture at governance-test lines 90–97 now explicitly sets S1 and S2 both IN_PROGRESS before asserting predecessor rejection. Added fixtures at lines 99–146 cover S1-closed/S2-blocked, later distinct S2 context and unresolved-D2 package rejection; their approvals/commits are explicitly synthetic test inputs, not real principal or reviewer identities. Existing self-audit, reused-commit, wrong-reviewed-revision, missing-report/SHA and D1/D2-waiver negatives remain. ([Actual governance fixtures, lines 90–168](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_governance.py#L90), [remaining negatives, lines 170–209](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_governance.py#L170))
-
-The independent supplemental probe holds all session/package/finding changes in Python objects; it invokes six actual corrected/retained test methods with reads/mutations patched in memory, including both originally failing methods. It also tests S1 CLOSED at the actual implementation commit, S2 PLANNED, package ACTIVE; hypothetical distinct S2 entry/closed-audit cases; and rejection of package closure while DEV-001/DEV-002 stay OPEN even if this readiness finding is hypothetically VERIFIED. It finishes by checking exact unchanged actual source identity. ([Probe script](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-transition-probe.py), [actual raw result](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stdout.log))
-
-All those checks pass; no original-test assertion failure remains in the tested next-state scenario. The limited resolution can be recorded in the live finding as VERIFIED with this unchanged decision as authority, but I made no live edit, and no inherited finding disposition follows. ([Probe result](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stdout.log))
-
-## 5. Actual commands and evidence
-
-Every execution was on the laptop in the authoritative root with a credential-free allowlisted shell environment: fixed PATH/locale/TZ, `PYTHONDONTWRITEBYTECODE=1`; targeted/full commands additionally use `PYTHONHASHSEED=0` and source PYTHONPATH. Wrapper logs are retained in `artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/`; exact raw digests are in the structured decision. ([Raw evidence directory](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3))
-
-| Command | Actual outcome |
-|---|---|
-| `python3 tools/check_wp001_delivery.py` | exit 0, eight clauses mapped, historical author snapshot readiness remains PENDING |
-| `python3 tools/check_session_briefs.py` | exit 0, 36 packages / 144 frozen briefs |
-| `python3 tools/run_wp_tests.py WP-001` | exit 0, **61 discovered/executed, zero skips** |
-| `python3 tools/local_check.py --require-clean` | exit 0, governance/hygiene/syntax/tests PASS; **199 executed, zero skips**, unchanged clean source |
-| `python3 tools/verify_local_run.py artifacts/gates/20261021T021659Z-041f70986662 --check-current-source` | exit 0, LOCAL_EVIDENCE=PASS |
-| Same verifier on root-author `artifacts/gates/20261021T010648Z-d84d2d08ef17` | exit 0, raw bytes and current-source binding PASS |
-| Same verifier on versioned candidate-copy main-author `.../artifacts/gates/20261021T010655Z-7ac98da8c5ac` | exit 0, raw bytes and current-source binding PASS |
-| Same verifier on candidate-copy fresh clone `.../artifacts/fresh-copy/artifacts/gates/20261021T010702Z-010210e396fd` | exit 0, raw bytes and current-source binding PASS |
-| `python3 -` — bounded in-memory probe | exit 0, all six actual methods and positive/negative transition scenarios PASS |
-
-These results are supported by the [actual wrapper logs](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3), not inferred from the coordinator's reported counts.
-
-Independent run **`20261021T021659Z-041f70986662`** has manifest SHA-256 **`f1bc431628a37cf44e552d4a9037d010a3e16d5796dc993dab3c7e31df20356f`**; schema digest is `1462261e123749549ae20e5c84db9eeea4e7554c616db2c256aa4ba504954904`, Python 3.12.3, Linux x86_64. Its manifest binds raw governance/hygiene/syntax/test log bytes and both source fingerprints. ([Independent manifest](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/gates/20261021T021659Z-041f70986662/manifest.json))
-
-I separately inspected author test stdout/stderr: all three verified author runs report 199 executed, zero skips, `OK`; root/main/clone manifest digests are respectively `92619c49bc50a0cfab17ab9fc07c2ac6d726d6f2e7c9540b1b80008d7fe79bba`, `2fa83b6f7aef5a8e5660774f64dde2f6a4f9c7fe512b074ca55a51012f1fdee7`, `01ca26f322152be71ef507261b112d91f79fa78c79ae0aec17501978d5875e34`. The latter two agree with the new author pin; a fresh same-author copy is not independent S2 or authenticated reproduction. ([Root-author manifest](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/gates/20261021T010648Z-d84d2d08ef17/manifest.json), [versioned pin](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/wp001-s1/AUDIT-TARGET.json))
-
-## 6. Exact bindings
-
-The structured decision lists full SHA-256 bindings for charter, amendments, ACTIVE-BASELINE, APR-001 JSON/MD, APR-002, DEC-004/delegation/map, methodology, exception rules, declaration, frozen brief, execution record, artifact manifest, reconciliation/handoff, changed tests and actual findings/deviations. Material bindings include:
-
-| Record | SHA-256 |
-|---|---|
-| S1 brief | `eaf84b61a397e2588ad4bc1724a3069c60c00efea0db45df24689f6a5cf1e7a6` |
-| WP-001 declaration | `333ee548906a15d6eee5a40d04de13701227fe5e4a10dfbf3a0a4f9083d95b58` |
-| Artifact manifest | `ca8705a1e9b0dc1a5b62279ca8b6800b9f1f5bd25c5ed65153edd59167fcce3c` |
-| Execution / acceptance record | `a2e5402a05b64cac70353390753998663798cb06042499fe02407b6d65a699cf` |
-| Ratified AMD-002 | `f97d8ed7e18d5cb8398f9fe304268506b1bd05a42f8540516546fdadaf220e13` |
-| Forward scope APR-002 | `afea8af8234c9fa5f9902b853510be7f7781160ad7fc3b4731e8c69ec42420a0` |
-| Corrected governance tests | `e1ad845320df4f0326b8d29546123a7a31708aacee037ad1efc7a919f029249c` |
-| Corrected ratification tests | `707bee6ecf85e9d897ae155e8703c96e38938fba2745cef0ce1793fa9cec278e` |
-
-These are observed source/file bindings, not signatures; the actual [brief](/home/themichael/PerplexityWorkspace/axiomlint/governance/session-briefs/WP-001/S1.md), [artifact manifest](/home/themichael/PerplexityWorkspace/axiomlint/governance/execution/WP-001/S1/artifacts.json), [authority](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/AMD-002-delegated-decisions.md) and [correction tests](/home/themichael/PerplexityWorkspace/axiomlint/tests/test_governance.py) remain the governing/source objects.
-
-## 7. Exact permitted recording steps and later-head verification
-
-Under this **ordinary readiness approval only**, the coordinator may make a **separate metadata-only recording commit** that does the following and nothing materially broader:
-
-1. Preserve this report, decision, probe and evidence references unchanged in a new versioned readiness location; retain round-1 BLOCK and round-2 access records, old pins and all failure logs.
-2. Record `READINESS-WP001-001` as **VERIFIED**, citing this independent exact-target verification, its corrected tests and raw logs; do not alter DEV-001, DEV-002 or FIND-S1-001 status, severity, restrictions or approval references.
-3. In `governance/sessions/index.json`, record S1 **CLOSED**, with **implementation/session commit `846b0dcbae94b0eb268fe10571c395c90a4f1228`**, original real implementation actor/context retained, and a truthful S1 summary/report referencing this readiness decision. This does not represent me as the implementation author.
-4. S2 may be recorded **PLANNED / NOT STARTED**, with actual actor/context/commit/reviewed-commit/report still empty and no independent verdict fabricated. S3/S4 remain BLOCKED; package WP-001 remains ACTIVE; all gates remain BLOCKED and WP-002 onward PLANNED/unapproved.
-5. Update only the corresponding mutable README/current-state/S1 session-summary documentation and new append-only readiness/exit/handoff supplement to state these facts, the actual current versioned pin, inherited restrictions, exact implementation/evidence identity, and that a separate future S2 is required. An appended DEC-006 may record this actual decision and its limits verbatim/by exact digest; it may not create or widen delegated authority. Any new S2-ready/entry-preparation document must say **PLANNED, NOT STARTED**, conditioned on independent verification of the actual recording head and separate actual auditor assignment/entry. Preserve hashed historical author snapshots (`record.json`, `artifacts.json`, original handoff and original pins) as historical evidence rather than rewriting their pending author-time labels.
-
-This scope follows AMD-002's bounded ordinary readiness authority, the existing session schema's CLOSED/PLANNED representations and the handoff's explicit implementation/metadata distinction; it does not authorize product/test/schema/contract changes, material scope expansion or formal S2 entry/execution. ([AMD-002, lines 23–42](/home/themichael/PerplexityWorkspace/axiomlint/governance/charter/AMD-002-delegated-decisions.md#L23), [session schema, lines 27–35 and 46–68](/home/themichael/PerplexityWorkspace/axiomlint/schemas/session.schema.json#L27), [handoff, lines 66–70](/home/themichael/PerplexityWorkspace/axiomlint/governance/execution/WP-001/S1/handoff.md#L66))
-
-**Required subsequent verification:** after recording and committing those metadata changes, an independent context must inspect the actual diff against this approved implementation target; verify the unchanged decision bytes and retained authority/brief/test/source bindings; check that no unpermitted status or product change occurred; and run delivery/brief/targeted/full clean checks plus manifest verification on the **actual new metadata HEAD/fingerprint**. Retain that new head and raw evidence in a separate verification record. A mismatch, failed mandatory check or broader change blocks transition completion/S2 entry pending correction and review. This report's test logs cover `846b0dc…`, **not future bytes**. ([Handoff, lines 66–70](/home/themichael/PerplexityWorkspace/axiomlint/governance/execution/WP-001/S1/handoff.md#L66), [protocol, lines 74–81](/home/themichael/PerplexityWorkspace/axiomlint/governance/session-briefs/PROTOCOL.md#L74))
-
-Do not put the future recording commit's hash inside itself, relabel its logs as implementation-target logs, or substitute its hash for the approved implementation identity. Its actual hash is recorded externally/after creation; the S1 implementation/session commit and later metadata commit remain distinguishable. S2, if separately and lawfully entered later, needs a genuinely separate actual auditor/context and its own report/commit reviewing the exact accepted S1 target plus relevant metadata. ([Protocol, lines 74–81](/home/themichael/PerplexityWorkspace/axiomlint/governance/session-briefs/PROTOCOL.md#L74), [methodology, lines 20–35](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/methodology.md#L20))
-
-## 8. Limitations and final status
-
-This is a bounded readiness review, not exhaustive S2 security/scientific validation. Trusted local repository tests and unsigned same-user hashes do not authenticate principal conversations, resist malicious-host tampering, qualify hostile containment or prove scientific effectiveness; ordinary governance checks do not authenticate an approval merely because a report path or synthetic unit-test fixture exists. Independent review and real source-bound authority remain required. ([Independent manifest limitations](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/gates/20261021T021659Z-041f70986662/manifest.json), [governance semantics, lines 159–175](/home/themichael/PerplexityWorkspace/axiomlint/src/axiomlint/governance.py#L159))
-
-Full Ruff/mypy/coverage/SCA/SBOM, locked toolchains, Nix/OCI/Windows, signing, complete JSON Schema/SARIF, solver/CAS/Lean and hostile-subject qualification remain explicitly deferred, not waived by this acceptance of WP-001 policy/governance deliverables. No installation, subject/backend/model/API invocation, push, hosted CI, product/live-state edit or commit was performed by this reviewer; all tests/probes ran on the laptop, and only ignored raw logs were written there. ([Testing standard](/home/themichael/PerplexityWorkspace/axiomlint/governance/standards/testing-and-local-gates.md#L30), [independent raw logs](/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3))
-
-**Final:** S1 implementation is ready for the exact bounded exit recording above; READINESS-WP001-001 is independently resolved at this implementation target. Actual live S1 remains IN_PROGRESS until the coordinator records and the later head is independently verified. No S2 has occurred, no package/gate is accepted, and no inherited D2/D3 or material risk is disposed of by this decision. ([Actual session register](/home/themichael/PerplexityWorkspace/axiomlint/governance/sessions/index.json), [actual finding/deviation records](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/findings.json), [deviations](/home/themichael/PerplexityWorkspace/axiomlint/governance/registers/deviations.json))
+The first metadata head `70997d7bac25a300610147462be80292530cc4fb` failed its local
+gate on those cross-host links. That failed run is preserved at
+`artifacts/gates/20261021T022926Z-d1bad31b5c36`, manifest SHA-256
+`3829a3be487119e938be1bd8a0794efa356dd7080a47028c56e33c31b25cf9a0`.
+This archival/index correction does not modify tests, the hygiene checker,
+independent source bytes, authority or mandatory later-head verification.

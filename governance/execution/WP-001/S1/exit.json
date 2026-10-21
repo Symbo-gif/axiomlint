@@ -8,6 +8,8 @@
   "readiness_decision": "governance/readiness/WP-001/round-3/decision.json",
   "readiness_decision_sha256": "364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338",
   "readiness_report_sha256": "322368a167e4d71e09fbd55b64ffd928b46e57ec4ba2e0a38968ac4a5a547661",
+  "readiness_report_original": "governance/readiness/WP-001/round-3/review.original.txt",
+  "readiness_portable_index": "governance/readiness/WP-001/round-3/review.md",
   "readiness_probe_sha256": "3522cf2a495116909f2bf040220c9ec4b9f67ccb25fac4a41fd69f403001fc0b",
   "implementation_independent_gate": {
     "run_id": "20261021T021659Z-041f70986662",

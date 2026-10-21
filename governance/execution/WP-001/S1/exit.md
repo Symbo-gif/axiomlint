@@ -14,6 +14,7 @@ verification of the actual later recording head before transition completion.
 - Decision: `governance/readiness/WP-001/round-3/decision.json`.
 - Decision SHA-256: `364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338`.
 - Report SHA-256: `322368a167e4d71e09fbd55b64ffd928b46e57ec4ba2e0a38968ac4a5a547661`.
+- Original report bytes: `governance/readiness/WP-001/round-3/review.original.txt`.
 - Probe SHA-256: `3522cf2a495116909f2bf040220c9ec4b9f67ccb25fac4a41fd69f403001fc0b`.
 
 All eight original clauses were provisionally demonstrated for bounded S1
@@ -41,7 +42,12 @@ Do not use the latter as the accepted corrected implementation identity.
 
 Round-1 BLOCK remains preserved for its original source. Round-2 access failure
 is retained as an access record, not a substantive rejection or test result.
-Round-3 report/decision/probe are copied byte-for-byte. The hashed historical
+Round-3 original report/decision/probe are copied byte-for-byte. The report's
+raw `.txt` record preserves original cloud-context hyperlinks as archival data;
+the adjacent `review.md` is explicitly coordinator-written portable navigation,
+not a modified or newly issued reviewer report. The first recording head's
+failed link-hygiene run is retained and no check or test was weakened.
+The hashed historical
 36-file author snapshot, record and handoff remain unchanged; their author-time
 pending state is not rewritten into retroactive independent approval.
 

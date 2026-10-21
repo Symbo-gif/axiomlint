@@ -1,0 +1,28 @@
+{
+  "kind": "BOUNDED_METADATA_PORTABILITY_SCOPE_ADDENDUM",
+  "reviewer_task_id": "independent_wp_001_s1_readiness_decision_mvheckh1",
+  "implementation_author_context": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+  "assessment": "PERMITTED_PACKAGING_SCOPE_ONLY",
+  "implementation_target_unchanged": "846b0dcbae94b0eb268fe10571c395c90a4f1228",
+  "reported_failed_recording_head_not_independently_verified": "70997d7bac25a300610147462be80292530cc4fb",
+  "round3_report_original_sha256": "322368a167e4d71e09fbd55b64ffd928b46e57ec4ba2e0a38968ac4a5a547661",
+  "round3_decision_original_sha256": "364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338",
+  "permitted": [
+    "Store exact original independent reports byte-for-byte as clearly named versioned review.original.txt records",
+    "Add conspicuously coordinator-authored portable Markdown indexes, not substitute independent reports",
+    "Map original filenames/source-context references to actual raw-record/index paths with exact observed digests",
+    "Update only packaging/exit supplements to state provenance and still-pending later-head verification",
+    "Preserve failed head/history/logs and every prior verdict; rerun unchanged mandatory checks"
+  ],
+  "forbidden": [
+    "Modifying original independent report/decision/probe bytes or their reviewed-target/evidence identities",
+    "Author index impersonating reviewer or silently changing verdict/limits",
+    "Editing or bypassing source/tests/hygiene/schema/contracts to make metadata pass",
+    "Claiming this scope assessment independently verifies reported failure or any new metadata head",
+    "S2 execution/entry, package/G0 closure, downstream activation, inherited finding waiver or material risk acceptance"
+  ],
+  "actual_metadata_head_verified": false,
+  "transition_completion_blocked_pending_actual_head_verification": true,
+  "required_next_review": "Independently inspect full actual diff versus implementation target and failed recording head, exact original hashes/index provenance/retained failures/states, then reproduce requested unchanged gates and byte verifiers; issue external receipt bound to actual new metadata head/fingerprint",
+  "report": "/home/user/workspace/review_outputs/WP001-S1-readiness-portability-scope-addendum.md"
+}

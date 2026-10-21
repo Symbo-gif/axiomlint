@@ -1,0 +1,26 @@
+# WP-001 S1 readiness — bounded portability-recording scope addendum
+
+Reviewer: `independent_wp_001_s1_readiness_decision_mvheckh1`, independent delegated ordinary readiness reviewer, not implementation author or S2.
+
+## Scope assessment
+
+**The proposed metadata-only portability packaging is permitted under the existing bounded recording route, subject to the conditions below. This is not verification or approval of either the failed recording head or any future head.** The underlying readiness approval remains bound to implementation `846b0dcbae94b0eb268fe10571c395c90a4f1228`, with later-head verification required. ([Unchanged round-3 decision](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-decision.json))
+
+The coordinator reports that recording head `70997d7bac25a300610147462be80292530cc4fb` failed its full gate because byte-preserved reports contain nonportable cloud-workspace Markdown references, and proposes retaining original bytes in `.txt` records with author-written portable index pages. I have not independently inspected that new head or its failed logs; the reported cause/count is not an independently verified finding in this addendum.
+
+## Exact allowed correction
+
+1. Preserve each original independent report byte-for-byte in a clearly named `review.original.txt` raw record within its respective versioned review directory. For round 3, the original report SHA-256 must remain **`322368a167e4d71e09fbd55b64ffd928b46e57ec4ba2e0a38968ac4a5a547661`**; the original round-3 decision SHA-256 must remain **`364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338`**. ([Original report](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-review.md), [original decision](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-decision.json))
+2. Preserve the round-2 access-block report, decision and probe marker unchanged in bytes; calculate and record their actual original digests rather than guessing them. Retain all round-1 records, the failed recording source/history and raw logs.
+3. Add a portable Markdown index conspicuously labelled **“Coordinator-authored portability index — not the independent review.”** It may point by correct repository-relative references to the exact original raw report, unchanged decision/probe and preserved prior records, identifying each original filename/source-context address and digest. It must explain that original cloud-workspace references describe the review's source context and may not resolve on the laptop.
+4. Do not rewrite the original review text, decision, probe, authority, original reviewed target or evidence digests. A changed storage suffix/path is an explicit packaging mapping, not an erratum to the review or new independent authorship. The index must not impersonate the reviewer, silently reinterpret the verdict, or present coordinator prose as an independent report.
+5. Update the exit/recording supplement only to map raw-report/index pathnames, hashes and provenance truthfully, retain the failed check, and state that transition completion and S2 entry remain blocked pending independent verification of the actual corrected recording head.
+6. Do not edit or bypass hygiene rules, tests, validators, schemas or source contracts. The corrected metadata must pass the unchanged applicable delivery/brief/targeted/full clean gate and raw-byte verification on its actual new commit/fingerprint.
+
+Retaining an exact raw record plus an honestly labelled navigation index addresses packaging portability without changing the reviewed implementation or claiming that a failed mandatory gate passed; the original decision expressly requires later-head verification and blocks transition completion on failure. ([Round-3 recording and verification conditions](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-review.md))
+
+## Required subsequent independent review
+
+After the corrected metadata commit exists, request independent inspection of its complete diff against the approved implementation target **and** the failed recording head, actual immutable original hashes, index provenance/references, retained failure logs, actual current states and all new gate/verifier evidence. An independent PASS receipt must bind that actual metadata commit/fingerprint and raw evidence; this addendum is not that receipt. ([Existing later-head requirements](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-decision.json))
+
+No S2 is begun or pre-approved. DEV-001/DEV-002/FIND-S1-001 remain unresolved, WP-001 remains ACTIVE, G0/downstream restrictions remain unchanged, and this addendum grants no waiver, risk acceptance, package closure or authority expansion. ([Original decision limits](/home/user/workspace/review_outputs/WP001-S1-readiness-round3-decision.json))

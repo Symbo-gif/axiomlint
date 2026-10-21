@@ -1,0 +1,226 @@
+test_acceptance_cannot_disable_record_capture (test_gate.GateTests.test_acceptance_cannot_disable_record_capture) ... ok
+test_acceptance_refuses_dirty_tree_before_commands (test_gate.GateTests.test_acceptance_refuses_dirty_tree_before_commands) ... ok
+test_broken_document_link_rejected (test_gate.GateTests.test_broken_document_link_rejected) ... ok
+test_child_environment_excludes_credentials_home_and_proxy (test_gate.GateTests.test_child_environment_excludes_credentials_home_and_proxy) ... ok
+test_clean_identity_has_commit_and_digest (test_gate.GateTests.test_clean_identity_has_commit_and_digest) ... ok
+test_command_inventory_mandatory_and_local (test_gate.GateTests.test_command_inventory_mandatory_and_local) ... ok
+test_current_hygiene_passes (test_gate.GateTests.test_current_hygiene_passes) ... FAIL
+test_deleted_tracked_source_fails (test_gate.GateTests.test_deleted_tracked_source_fails) ... ok
+test_dirty_modification_changes_tree (test_gate.GateTests.test_dirty_modification_changes_tree) ... ok
+test_empty_test_selection_fails (test_gate.GateTests.test_empty_test_selection_fails) ... ok
+test_executable_bit_changes_source_identity (test_gate.GateTests.test_executable_bit_changes_source_identity) ... ok
+test_failed_command_is_preserved_and_not_clean (test_gate.GateTests.test_failed_command_is_preserved_and_not_clean) ... ok
+test_filename_with_newline_is_unambiguous (test_gate.GateTests.test_filename_with_newline_is_unambiguous) ... ok
+test_hosted_workflow_rejected (test_gate.GateTests.test_hosted_workflow_rejected) ... ok
+test_ignored_gate_artifacts_do_not_change_identity (test_gate.GateTests.test_ignored_gate_artifacts_do_not_change_identity) ... ok
+test_missing_executable_is_error (test_gate.GateTests.test_missing_executable_is_error) ... ok
+test_nested_directory_cannot_inherit_parent_git_identity (test_gate.GateTests.test_nested_directory_cannot_inherit_parent_git_identity) ... ok
+test_non_git_directory_fails (test_gate.GateTests.test_non_git_directory_fails) ... ok
+test_rename_changes_identity (test_gate.GateTests.test_rename_changes_identity) ... ok
+test_source_symlink_fails (test_gate.GateTests.test_source_symlink_fails) ... ok
+test_timeout_is_preserved (test_gate.GateTests.test_timeout_is_preserved) ... ok
+test_umask_readwrite_permissions_do_not_change_git_source_identity (test_gate.GateTests.test_umask_readwrite_permissions_do_not_change_git_source_identity) ... ok
+test_untracked_input_is_included (test_gate.GateTests.test_untracked_input_is_included) ... ok
+test_all_36_packages_present_only_first_active (test_governance.GovernanceTests.test_all_36_packages_present_only_first_active) ... ok
+test_closed_session_requires_report_and_sha (test_governance.GovernanceTests.test_closed_session_requires_report_and_sha) ... ok
+test_current_constitution_is_ratified_but_packages_are_not_closed (test_governance.GovernanceTests.test_current_constitution_is_ratified_but_packages_are_not_closed) ... ok
+test_d1_d2_waiver_prohibited (test_governance.GovernanceTests.test_d1_d2_waiver_prohibited) ... ok
+test_dependency_cycle_fails (test_governance.GovernanceTests.test_dependency_cycle_fails) ... ok
+test_duplicate_global_id_fails (test_governance.GovernanceTests.test_duplicate_global_id_fails) ... ok
+test_empty_mandatory_register_fails (test_governance.GovernanceTests.test_empty_mandatory_register_fails) ... ok
+test_malformed_register_is_not_silently_accepted (test_governance.GovernanceTests.test_malformed_register_is_not_silently_accepted) ... ok
+test_missing_evidence_reference_fails (test_governance.GovernanceTests.test_missing_evidence_reference_fails) ... ok
+test_multiple_active_packages_fail (test_governance.GovernanceTests.test_multiple_active_packages_fail) ... ok
+test_orphan_requirement_package_fails (test_governance.GovernanceTests.test_orphan_requirement_package_fails) ... ok
+test_path_traversal_evidence_fails (test_governance.GovernanceTests.test_path_traversal_evidence_fails) ... ok
+test_plan_baseline_tampering_fails (test_governance.GovernanceTests.test_plan_baseline_tampering_fails) ... ok
+test_premature_package_closure_fails (test_governance.GovernanceTests.test_premature_package_closure_fails) ... ok
+test_reused_session_commit_fails (test_governance.GovernanceTests.test_reused_session_commit_fails) ... ok
+test_s1_exit_does_not_waive_open_d2_package_closure_block (test_governance.GovernanceTests.test_s1_exit_does_not_waive_open_d2_package_closure_block) ... ok
+test_s2_can_start_after_s1_closes_without_merging_sessions (test_governance.GovernanceTests.test_s2_can_start_after_s1_closes_without_merging_sessions) ... ok
+test_s2_cannot_start_before_s1_closes (test_governance.GovernanceTests.test_s2_cannot_start_before_s1_closes) ... ok
+test_schema_keyword_escape_fails (test_governance.GovernanceTests.test_schema_keyword_escape_fails) ... ok
+test_self_audit_closed_fails (test_governance.GovernanceTests.test_self_audit_closed_fails) ... ok
+test_source_bound_s1_exit_allows_s2_to_remain_blocked (test_governance.GovernanceTests.test_source_bound_s1_exit_allows_s2_to_remain_blocked) ... ok
+test_unknown_dependency_fails (test_governance.GovernanceTests.test_unknown_dependency_fails) ... ok
+test_wrong_audit_revision_fails (test_governance.GovernanceTests.test_wrong_audit_revision_fails) ... ok
+test_all_backends_honestly_unavailable (test_intake_cli.IntakeAndCliTests.test_all_backends_honestly_unavailable) ... ok
+test_ast_parse_success_is_not_compile_success (test_intake_cli.IntakeAndCliTests.test_ast_parse_success_is_not_compile_success) ... ok
+test_cli_malformed_schema_error_is_actionable (test_intake_cli.IntakeAndCliTests.test_cli_malformed_schema_error_is_actionable) ... ok
+test_cli_status_no_successful_backend_claims (test_intake_cli.IntakeAndCliTests.test_cli_status_no_successful_backend_claims) ... ok
+test_execution_always_refuses (test_intake_cli.IntakeAndCliTests.test_execution_always_refuses) ... ok
+test_fifo_source_rejected_without_blocking (test_intake_cli.IntakeAndCliTests.test_fifo_source_rejected_without_blocking) ... ok
+test_final_source_symlink_rejected (test_intake_cli.IntakeAndCliTests.test_final_source_symlink_rejected) ... ok
+test_input_byte_limit (test_intake_cli.IntakeAndCliTests.test_input_byte_limit) ... ok
+test_invalid_encoding_and_null_are_preserved_errors (test_intake_cli.IntakeAndCliTests.test_invalid_encoding_and_null_are_preserved_errors) ... ok
+test_invalid_source_reported_not_clean (test_intake_cli.IntakeAndCliTests.test_invalid_source_reported_not_clean) ... ok
+test_inventory_cli_missing_file_exit (test_intake_cli.IntakeAndCliTests.test_inventory_cli_missing_file_exit) ... ok
+test_inventory_cli_parse_error_exit (test_intake_cli.IntakeAndCliTests.test_inventory_cli_parse_error_exit) ... ok
+test_static_function_locations (test_intake_cli.IntakeAndCliTests.test_static_function_locations) ... ok
+test_top_level_source_is_never_executed (test_intake_cli.IntakeAndCliTests.test_top_level_source_is_never_executed) ... ok
+test_changed_source_detected (test_run_verifier.RunVerifierTests.test_changed_source_detected) ... ok
+test_command_inventory_cannot_be_replaced (test_run_verifier.RunVerifierTests.test_command_inventory_cannot_be_replaced) ... ok
+test_complete_fixture_passes_structural_integrity_only (test_run_verifier.RunVerifierTests.test_complete_fixture_passes_structural_integrity_only) ... ok
+test_dirty_acceptance_detected (test_run_verifier.RunVerifierTests.test_dirty_acceptance_detected) ... ok
+test_false_green_exit_code_detected (test_run_verifier.RunVerifierTests.test_false_green_exit_code_detected) ... ok
+test_manifest_corruption_detected (test_run_verifier.RunVerifierTests.test_manifest_corruption_detected) ... ok
+test_missing_log_detected (test_run_verifier.RunVerifierTests.test_missing_log_detected) ... ok
+test_raw_log_corruption_detected (test_run_verifier.RunVerifierTests.test_raw_log_corruption_detected) ... ok
+test_schema_snapshot_corruption_detected (test_run_verifier.RunVerifierTests.test_schema_snapshot_corruption_detected) ... ok
+test_wrong_argv_detected (test_run_verifier.RunVerifierTests.test_wrong_argv_detected) ... ok
+test_zero_or_all_skipped_counts_detected_even_with_rehashed_logs (test_run_verifier.RunVerifierTests.test_zero_or_all_skipped_counts_detected_even_with_rehashed_logs) ... ok
+test_all_published_schemas_use_supported_vocabulary (test_schema.SchemaTests.test_all_published_schemas_use_supported_vocabulary) ... ok
+test_array_minimum_and_nested_types (test_schema.SchemaTests.test_array_minimum_and_nested_types) ... ok
+test_boolean_is_not_integer (test_schema.SchemaTests.test_boolean_is_not_integer) ... ok
+test_boolean_is_not_numeric_enum (test_schema.SchemaTests.test_boolean_is_not_numeric_enum) ... ok
+test_duplicate_json_key_rejected (test_schema.SchemaTests.test_duplicate_json_key_rejected) ... ok
+test_duplicate_required (test_schema.SchemaTests.test_duplicate_required) ... ok
+test_exponent_overflow_is_not_finite_json (test_schema.SchemaTests.test_exponent_overflow_is_not_finite_json) ... ok
+test_external_reference_rejected_without_fetch (test_schema.SchemaTests.test_external_reference_rejected_without_fetch) ... ok
+test_false_is_not_zero_constant (test_schema.SchemaTests.test_false_is_not_zero_constant) ... ok
+test_invalid_schema_pattern (test_schema.SchemaTests.test_invalid_schema_pattern) ... ok
+test_malformed_json_and_missing_file_rejected (test_schema.SchemaTests.test_malformed_json_and_missing_file_rejected) ... ok
+test_malformed_supported_keyword_types_fail_cleanly (test_schema.SchemaTests.test_malformed_supported_keyword_types_fail_cleanly) ... ok
+test_missing_required_rejected (test_schema.SchemaTests.test_missing_required_rejected) ... ok
+test_nested_boolean_numeric_equality_not_conflated (test_schema.SchemaTests.test_nested_boolean_numeric_equality_not_conflated) ... ok
+test_nonfinite_json_rejected (test_schema.SchemaTests.test_nonfinite_json_rejected) ... ok
+test_nonfinite_native_values_rejected (test_schema.SchemaTests.test_nonfinite_native_values_rejected) ... ok
+test_null_and_number (test_schema.SchemaTests.test_null_and_number) ... ok
+test_numeric_enum_duplicate_rejected_boolean_remains_distinct (test_schema.SchemaTests.test_numeric_enum_duplicate_rejected_boolean_remains_distinct) ... ok
+test_pattern_and_string_lengths (test_schema.SchemaTests.test_pattern_and_string_lengths) ... ok
+test_project_config_rejects_hosted_or_dynamic_enablement (test_schema.SchemaTests.test_project_config_rejects_hosted_or_dynamic_enablement) ... ok
+test_schema_enums_and_additional_policy_are_checked (test_schema.SchemaTests.test_schema_enums_and_additional_policy_are_checked) ... ok
+test_session_unknown_state_rejected (test_schema.SchemaTests.test_session_unknown_state_rejected) ... ok
+test_strict_loading_roundtrip (test_schema.SchemaTests.test_strict_loading_roundtrip) ... ok
+test_unknown_property_rejected (test_schema.SchemaTests.test_unknown_property_rejected) ... ok
+test_unsupported_keyword_fails_even_in_unused_branch (test_schema.SchemaTests.test_unsupported_keyword_fails_even_in_unused_branch) ... ok
+test_valid_object (test_schema.SchemaTests.test_valid_object) ... ok
+test_all_skipped_package_suite_refuses (test_session_briefs.PackageTestRunnerTests.test_all_skipped_package_suite_refuses) ... ok
+test_empty_package_suite_refuses (test_session_briefs.PackageTestRunnerTests.test_empty_package_suite_refuses) ... ok
+test_failed_package_suite_refuses (test_session_briefs.PackageTestRunnerTests.test_failed_package_suite_refuses) ... ok
+test_invalid_package_ids_refuse (test_session_briefs.PackageTestRunnerTests.test_invalid_package_ids_refuse) ... ok
+test_calibration_order_conflict_explicit (test_session_briefs.SessionBriefTests.test_calibration_order_conflict_explicit) ... ok
+test_catalogue_path_escape_rejected (test_session_briefs.SessionBriefTests.test_catalogue_path_escape_rejected) ... ok
+test_changed_original_acceptance_rejected (test_session_briefs.SessionBriefTests.test_changed_original_acceptance_rejected) ... ok
+test_changed_profile_source_rejected (test_session_briefs.SessionBriefTests.test_changed_profile_source_rejected) ... ok
+test_changed_protocol_rejected (test_session_briefs.SessionBriefTests.test_changed_protocol_rejected) ... ok
+test_complete_draft_catalogue_valid (test_session_briefs.SessionBriefTests.test_complete_draft_catalogue_valid) ... ok
+test_duplicate_id_rejected (test_session_briefs.SessionBriefTests.test_duplicate_id_rejected) ... ok
+test_each_stage_contains_its_own_specific_actions (test_session_briefs.SessionBriefTests.test_each_stage_contains_its_own_specific_actions) ... ok
+test_exact_36_by_4_coverage (test_session_briefs.SessionBriefTests.test_exact_36_by_4_coverage) ... ok
+test_experiments_require_review_before_execution (test_session_briefs.SessionBriefTests.test_experiments_require_review_before_execution) ... ok
+test_fabricated_approval_rejected (test_session_briefs.SessionBriefTests.test_fabricated_approval_rejected) ... ok
+test_lean_trust_policy_not_only_text_blacklist (test_session_briefs.SessionBriefTests.test_lean_trust_policy_not_only_text_blacklist) ... ok
+test_missing_brief_rejected (test_session_briefs.SessionBriefTests.test_missing_brief_rejected) ... ok
+test_no_findings_still_requires_independent_s3 (test_session_briefs.SessionBriefTests.test_no_findings_still_requires_independent_s3) ... ok
+test_original_acceptance_retained_all_144 (test_session_briefs.SessionBriefTests.test_original_acceptance_retained_all_144) ... ok
+test_package_boundary_has_previous_wp_s4 (test_session_briefs.SessionBriefTests.test_package_boundary_has_previous_wp_s4) ... ok
+test_rehashed_tampering_still_rejected (test_session_briefs.SessionBriefTests.test_rehashed_tampering_still_rejected) ... ok
+test_removed_declaration_navigation_rejected (test_session_briefs.SessionBriefTests.test_removed_declaration_navigation_rejected) ... ok
+test_render_is_deterministic_without_mutating_live_register (test_session_briefs.SessionBriefTests.test_render_is_deterministic_without_mutating_live_register) ... ok
+test_renderer_refuses_to_overwrite_catalogue (test_session_briefs.SessionBriefTests.test_renderer_refuses_to_overwrite_catalogue) ... ok
+test_s2_is_not_given_product_edit_authority (test_session_briefs.SessionBriefTests.test_s2_is_not_given_product_edit_authority) ... ok
+test_skipped_predecessor_rejected (test_session_briefs.SessionBriefTests.test_skipped_predecessor_rejected) ... ok
+test_stage_reordering_rejected (test_session_briefs.SessionBriefTests.test_stage_reordering_rejected) ... ok
+test_symlink_brief_rejected (test_session_briefs.SessionBriefTests.test_symlink_brief_rejected) ... ok
+test_tampered_brief_rejected (test_session_briefs.SessionBriefTests.test_tampered_brief_rejected) ... ok
+test_canonical_order_and_unicode (test_store.StoreTests.test_canonical_order_and_unicode) ... ok
+test_corrupt_preexisting_put_fails_without_overwrite (test_store.StoreTests.test_corrupt_preexisting_put_fails_without_overwrite) ... ok
+test_corrupt_read_fails (test_store.StoreTests.test_corrupt_read_fails) ... ok
+test_digest_path_traversal_and_uppercase_fail (test_store.StoreTests.test_digest_path_traversal_and_uppercase_fail) ... ok
+test_empty_content_is_a_real_artifact (test_store.StoreTests.test_empty_content_is_a_real_artifact) ... ok
+test_fifo_artifact_rejected_without_blocking (test_store.StoreTests.test_fifo_artifact_rejected_without_blocking) ... ok
+test_missing_artifact_fails (test_store.StoreTests.test_missing_artifact_fails) ... ok
+test_nonfinite_serialization_rejected (test_store.StoreTests.test_nonfinite_serialization_rejected) ... ok
+test_record_store_roundtrip (test_store.StoreTests.test_record_store_roundtrip) ... ok
+test_roundtrip_and_idempotence (test_store.StoreTests.test_roundtrip_and_idempotence) ... ok
+test_symlink_artifact_fails (test_store.StoreTests.test_symlink_artifact_fails) ... ok
+test_symlink_store_parent_fails (test_store.StoreTests.test_symlink_store_parent_fails) ... ok
+test_author_review_is_labeled_not_s2 (test_wp_001_authority.AuthorityRecordTests.test_author_review_is_labeled_not_s2) ... ok
+test_authority_quote_is_not_an_invented_signature (test_wp_001_authority.AuthorityRecordTests.test_authority_quote_is_not_an_invented_signature) ... ok
+test_delegation_does_not_break_governance_structure (test_wp_001_authority.AuthorityRecordTests.test_delegation_does_not_break_governance_structure) ... ok
+test_hosted_check_prohibition_cannot_be_removed (test_wp_001_authority.AuthorityRecordTests.test_hosted_check_prohibition_cannot_be_removed) ... ok
+test_independence_reservation_cannot_be_removed (test_wp_001_authority.AuthorityRecordTests.test_independence_reservation_cannot_be_removed) ... ok
+test_principal_cannot_be_impersonated_as_the_delegate (test_wp_001_authority.AuthorityRecordTests.test_principal_cannot_be_impersonated_as_the_delegate) ... ok
+test_record_cannot_be_promoted_to_ratification (test_wp_001_authority.AuthorityRecordTests.test_record_cannot_be_promoted_to_ratification) ... ok
+test_record_cannot_grant_author_self_approval (test_wp_001_authority.AuthorityRecordTests.test_record_cannot_grant_author_self_approval) ... ok
+test_routine_scope_and_reserved_decisions_are_disjoint (test_wp_001_authority.AuthorityRecordTests.test_routine_scope_and_reserved_decisions_are_disjoint) ... ok
+test_scientific_condition_cannot_be_removed (test_wp_001_authority.AuthorityRecordTests.test_scientific_condition_cannot_be_removed) ... ok
+test_unknown_authority_field_fails_closed (test_wp_001_authority.AuthorityRecordTests.test_unknown_authority_field_fails_closed) ... ok
+test_user_grant_has_a_valid_record (test_wp_001_authority.AuthorityRecordTests.test_user_grant_has_a_valid_record) ... ok
+test_all_new_constitutional_deliverables_have_snapshot_bytes (test_wp_001_delivery.DeliveryArtifactTests.test_all_new_constitutional_deliverables_have_snapshot_bytes) ... ok
+test_author_cannot_claim_independent_readiness (test_wp_001_delivery.DeliveryArtifactTests.test_author_cannot_claim_independent_readiness) ... ok
+test_author_cannot_claim_s2_completed (test_wp_001_delivery.DeliveryArtifactTests.test_author_cannot_claim_s2_completed) ... ok
+test_author_cannot_close_package_in_delivery_record (test_wp_001_delivery.DeliveryArtifactTests.test_author_cannot_close_package_in_delivery_record) ... ok
+test_author_manifest_itself_is_excluded_from_its_byte_list (test_wp_001_delivery.DeliveryArtifactTests.test_author_manifest_itself_is_excluded_from_its_byte_list) ... ok
+test_changed_glossary_invalidates_author_snapshot (test_wp_001_delivery.DeliveryArtifactTests.test_changed_glossary_invalidates_author_snapshot) ... ok
+test_changed_project_license_fails (test_wp_001_delivery.DeliveryArtifactTests.test_changed_project_license_fails) ... ok
+test_complete_author_delivery_is_consistent_not_approved (test_wp_001_delivery.DeliveryArtifactTests.test_complete_author_delivery_is_consistent_not_approved) ... ok
+test_duplicate_criterion_fails (test_wp_001_delivery.DeliveryArtifactTests.test_duplicate_criterion_fails) ... ok
+test_exact_original_eight_acceptance_clauses (test_wp_001_delivery.DeliveryArtifactTests.test_exact_original_eight_acceptance_clauses) ... ok
+test_existing_snapshot_is_not_overwritten (test_wp_001_delivery.DeliveryArtifactTests.test_existing_snapshot_is_not_overwritten) ... ok
+test_frozen_brief_is_not_silently_rewritten (test_wp_001_delivery.DeliveryArtifactTests.test_frozen_brief_is_not_silently_rewritten) ... ok
+test_manifest_cannot_omit_a_required_artifact (test_wp_001_delivery.DeliveryArtifactTests.test_manifest_cannot_omit_a_required_artifact) ... ok
+test_material_inventory_is_not_full_clearance (test_wp_001_delivery.DeliveryArtifactTests.test_material_inventory_is_not_full_clearance) ... ok
+test_missing_acceptance_clause_fails (test_wp_001_delivery.DeliveryArtifactTests.test_missing_acceptance_clause_fails) ... ok
+test_missing_license_policy_fails (test_wp_001_delivery.DeliveryArtifactTests.test_missing_license_policy_fails) ... ok
+test_missing_scope_authorization_fails (test_wp_001_delivery.DeliveryArtifactTests.test_missing_scope_authorization_fails) ... ok
+test_mutable_live_status_is_not_frozen_forever (test_wp_001_delivery.DeliveryArtifactTests.test_mutable_live_status_is_not_frozen_forever) ... ok
+test_pair_guard_accepts_matching_synthetic_identities (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_accepts_matching_synthetic_identities) ... ok
+test_pair_guard_rejects_development_run (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_rejects_development_run) ... ok
+test_pair_guard_rejects_different_source (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_rejects_different_source) ... ok
+test_pair_guard_rejects_different_tree (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_rejects_different_tree) ... ok
+test_pair_guard_rejects_dirty_current_source (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_rejects_dirty_current_source) ... ok
+test_pair_guard_rejects_failed_run (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_rejects_failed_run) ... ok
+test_pair_guard_rejects_reusing_same_run (test_wp_001_delivery.HandoffPinGuardTests.test_pair_guard_rejects_reusing_same_run) ... ok
+test_pin_writer_refuses_existing_record (test_wp_001_delivery.HandoffPinGuardTests.test_pin_writer_refuses_existing_record) ... ok
+test_active_source_bound_constitution_passes (test_wp_001_ratification.RatificationTests.test_active_source_bound_constitution_passes) ... ok
+test_active_target_list_cannot_expand (test_wp_001_ratification.RatificationTests.test_active_target_list_cannot_expand) ... ok
+test_actual_record_validates_against_pinned_schema (test_wp_001_ratification.RatificationTests.test_actual_record_validates_against_pinned_schema) ... ok
+test_adoption_does_not_close_live_sessions_or_packages (test_wp_001_ratification.RatificationTests.test_adoption_does_not_close_live_sessions_or_packages) ... ok
+test_approval_flag_without_active_record_fails (test_wp_001_ratification.RatificationTests.test_approval_flag_without_active_record_fails) ... ok
+test_changed_charter_fails (test_wp_001_ratification.RatificationTests.test_changed_charter_fails) ... ok
+test_changed_delegation_amendment_fails (test_wp_001_ratification.RatificationTests.test_changed_delegation_amendment_fails) ... ok
+test_changed_local_only_amendment_fails (test_wp_001_ratification.RatificationTests.test_changed_local_only_amendment_fails) ... ok
+test_changed_packet_fails (test_wp_001_ratification.RatificationTests.test_changed_packet_fails) ... ok
+test_full_governance_gate_enforces_ratified_bytes (test_wp_001_ratification.RatificationTests.test_full_governance_gate_enforces_ratified_bytes) ... ok
+test_historical_pending_scaffold_without_activation_is_supported (test_wp_001_ratification.RatificationTests.test_historical_pending_scaffold_without_activation_is_supported) ... ok
+test_missing_principal_record_fails (test_wp_001_ratification.RatificationTests.test_missing_principal_record_fails) ... ok
+test_original_general_grant_is_not_rewritten_as_ratification (test_wp_001_ratification.RatificationTests.test_original_general_grant_is_not_rewritten_as_ratification) ... ok
+test_pending_configuration_cannot_claim_active_baseline (test_wp_001_ratification.RatificationTests.test_pending_configuration_cannot_claim_active_baseline) ... ok
+test_principal_must_match_current_maintainer (test_wp_001_ratification.RatificationTests.test_principal_must_match_current_maintainer) ... ok
+test_ratification_check_preserves_already_closed_s1_fixture (test_wp_001_ratification.RatificationTests.test_ratification_check_preserves_already_closed_s1_fixture) ... ok
+test_record_byte_tampering_fails (test_wp_001_ratification.RatificationTests.test_record_byte_tampering_fails) ... ok
+test_rehashed_false_answer_still_fails (test_wp_001_ratification.RatificationTests.test_rehashed_false_answer_still_fails) ... ok
+test_rehashed_false_principal_still_fails (test_wp_001_ratification.RatificationTests.test_rehashed_false_principal_still_fails) ... ok
+test_source_revision_mismatch_fails (test_wp_001_ratification.RatificationTests.test_source_revision_mismatch_fails) ... ok
+test_symlink_approval_rejected (test_wp_001_ratification.RatificationTests.test_symlink_approval_rejected) ... ok
+test_symlink_charter_rejected (test_wp_001_ratification.RatificationTests.test_symlink_charter_rejected) ... ok
+test_unsafe_authority_reference_rejected (test_wp_001_ratification.RatificationTests.test_unsafe_authority_reference_rejected) ... ok
+
+======================================================================
+FAIL: test_current_hygiene_passes (test_gate.GateTests.test_current_hygiene_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/themichael/PerplexityWorkspace/axiomlint/tests/test_gate.py", line 163, in test_current_hygiene_passes
+    self.assertEqual(hygiene_check(ROOT), [])
+AssertionError: Lists differ: ['governance/readiness/WP-001/round-3/revi[498 chars].md'] != []
+
+First list contains 4 additional elements.
+First extra element 0:
+'governance/readiness/WP-001/round-3/review.md: broken link /home/user/workspace/review_outputs/WP001-S1-readiness-round2-review.md'
+
++ []
+- ['governance/readiness/WP-001/round-3/review.md: broken link '
+-  '/home/user/workspace/review_outputs/WP001-S1-readiness-round2-review.md',
+-  'governance/readiness/WP-001/round-3/review.md: broken link '
+-  '/home/user/workspace/review_outputs/WP001-S1-readiness-review.md',
+-  'governance/readiness/WP-001/round-3/review.md: broken link '
+-  '/home/user/workspace/review_outputs/WP001-S1-readiness-round3-transition-probe.py',
+-  'governance/readiness/WP-001/round-2-access-block/review.md: broken link '
+-  '/home/user/workspace/review_outputs/WP001-S1-readiness-review.md']
+
+----------------------------------------------------------------------
+Ran 199 tests in 4.693s
+
+FAILED (failures=1)
