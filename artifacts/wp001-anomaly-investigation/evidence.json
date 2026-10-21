@@ -1,0 +1,51 @@
+{
+  "investigation_id": "INV-WP001-FILE-TRUNCATION",
+  "investigator_context_id": "72128125-7e51-4832-93b2-09822b20cfb9",
+  "timestamp": "2026-10-21T04:46:00-03:00",
+  "root_cause": {
+    "subsystem": "Devin Desktop IDE (Electron/VS Code)",
+    "workspace_folder": "file:///home/themichael/PerplexityWorkspace/axiomlint",
+    "trigger_setting": {
+      "path": "/home/themichael/.config/Devin/User/settings.json",
+      "original": "\"files.autoSave\": \"afterDelay\"",
+      "remediated": "\"files.autoSave\": \"off\""
+    },
+    "mechanism": "External tools/git commit modify files on disk while Devin Desktop holds open in-memory document buffers. After auto-save delay or diff dismissal, VS Code applies Workspace Edit flushing stale in-memory buffers (empty 0 bytes for newly tracked files; pre-edit content for modified files) back to disk."
+  },
+  "incidents": [
+    {
+      "incident_id": 1,
+      "commit": "63bd5f8bc6e66803cd4d5a06c92b6701b1ac09f6",
+      "commit_timestamp": "2026-10-21T01:46:33-03:00",
+      "reversion_timestamp": "2026-10-21T01:47:45.47x-03:00",
+      "history_entries": [
+        {"file": "governance/execution/WP-001/S2/handoff.md", "source": "Workspace Edit", "bytes": 0, "history_id": "Cn7z.md"},
+        {"file": "governance/audits/WP-001/S2-report.md", "source": "Workspace Edit", "bytes": 0, "history_id": "l14s.md"},
+        {"file": "governance/audits/WP-001/S2-findings.json", "source": "Workspace Edit", "bytes": 0, "history_id": "DhDx.json"},
+        {"file": "governance/execution/WP-001/S2/record.json", "source": "Workspace Edit", "bytes": 0, "history_id": "Fovy.json"}
+      ],
+      "acp_bridge_events": "4 cognition.ai/document/didChangeDirty notifications at 2026-10-21T04:47:44 UTC in /home/themichael/.config/Devin/logs/20261021T011716/window1/exthost/output_logging_20261021T011948/3-Devin ACP devin-cli.log"
+    },
+    {
+      "incident_id": 2,
+      "commit": "b40f5071f8af0e857d35a59102eb10246daf04d6",
+      "commit_timestamp": "2026-10-21T02:08:10-03:00",
+      "reversion_timestamp": "2026-10-21T02:08:35.67x-03:00",
+      "history_entries": [
+        {"file": "governance/execution/WP-001/S3/record.json", "source": "Workspace Edit", "bytes": 0, "history_id": "VGyx.json"},
+        {"file": "governance/findings/WP-001/closure-table.md", "source": "Workspace Edit", "bytes": 0, "history_id": "qBJS.md"},
+        {"file": "governance/execution/WP-001/S3/handoff.md", "source": "Workspace Edit", "bytes": 0, "history_id": "yGHS.md"},
+        {"file": "governance/audits/WP-001/S3-delta-review.md", "source": "Workspace Edit", "bytes": 0, "history_id": "0Z4f.md"},
+        {"file": "governance/registers/findings.json", "source": "Workspace Edit", "bytes": 1911, "history_id": "161Q.json"},
+        {"file": "tools/verify_local_run.py", "source": "Workspace Edit", "bytes": 5288, "history_id": "bF2S.py"},
+        {"file": "src/axiomlint/schema.py", "source": "Workspace Edit", "bytes": 7364, "history_id": "r6a6.py"},
+        {"file": "tests/test_schema.py", "source": "Workspace Edit", "bytes": 7969, "history_id": "DCjb.py"}
+      ],
+      "acp_bridge_events": "8 cognition.ai/document/didChangeDirty notifications at 2026-10-21T05:08:34 UTC, Antigravity LS diff dismissal lines 157-164, and 5 rapid git status loops in vscode.git"
+    }
+  ],
+  "mitigation": {
+    "applied": "Disabled files.autoSave (set to 'off') in Devin user settings",
+    "safeguard": "Require clean git status and verify file sizes > 0 after every commit"
+  }
+}
