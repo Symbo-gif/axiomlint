@@ -71,7 +71,7 @@ class SchemaTests(unittest.TestCase):
 
     def test_invalid_schema_pattern(self):
         with self.assertRaises(InvalidRecord):
-            check_schema({"pattern": "["})
+            check_schema({"type": "string", "pattern": "["})
 
     def test_duplicate_required(self):
         with self.assertRaises(InvalidRecord):
