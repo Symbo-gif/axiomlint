@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1",
+  "session_id": "SESSION-WP-001-S2",
+  "package": "WP-001",
+  "stage": "S2",
+  "actor": "Independent S2 Auditor",
+  "context_id": "39122e38-95a9-41a1-b210-d98ed7f9618a",
+  "independent": true,
+  "entry_commit": "ff38d388331699cd0d7c2a3adc9d1e88d8297e8d",
+  "reviewed_commit": "846b0dcbae94b0eb268fe10571c395c90a4f1228",
+  "reviewed_commit_tree_sha256": "81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f",
+  "recording_head_commit": "ff38d388331699cd0d7c2a3adc9d1e88d8297e8d",
+  "recording_head_tree_sha256": "740e7097eddc287a8688bc885ea9df8677a60e3c6cfd847886d14f01f294c439",
+  "external_receipt": "artifacts/wp001-s1-exit/metadata-verification/decision.json",
+  "external_receipt_decision": "PASS",
+  "authority_reference": "governance/charter/AMD-002-delegated-decisions.md",
+  "constitution_baseline": "governance/charter/ACTIVE-BASELINE.json",
+  "frozen_brief": "governance/session-briefs/WP-001/S2.md",
+  "audit_report": "governance/audits/WP-001/S2-report.md",
+  "audit_findings": "governance/audits/WP-001/S2-findings.json",
+  "handoff": "governance/execution/WP-001/S2/handoff.md",
+  "verdict": "PASS-WITH-FINDINGS",
+  "dirty_before": false,
+  "dirty_after": false,
+  "commands": [
+    {
+      "name": "delivery",
+      "argv": ["python3", "tools/check_wp001_delivery.py"],
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_bytes": 99,
+      "stdout_sha256": "0aaa5e232e961e772d72c59d56b5d94c5463c49809678809bda20dfe630e8fd2",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "briefs",
+      "argv": ["python3", "tools/check_session_briefs.py"],
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_bytes": 129,
+      "stdout_sha256": "a61fe6739c4f8732f433934c0b63ff8c4b1147e5992b6e2cbf1be56aafe81fc5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "targeted",
+      "argv": ["python3", "tools/run_wp_tests.py", "WP-001"],
+      "exit_code": 0,
+      "status": "PASS",
+      "discovered": 61,
+      "executed": 61,
+      "skipped": 0,
+      "stdout_bytes": 51,
+      "stdout_sha256": "83563443bea0a583ad02aec5fb77458eb8a1015462a3b625965aeb616123ac73",
+      "stderr_bytes": 8657,
+      "stderr_sha256": "10d07c6ae678eb337cc4c2b34e3b4bd08edde26a97a828b668e9698c4fba2240"
+    },
+    {
+      "name": "gate",
+      "argv": ["python3", "tools/local_check.py", "--require-clean"],
+      "exit_code": 0,
+      "status": "PASS",
+      "run_id": "20261021T044249Z-619b94b9d058",
+      "manifest_sha256": "c8525be2c2243b418136367c6781cfcfdaef2c13fd9f2f8fe5096b2548440210",
+      "discovered": 199,
+      "executed": 199,
+      "skipped": 0,
+      "stdout_bytes": 623,
+      "stdout_sha256": "9b63bd9f9b3393966a67422b5acdb75952648f8511fe4b33f98aca5ea4cbca3d",
+      "stderr_bytes": 24607,
+      "stderr_sha256": "99b3a3b654bbba8f330bc3e1f6e9fefc1fc9ee78d1c46bc476e9216475cd491e"
+    },
+    {
+      "name": "verify-gate",
+      "argv": ["python3", "tools/verify_local_run.py", "artifacts/gates/20261021T044249Z-619b94b9d058", "--check-current-source"],
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout_bytes": 46,
+      "stdout_sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "raw_log_directory": "artifacts/wp001-s2-audit",
+  "raw_logs": {
+    "briefs.stderr.log": {"bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    "briefs.stdout.log": {"bytes": 129, "sha256": "a61fe6739c4f8732f433934c0b63ff8c4b1147e5992b6e2cbf1be56aafe81fc5"},
+    "delivery.stderr.log": {"bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    "delivery.stdout.log": {"bytes": 99, "sha256": "0aaa5e232e961e772d72c59d56b5d94c5463c49809678809bda20dfe630e8fd2"},
+    "gate.stderr.log": {"bytes": 24607, "sha256": "99b3a3b654bbba8f330bc3e1f6e9fefc1fc9ee78d1c46bc476e9216475cd491e"},
+    "gate.stdout.log": {"bytes": 623, "sha256": "9b63bd9f9b3393966a67422b5acdb75952648f8511fe4b33f98aca5ea4cbca3d"},
+    "targeted.stderr.log": {"bytes": 8657, "sha256": "10d07c6ae678eb337cc4c2b34e3b4bd08edde26a97a828b668e9698c4fba2240"},
+    "targeted.stdout.log": {"bytes": 51, "sha256": "83563443bea0a583ad02aec5fb77458eb8a1015462a3b625965aeb616123ac73"},
+    "verify-gate.stderr.log": {"bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    "verify-gate.stdout.log": {"bytes": 46, "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043"},
+    "verify-imp-gate.stderr.log": {"bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    "verify-imp-gate.stdout.log": {"bytes": 46, "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043"},
+    "verify-metadata-gate.stderr.log": {"bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    "verify-metadata-gate.stdout.log": {"bytes": 46, "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043"}
+  },
+  "dispositions": {
+    "DEV-001": {
+      "severity": "D2",
+      "status": "OPEN",
+      "blocking_gate": "G0",
+      "action": "RETAINED_NO_WAIVER",
+      "note": "Bootstrap history cannot be backdated as pre-approved; resolved only at S4 package closure"
+    },
+    "DEV-002": {
+      "severity": "D2",
+      "status": "OPEN",
+      "blocking_gate": "G0",
+      "action": "RETAINED_NO_WAIVER",
+      "note": "Local-only override tension with upstream framework acknowledged and ratified under AMD-001; resolved only at S4 package closure"
+    },
+    "FIND-S1-001": {
+      "severity": "D3",
+      "status": "PENDING",
+      "blocking_gate": "G0",
+      "action": "RETAINED_PENDING_S3_UPDATE",
+      "note": "Code fix and clone source identity reproducibility independently confirmed; register update to VERIFIED belongs to S3/S4"
+    },
+    "READINESS-WP001-001": {
+      "severity": "D2",
+      "status": "VERIFIED",
+      "blocking_gate": "S1_EXIT",
+      "action": "CONFIRMED_VERIFIED",
+      "note": "Independent readiness review resolved phase-freezing fixtures"
+    }
+  },
+  "findings": [
+    {
+      "id": "FIND-S2-001",
+      "severity": "D3",
+      "status": "OPEN",
+      "location": "tools/verify_local_run.py:79",
+      "summary": "Gate verification runner permits partial skips in test discovery verification"
+    },
+    {
+      "id": "FIND-S2-002",
+      "severity": "D4",
+      "status": "OPEN",
+      "location": "src/axiomlint/schema.py:81-129",
+      "summary": "Foundation schema validator check_schema does not enforce keyword-type co-occurrence"
+    }
+  ],
+  "limitations": [
+    "No subject code execution, AST execution, or backend solver invocation performed",
+    "No hostile-input containment or container boundary qualification tested (WP-006 deferred)",
+    "No remote API, LLM, network client or hosted CI execution",
+    "All checks executed exclusively on local laptop filesystem",
+    "Local unsigned digests do not defend against malicious same-user adversary"
+  ],
+  "status_effects": {
+    "s1": "CLOSED",
+    "s2": "AUDITED_VERDICT_ISSUED",
+    "s3": "READY_FOR_FINDING_REMEDIATION",
+    "s4": "BLOCKED",
+    "wp001": "ACTIVE",
+    "gates": "BLOCKED",
+    "wp002_and_later": "PLANNED_UNAPPROVED",
+    "package_closure_granted": false,
+    "g0_closure_granted": false,
+    "wp002_activation_granted": false,
+    "risk_acceptance_granted": false,
+    "waiver_granted": false,
+    "release_granted": false
+  }
+}

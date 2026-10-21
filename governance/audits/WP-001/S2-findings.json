@@ -1,0 +1,42 @@
+[
+  {
+    "id": "FIND-S2-001",
+    "category": "FINDING",
+    "status": "OPEN",
+    "severity": "D3",
+    "owner": "Michael Maillet",
+    "title": "Gate verification runner permits partial skips in test discovery verification",
+    "package": "WP-001",
+    "stage": "S2",
+    "location": "tools/verify_local_run.py:79",
+    "governing_clauses": [
+      "governance/standards/testing-and-local-gates.md:12-13",
+      "governance/session-briefs/PROTOCOL.md:64-65"
+    ],
+    "failure_mode": "verify_local_run.py evaluates 'skipped >= executed' to detect all-skipped suites, but does not flag non-zero skipped counts when skipped < executed for ACCEPTANCE_CANDIDATE runs",
+    "impact": "A test suite execution that inadvertently skips a subset of tests could be accepted by verify_local_run.py as a valid acceptance run without raising an automated verification error",
+    "reproduction": "Inspection of tools/verify_local_run.py line 79: 'if discovered <= 0 or executed != discovered or skipped >= executed:'. If discovered=199, executed=199, skipped=5, 'skipped >= executed' evaluates to False and no error is recorded",
+    "expected_remedy": "Update tools/verify_local_run.py in S3 to require skipped == 0 when manifest['kind'] == 'ACCEPTANCE_CANDIDATE', and add regression test in tests/test_run_verifier.py",
+    "disposition": "OPEN_FOR_S3_REMEDIATION"
+  },
+  {
+    "id": "FIND-S2-002",
+    "category": "FINDING",
+    "status": "OPEN",
+    "severity": "D4",
+    "owner": "Michael Maillet",
+    "title": "Foundation schema validator check_schema does not enforce keyword-type co-occurrence",
+    "package": "WP-001",
+    "stage": "S2",
+    "location": "src/axiomlint/schema.py:81-129",
+    "governing_clauses": [
+      "governance/standards/evidence-and-claims.md:47-49",
+      "schemas/project.schema.json"
+    ],
+    "failure_mode": "check_schema does not reject schemas where type-specific keywords such as 'minimum' or 'pattern' are declared without matching 'type' ('number'/'integer' or 'string'). During validation, validate() skips these checks when value type does not match",
+    "impact": "Low impact because all 15 foundation schemas currently declare 'type': 'object' or explicit scalar types. However, future schemas could omit 'type' and inadvertently bypass constraint enforcement",
+    "reproduction": "validate('text', {'minimum': 5}) succeeds because type('text') is not in (int, float), bypassing the minimum check",
+    "expected_remedy": "Update check_schema in S3 to check keyword-type compatibility when type is present and reject mismatched declarations, with regression tests in tests/test_schema.py",
+    "disposition": "OPEN_FOR_S3_REMEDIATION"
+  }
+]
