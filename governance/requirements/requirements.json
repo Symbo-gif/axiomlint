@@ -29,7 +29,7 @@
   },
   {
     "id": "REQ-GOV-003",
-    "title": "Human approvals remain explicit and pending",
+    "title": "Approvals remain explicit, source-bound and role-separated",
     "package": "WP-001",
     "source": "Plan: Authority hierarchy",
     "rationale": "An agent cannot self-ratify governance",
@@ -38,7 +38,10 @@
     "verification": "Premature-closure negative tests and maintainer review",
     "evidence": [
       "governance/charter/CHARTER.md",
-      "tests/test_governance.py"
+      "tests/test_governance.py",
+      "governance/approvals/APR-001-constitutional-ratification.json",
+      "governance/approvals/APR-002-wp001-s1-scope.md",
+      "governance/execution/WP-001/S1/record.json"
     ]
   },
   {
@@ -187,11 +190,14 @@
     "source": "Plan: Free/open-source stack and exclusions",
     "rationale": "Avoid mandatory restricted engines/rules",
     "owner": "Michael Maillet",
-    "status": "DRAFT",
+    "status": "IMPLEMENTED",
     "verification": "License/tool inventory review before each adoption",
     "evidence": [
       "LICENSE",
-      "governance/standards/security-and-privacy.md"
+      "governance/standards/security-and-privacy.md",
+      "governance/standards/license-policy.md",
+      "governance/licenses/foundation-materials.json",
+      "tests/test_wp_001_delivery.py"
     ]
   },
   {

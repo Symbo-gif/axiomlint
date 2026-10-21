@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1",
+  "status": "AUTHOR_INVENTORY_NOT_FULL_LICENSE_CLEARANCE",
+  "project_license": {
+    "identifier": "MIT",
+    "path": "LICENSE",
+    "sha256": "7d3000977eec41c902e23ba0462a58c71fd7565b63f9607612f1c7baee8c797c",
+    "scope": "Project-authored material only; no relicensing of third-party inputs"
+  },
+  "mandatory_runtime_python_packages": [],
+  "toolchain": [
+    {
+      "name": "CPython and standard library",
+      "observed_version": "3.12.3",
+      "license_context": "PSF terms and incorporated-software notices",
+      "evidence": "https://docs.python.org/3/license.html",
+      "review_status": "INSTALLED_DISTRIBUTION_AUDIT_DEFERRED_WP004"
+    },
+    {
+      "name": "Git",
+      "observed_version": "2.43.0",
+      "license_context": "Installed copyright file has GPL-2 and multiple component notice sections",
+      "evidence": "/usr/share/doc/git/copyright",
+      "review_status": "NOTICE_CONTEXT_INSPECTED_NOT_FULL_LINKED_BINARY_AUDIT"
+    }
+  ],
+  "packaging": {
+    "name": "setuptools",
+    "status": "UNPINNED_BUILD_REQUIREMENT_NOT_EXERCISED_BY_LOCAL_GATE",
+    "blocking_package": "WP-004"
+  },
+  "future_backends": "NOT_ADOPTED_OR_ENABLED",
+  "independent_review": "PENDING",
+  "release_clearance": "NOT_GRANTED"
+}
+

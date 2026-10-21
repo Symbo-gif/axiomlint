@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:governance:wp001-artifacts:0.1",
+  "title": "Author S1 artifact bytes",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "kind", "omits", "files"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "kind": {"const": "AUTHOR_S1_ARTIFACT_SNAPSHOT"},
+    "omits": {"const": "This manifest, mutable live registers/status, ignored logs, and post-commit pin receipts are excluded; the Git pin binds the complete author source"},
+    "files": {
+      "type": "array", "minItems": 20,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["path", "sha256", "bytes"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    }
+  }
+}

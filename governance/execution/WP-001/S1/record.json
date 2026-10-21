@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1",
+  "session_id": "SESSION-WP-001-S1",
+  "package": "WP-001",
+  "stage": "S1",
+  "actor": "Computer implementation author",
+  "context_id": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+  "independent": false,
+  "entry_commit": "71a557223ec8c49c95e91fcb77429773358f0391",
+  "scope_authorization": "governance/approvals/APR-002-wp001-s1-scope.md",
+  "constitution": "governance/charter/ACTIVE-BASELINE.json",
+  "frozen_brief": "governance/session-briefs/WP-001/S1.md",
+  "frozen_brief_sha256": "eaf84b61a397e2588ad4bc1724a3069c60c00efea0db45df24689f6a5cf1e7a6",
+  "author_delivery": "ASSEMBLED_PENDING_PINNED_VERIFICATION",
+  "formal_session_status": "IN_PROGRESS",
+  "readiness_approval": "PENDING_SEPARATE_CONTEXT",
+  "independent_audit": "NOT_PERFORMED",
+  "package_closure": "NOT_GRANTED",
+  "artifact_manifest": "governance/execution/WP-001/S1/artifacts.json",
+  "handoff": "governance/execution/WP-001/S1/handoff.md",
+  "pin_receipt": "artifacts/wp001-s1/AUDIT-TARGET.json",
+  "requirements": ["REQ-GOV-001", "REQ-GOV-002", "REQ-GOV-003", "REQ-LIC-001"],
+  "criteria": [
+    {
+      "id": "WP-001-C01",
+      "criterion": "Approved charter",
+      "artifacts": ["governance/charter/CHARTER.md", "governance/charter/ACTIVE-BASELINE.json", "governance/approvals/APR-001-constitutional-ratification.json"],
+      "verification": "Check exact principal-ratified document digests and active approval binding",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C02",
+      "criterion": "Authority map",
+      "artifacts": ["governance/decisions/authority-map.md", "governance/charter/AMD-002-delegated-decisions.md"],
+      "verification": "Read derived roles against actual ratified reserved/delegated conditions",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C03",
+      "criterion": "License policy",
+      "artifacts": ["governance/standards/license-policy.md", "governance/licenses/foundation-materials.json", "LICENSE"],
+      "verification": "Verify project-license identity, per-material adoption rule and explicit unperformed full toolchain clearance",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C04",
+      "criterion": "Claim glossary",
+      "artifacts": ["governance/standards/claim-glossary.md", "governance/standards/evidence-and-claims.md"],
+      "verification": "Challenge each claim/outcome boundary, source/model distinction and prohibited assurance example",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C05",
+      "criterion": "Amendment rules",
+      "artifacts": ["governance/standards/amendments-and-exceptions.md", "governance/templates/amendment.md", "governance/templates/approval.md"],
+      "verification": "Check baseline binding, actual decision authority, prospective effect and immutable accepted history",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C06",
+      "criterion": "Exception rules",
+      "artifacts": ["governance/standards/amendments-and-exceptions.md", "governance/standards/methodology.md", "governance/execution/WP-001/S1/scope-reconciliation.md"],
+      "verification": "No D1/D2 carry; lower-severity exceptions require real independent/authorized bounded disposition",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C07",
+      "criterion": "Initialized decision/risk/finding/session registers",
+      "artifacts": ["governance/registers/decisions.json", "governance/registers/risks.json", "governance/registers/findings.json", "governance/sessions/index.json"],
+      "verification": "Validate records and references without inferring their approvals, risk acceptance or closure",
+      "independent_assessment": "PENDING"
+    },
+    {
+      "id": "WP-001-C08",
+      "criterion": "Governance validator passing",
+      "artifacts": ["src/axiomlint/governance.py", "src/axiomlint/authority.py", "tools/check_wp001_delivery.py", "tests/test_wp_001_delivery.py"],
+      "verification": "Run nonempty targeted/full local checks and verify source-bound raw manifests; obtain separate semantic review",
+      "independent_assessment": "PENDING"
+    }
+  ],
+  "commands": [
+    ["python3", "tools/check_wp001_delivery.py"],
+    ["python3", "tools/check_session_briefs.py"],
+    ["python3", "tools/run_wp_tests.py", "WP-001"],
+    ["python3", "tools/local_check.py", "--require-clean"]
+  ],
+  "open_review_items": ["DEV-001", "DEV-002", "FIND-S1-001", "READINESS-D2-INTERPRETATION"],
+  "constraints": [
+    "NO_HOSTED_CI",
+    "NO_SELF_APPROVED_READINESS",
+    "NO_INDEPENDENT_S2_CLAIM",
+    "NO_PACKAGE_OR_PHASE_CLOSURE",
+    "NO_BACKEND_OR_SUBJECT_EXECUTION",
+    "NO_BENCHMARK_OR_EFFICACY_RESULT"
+  ]
+}

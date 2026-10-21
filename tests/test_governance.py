@@ -124,7 +124,9 @@ class GovernanceTests(unittest.TestCase):
         self.assert_problem("audit reviewed wrong S1 commit")
 
     def test_premature_package_closure_fails(self):
-        self.mutate("governance/work-packages/index.json", lambda x: x[0].update(status="CLOSED"))
+        # The live scope is actually authorized now; explicitly remove it in this negative fixture.
+        self.mutate("governance/work-packages/index.json",
+                    lambda x: x[0].update(status="CLOSED", approval="PENDING", approval_ref=""))
         self.assert_problem("CLOSED before S1-S4 complete")
         self.assert_problem("CLOSED without charter/scope approval")
         self.assert_problem("CLOSED without acceptance evidence")

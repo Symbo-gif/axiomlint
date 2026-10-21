@@ -4,8 +4,8 @@
     "title": "Charter and authority",
     "status": "ACTIVE",
     "owner": "Michael Maillet",
-    "approval": "USER_AUTHORIZED_DRAFTS",
-    "approval_ref": "governance/decisions/authorization.md",
+    "approval": "APPROVED",
+    "approval_ref": "governance/approvals/APR-002-wp001-s1-scope.md",
     "dependencies": [],
     "requirements": [
       "REQ-GOV-001",

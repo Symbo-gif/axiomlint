@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:governance:wp001-handoff-pin:0.1",
+  "title": "Author pin, not independent readiness",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "kind", "source_commit", "source_tree_sha256", "recorded_utc",
+               "author_context", "artifact_manifest_sha256", "brief_sha256", "scope_authorization",
+               "author_checks", "formal_readiness", "s1_formal_state", "s2", "package_closure",
+               "runs", "limitations"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "kind": {"const": "AUTHOR_S1_HANDOFF_PIN"},
+    "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "source_tree_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "recorded_utc": {"type": "string", "minLength": 1},
+    "author_context": {"const": "72131cdc-563c-4d43-a6b3-f37dd1253e0c"},
+    "artifact_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "brief_sha256": {"const": "eaf84b61a397e2588ad4bc1724a3069c60c00efea0db45df24689f6a5cf1e7a6"},
+    "scope_authorization": {"const": "governance/approvals/APR-002-wp001-s1-scope.md"},
+    "author_checks": {"const": "PASS"},
+    "formal_readiness": {"const": "PENDING_SEPARATE_CONTEXT"},
+    "s1_formal_state": {"const": "IN_PROGRESS"},
+    "s2": {"const": "NOT_PERFORMED"},
+    "package_closure": {"const": "NOT_GRANTED"},
+    "runs": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["role", "run_id", "directory", "manifest_sha256"],
+        "properties": {
+          "role": {"enum": ["MAIN_AUTHOR", "FRESH_LOCAL_CLONE_SAME_AUTHOR"]},
+          "run_id": {"type": "string", "minLength": 1},
+          "directory": {"type": "string", "minLength": 1},
+          "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  }
+}

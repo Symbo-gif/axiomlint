@@ -13,9 +13,12 @@ The bootstrap deviations still need their actual independent dispositions.
 
 The repository's development gate is useful but intentionally narrower than the
 plan's complete assurance stack. See deferred-validation records for exact gaps.
-The next legitimate work is completing remaining WP-001 S1 deliverables and
-handoff, followed by a genuinely separate read-only S2, not automatic
-advancement into implementations of later packages.
+The remaining WP-001 S1 author artifacts and acceptance/handoff controls are
+assembled under APR-002. Final source-bound author verification is in
+`artifacts/wp001-s1/AUDIT-TARGET.json` after its actual post-commit creation.
+The next actor must be a genuinely separate authorized context deciding lawful
+S1 readiness/exit and then S2 entry, not this implementation author signing
+their own readiness or automatically activating later packages.
 
 Implementation baseline: `fe3be9da8f7b8ada431b4656ea8e9e1b7ab055c4`.
 Main checkout and fresh local clone each ran 106 tests, zero failures/skips.
@@ -29,6 +32,11 @@ One self-detected fingerprint issue was corrected and regression-tested;
 independent disposition remains pending as FIND-S1-001. Constitutional
 ratification is complete, but remaining S1 acceptance and independent S2/S3/S4
 remain blockers. See APR-001 for authority and HANDOFF.md for historical evidence.
+
+Current S1 evidence/map: `governance/execution/WP-001/S1/record.json` and
+`artifacts.json`. The source-scope reconciliation explicitly retains the
+bootstrap deviations, FIND-S1-001 and the D2/readiness instruction conflict.
+No record here resolves those by authority assertion or carries a real D1/D2.
 
 ## Active constitutional baseline
 

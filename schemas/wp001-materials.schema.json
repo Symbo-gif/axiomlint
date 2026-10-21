@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:governance:wp001-materials:0.1",
+  "title": "Limited foundation material inventory, not release clearance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "status", "project_license", "mandatory_runtime_python_packages",
+               "toolchain", "packaging", "future_backends", "independent_review", "release_clearance"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "status": {"const": "AUTHOR_INVENTORY_NOT_FULL_LICENSE_CLEARANCE"},
+    "project_license": {
+      "type": "object", "additionalProperties": false,
+      "required": ["identifier", "path", "sha256", "scope"],
+      "properties": {
+        "identifier": {"const": "MIT"}, "path": {"const": "LICENSE"},
+        "sha256": {"const": "7d3000977eec41c902e23ba0462a58c71fd7565b63f9607612f1c7baee8c797c"},
+        "scope": {"const": "Project-authored material only; no relicensing of third-party inputs"}
+      }
+    },
+    "mandatory_runtime_python_packages": {"const": []},
+    "toolchain": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "observed_version", "license_context", "evidence", "review_status"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "observed_version": {"type": "string", "minLength": 1},
+          "license_context": {"type": "string", "minLength": 1},
+          "evidence": {"type": "string", "minLength": 1},
+          "review_status": {"enum": ["INSTALLED_DISTRIBUTION_AUDIT_DEFERRED_WP004",
+                                     "NOTICE_CONTEXT_INSPECTED_NOT_FULL_LINKED_BINARY_AUDIT"]}
+        }
+      }
+    },
+    "packaging": {
+      "type": "object", "additionalProperties": false, "required": ["name", "status", "blocking_package"],
+      "properties": {
+        "name": {"const": "setuptools"},
+        "status": {"const": "UNPINNED_BUILD_REQUIREMENT_NOT_EXERCISED_BY_LOCAL_GATE"},
+        "blocking_package": {"const": "WP-004"}
+      }
+    },
+    "future_backends": {"const": "NOT_ADOPTED_OR_ENABLED"},
+    "independent_review": {"const": "PENDING"},
+    "release_clearance": {"const": "NOT_GRANTED"}
+  }
+}

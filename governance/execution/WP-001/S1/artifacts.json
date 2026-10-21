@@ -1,0 +1,187 @@
+{
+  "schema_version": "0.1",
+  "kind": "AUTHOR_S1_ARTIFACT_SNAPSHOT",
+  "omits": "This manifest, mutable live registers/status, ignored logs, and post-commit pin receipts are excluded; the Git pin binds the complete author source",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "7d3000977eec41c902e23ba0462a58c71fd7565b63f9607612f1c7baee8c797c",
+      "bytes": 1073
+    },
+    {
+      "path": "config/project.json",
+      "sha256": "fc8c31825f2ca8e4a276f9f31190101193bad771d8d28ed416de07d9cbed3129",
+      "bytes": 604
+    },
+    {
+      "path": "docs/user-guide/S2-AUDIT-PROMPT.md",
+      "sha256": "3277c41b98cd5606acb2e9ff8e0cb4d27aa6a290e041de5fb74a31d3bdd472e6",
+      "bytes": 3640
+    },
+    {
+      "path": "governance/approvals/APR-001-constitutional-ratification.json",
+      "sha256": "25b4a0f31271c5653301e948931aaa45b6a3219137006b954419b5b6f95fd585",
+      "bytes": 1732
+    },
+    {
+      "path": "governance/approvals/APR-001-constitutional-ratification.md",
+      "sha256": "1a2bf176d74be7ab765e9b6bd3563089be7cb44133ec655cd6e78aab8f4fc66c",
+      "bytes": 3230
+    },
+    {
+      "path": "governance/approvals/APR-002-wp001-s1-scope.md",
+      "sha256": "afea8af8234c9fa5f9902b853510be7f7781160ad7fc3b4731e8c69ec42420a0",
+      "bytes": 2615
+    },
+    {
+      "path": "governance/charter/ACTIVE-BASELINE.json",
+      "sha256": "7111b3c1da901902945ec39acebf40529161890e0184e649b47e1776e1d1fe19",
+      "bytes": 996
+    },
+    {
+      "path": "governance/charter/AMD-001-local-only.md",
+      "sha256": "64fb2c98c8f63365dfc5815e93cb137cee4d14f5fa186f1690feda64fdb5d512",
+      "bytes": 3216
+    },
+    {
+      "path": "governance/charter/AMD-002-delegated-decisions.md",
+      "sha256": "f97d8ed7e18d5cb8398f9fe304268506b1bd05a42f8540516546fdadaf220e13",
+      "bytes": 4837
+    },
+    {
+      "path": "governance/charter/CHARTER.md",
+      "sha256": "956739508a8bc8e3a5d6f6364c2e350066e3675eb9a313212fc482b344d2dd76",
+      "bytes": 4730
+    },
+    {
+      "path": "governance/decisions/authority-map.md",
+      "sha256": "ecadcb6894764351ff5ba6a983494a041cb7ed2e1e26ba8d3597d9f09326f6ad",
+      "bytes": 3026
+    },
+    {
+      "path": "governance/execution/WP-001/S1/handoff.md",
+      "sha256": "b1b02ad3e8391b6b03383822663073da727f5373cf9bfbd7c4e68633fd12ae87",
+      "bytes": 4830
+    },
+    {
+      "path": "governance/execution/WP-001/S1/record.json",
+      "sha256": "a2e5402a05b64cac70353390753998663798cb06042499fe02407b6d65a699cf",
+      "bytes": 4749
+    },
+    {
+      "path": "governance/execution/WP-001/S1/scope-reconciliation.md",
+      "sha256": "c10272de65234c4119a6e28a96d6ec7888a9d87e850686006bf1d3f501eb337d",
+      "bytes": 3645
+    },
+    {
+      "path": "governance/licenses/foundation-materials.json",
+      "sha256": "fc27b9186d294e967ded890170e9de76a55ab3a7abafc6efeed742a8f074cc2b",
+      "bytes": 1266
+    },
+    {
+      "path": "governance/session-briefs/WP-001/S1.md",
+      "sha256": "eaf84b61a397e2588ad4bc1724a3069c60c00efea0db45df24689f6a5cf1e7a6",
+      "bytes": 10642
+    },
+    {
+      "path": "governance/standards/amendments-and-exceptions.md",
+      "sha256": "f671e1c046985818f54902838f54458ed63141de1ed35db957c5ed5310f43ab0",
+      "bytes": 4450
+    },
+    {
+      "path": "governance/standards/claim-glossary.md",
+      "sha256": "f31c6120bb35765f49f00d0538d44380a1143a66ae052895aa6577f38e2916b4",
+      "bytes": 6392
+    },
+    {
+      "path": "governance/standards/evidence-and-claims.md",
+      "sha256": "456d5a37d2fdd4f497a75b3722fbe879f60eca5305706d91da49c1b1341b564f",
+      "bytes": 3603
+    },
+    {
+      "path": "governance/standards/license-policy.md",
+      "sha256": "c5cfbe56a6e9f157685daebb59f7696ce30fd49d80b71d2ddeabf64f3c1a4876",
+      "bytes": 4819
+    },
+    {
+      "path": "governance/standards/methodology.md",
+      "sha256": "fe52e975630139301d6786464979afde2206b910436b59731f65e25a0102c477",
+      "bytes": 4738
+    },
+    {
+      "path": "governance/standards/requirements-and-baselines.md",
+      "sha256": "3306f5bba435a76955a0c24bda0afc19a325f8ca79607670a75483e07f4fb710",
+      "bytes": 1471
+    },
+    {
+      "path": "governance/standards/security-and-privacy.md",
+      "sha256": "11349dba78c31c82ccc016987a599d1591fde47b70eff79b398930c7698c885d",
+      "bytes": 3179
+    },
+    {
+      "path": "governance/standards/testing-and-local-gates.md",
+      "sha256": "0545bf629e00c3d7b7a01bc3c05ada8da1b7979383564e5bebd0a7b9064b94d6",
+      "bytes": 2680
+    },
+    {
+      "path": "governance/templates/amendment.md",
+      "sha256": "c7364dd0b5534b68360e27e47c6fe9d45192aaccbd50c08527b805fecc7c9911",
+      "bytes": 396
+    },
+    {
+      "path": "governance/templates/approval.md",
+      "sha256": "b29943b317ff30400cd7726f34ee2a7750c731c428ca62e67412744ae7f6e96b",
+      "bytes": 375
+    },
+    {
+      "path": "governance/work-packages/WP-001.md",
+      "sha256": "333ee548906a15d6eee5a40d04de13701227fe5e4a10dfbf3a0a4f9083d95b58",
+      "bytes": 2937
+    },
+    {
+      "path": "schemas/wp001-artifacts.schema.json",
+      "sha256": "762f8d80b55ce213b80c45c8b2c644120a508775e0be03b208c1f790e438675e",
+      "bytes": 964
+    },
+    {
+      "path": "schemas/wp001-handoff-pin.schema.json",
+      "sha256": "d0b3c3ebfb15c0582b3d053d172024fa5a1ae1471154be961df3b4ea8dd5ca13",
+      "bytes": 2063
+    },
+    {
+      "path": "schemas/wp001-materials.schema.json",
+      "sha256": "b12884d3328d8b5979daeee8b434ef479650d7368bac8f633702c0eef15d85bf",
+      "bytes": 2284
+    },
+    {
+      "path": "schemas/wp001-s1-delivery.schema.json",
+      "sha256": "4aebab955870864c8018b40b4d58ffaa35db2f0ddb1c1a04def164eab8c4044c",
+      "bytes": 3252
+    },
+    {
+      "path": "src/axiomlint/authority.py",
+      "sha256": "c85389234f2eb5925d810cd056e76b31c780ebe333adfe7a353a4456769a684d",
+      "bytes": 3167
+    },
+    {
+      "path": "src/axiomlint/governance.py",
+      "sha256": "7301dcfe53a18935a1fefd5023c3eeb08a90d3c5f177e0a5d106131594f0ea5d",
+      "bytes": 9449
+    },
+    {
+      "path": "tests/test_wp_001_delivery.py",
+      "sha256": "f753f25bf57042a8b36f1e5e88b58e1b9e93d886f34e08ef9c38839eb5f603ae",
+      "bytes": 7708
+    },
+    {
+      "path": "tools/check_wp001_delivery.py",
+      "sha256": "ae945fe61ad80724379fa101c97500d27cb8ddaea2aad70a0fd99411dfe0f198",
+      "bytes": 5635
+    },
+    {
+      "path": "tools/seal_wp001_handoff.py",
+      "sha256": "d2efc164799c4d6ec35151d267eab75a94367d37d58a59d1675feb67d340ef4f",
+      "bytes": 5848
+    }
+  ]
+}
