@@ -1,0 +1,100 @@
+{
+  "schema_version": "0.1",
+  "session_id": "SESSION-WP-001-S3",
+  "package": "WP-001",
+  "stage": "S3",
+  "actor": "S3 Remediator",
+  "context_id": "0e8e8253-00be-41e0-9197-dc87c53d3aa1",
+  "independent": false,
+  "entry_commit": "63bd5f8bc6e66803cd4d5a06c92b6701b1ac09f6",
+  "remediation_commits": [
+    "a6403c34872ba52b61c5bd39581a380cf5b9d66a",
+    "1e1355963854104943e7d1199ea739a2b6767550"
+  ],
+  "remediated_head_commit": "1e1355963854104943e7d1199ea739a2b6767550",
+  "s2_report": "governance/audits/WP-001/S2-report.md",
+  "s2_findings": "governance/audits/WP-001/S2-findings.json",
+  "frozen_brief": "governance/session-briefs/WP-001/S3.md",
+  "closure_table": "governance/findings/WP-001/closure-table.md",
+  "delta_review": "governance/audits/WP-001/S3-delta-review.md",
+  "handoff": "governance/execution/WP-001/S3/handoff.md",
+  "activity_boundary": "FINDINGS_ONLY",
+  "dirty_before": true,
+  "dirty_before_note": "Four S2 files were 0 bytes on disk (mtime about 01:47 local) versus committed content at entry; restored from HEAD blobs with the user's explicit authorization before any S3 work. Cause unknown.",
+  "dirty_after": false,
+  "findings": [
+    {
+      "id": "FIND-S2-001",
+      "severity": "D3",
+      "status": "FIXED_AWAITING_INDEPENDENT_VERIFICATION",
+      "files": ["tools/verify_local_run.py"],
+      "tests": ["tests/test_run_verifier.py"]
+    },
+    {
+      "id": "FIND-S2-002",
+      "severity": "D4",
+      "status": "FIXED_AWAITING_INDEPENDENT_VERIFICATION",
+      "files": ["src/axiomlint/schema.py"],
+      "tests": ["tests/test_schema.py"]
+    },
+    {
+      "id": "FIND-S1-001",
+      "severity": "D3",
+      "status": "VERIFIED",
+      "basis": "S2 independent auditor evidence (context 39122e38-95a9-41a1-b210-d98ed7f9618a)",
+      "files": ["governance/registers/findings.json"]
+    }
+  ],
+  "dispositions": {
+    "DEV-001": {"severity": "D2", "status": "OPEN", "blocking_gate": "G0", "action": "RETAINED_NO_WAIVER"},
+    "DEV-002": {"severity": "D2", "status": "OPEN", "blocking_gate": "G0", "action": "RETAINED_NO_WAIVER"}
+  },
+  "final_gate": {
+    "run_id": "20261021T050657Z-73c94738678f",
+    "manifest_sha256": "c18aaf55b506425cda15d95efa918e39019e0c39108d3795137daf1c01755e37",
+    "kind": "ACCEPTANCE_CANDIDATE",
+    "commit": "1e1355963854104943e7d1199ea739a2b6767550",
+    "dirty": false,
+    "discovered": 205,
+    "executed": 205,
+    "skipped": 0,
+    "verify_local_run": "LOCAL_EVIDENCE=PASS; not independent approval"
+  },
+  "superseded_gate": {
+    "run_id": "20261021T050619Z-a062a8bce4c3",
+    "manifest_sha256": "0a94aa95dd740b3545127d68eccfb9dac731c33f1e9fb96749cb78406c4c733a",
+    "commit": "a6403c34872ba52b61c5bd39581a380cf5b9d66a",
+    "note": "Passed; superseded by the final gate after a one-line test fixture adjustment. Logs kept under artifacts/wp001-s3-remediation/superseded-a6403c3/."
+  },
+  "commands": [
+    {"name": "delivery", "argv": ["python3", "tools/check_wp001_delivery.py"], "exit_code": 0, "stdout_sha256": "0aaa5e232e961e772d72c59d56b5d94c5463c49809678809bda20dfe630e8fd2", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"name": "briefs", "argv": ["python3", "tools/check_session_briefs.py"], "exit_code": 0, "stdout_sha256": "a61fe6739c4f8732f433934c0b63ff8c4b1147e5992b6e2cbf1be56aafe81fc5", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"name": "targeted", "argv": ["python3", "tools/run_wp_tests.py", "WP-001"], "exit_code": 0, "counts": "discovered=61 executed=61 skipped=0", "stdout_sha256": "83563443bea0a583ad02aec5fb77458eb8a1015462a3b625965aeb616123ac73", "stderr_sha256": "3115c279d07bbc26de77179f323ba9da53bf118071b9295751668df62a82146f"},
+    {"name": "gate", "argv": ["python3", "tools/local_check.py", "--require-clean"], "exit_code": 0, "stdout_sha256": "8536ede429651443616449f8e4d6d3460357864a34c558ff61dc309ac472a3b3", "stderr_sha256": "b54f8b3e2ec88aa6cbc914a6376a2698707fd65b1ff686dedafec2d2a53f993c"},
+    {"name": "verify-gate", "argv": ["python3", "tools/verify_local_run.py", "artifacts/gates/20261021T050657Z-73c94738678f", "--check-current-source"], "exit_code": 0, "stdout_sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+  ],
+  "raw_log_directory": "artifacts/wp001-s3-remediation",
+  "raw_log_sha256": {
+    "prefix.stderr.log": "945c6d3ee6ddfdaf0588fcee68251e01793c4895ffe9fa0fff24f15e8860e1ad",
+    "postfix.stderr.log": "551cea1971b4e9f631b29b4b41e6fd2c20b85e7963a4ab6e2bc94abfa0ea6e52"
+  },
+  "limitations": [
+    "Remediator self-check only; no independent delta reviewer exists or is invented",
+    "Local unsigned digests do not defend against a malicious same-user adversary",
+    "Raw logs live under gitignored artifacts/ and are not part of any commit",
+    "Pre-fix and post-fix logs predate a one-line fixture change; the final gate covers it",
+    "No subject code execution, backend, network, hosted CI, push or installation"
+  ],
+  "status_effects": {
+    "s3": "REMEDIATION_COMMITTED_INDEPENDENT_DELTA_REVIEW_PENDING",
+    "s4": "BLOCKED",
+    "wp001": "ACTIVE",
+    "gates": "BLOCKED",
+    "package_closure_granted": false,
+    "g0_closure_granted": false,
+    "wp002_activation_granted": false,
+    "risk_acceptance_granted": false,
+    "waiver_granted": false,
+    "release_granted": false
+  }
+}
