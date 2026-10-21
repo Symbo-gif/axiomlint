@@ -51,6 +51,9 @@ closure, independent audit, release authorization, or a correctness proof.
 - [All 144 individual session briefs](governance/session-briefs/README.md)
 - [Four-session masterbook](docs/planning/axiomlint-session-briefs-masterbook.md)
 - [Current WP-001 S1 author handoff](governance/execution/WP-001/S1/handoff.md)
+- [Independent S1 readiness decision](governance/readiness/WP-001/round-3/review.md)
+- [S1 exit recording supplement](governance/execution/WP-001/S1/exit.md)
+- [S2 preparation, not started](governance/execution/WP-001/S2/entry-preparation.md)
 - [Claim glossary](governance/standards/claim-glossary.md)
 - [License/material-adoption policy](governance/standards/license-policy.md)
 - [Amendment and exception procedure](governance/standards/amendments-and-exceptions.md)
@@ -62,10 +65,15 @@ The principal ratified the charter and AMD-001/AMD-002 in APR-001. Their exact
 reviewed bytes are preserved; historical DRAFT/PROPOSED labels in those snapshots
 do not supersede the active source-bound approval record.
 
-Only WP-001 is active and its S1 remains open. Later packages remain planned;
-no package or phase gate is closed. Bootstrap deviations, actual acceptance
-evidence and independent review remain required. This is not a claim that
-WP-002 through WP-036 were executed or that ratification verifies implementation.
+Only WP-001 is active. Its S1 is recorded CLOSED following the genuine separate
+readiness decision for implementation commit
+`846b0dcbae94b0eb268fe10571c395c90a4f1228`; the separate metadata recording head
+requires its own independent verification before transition completion or S2
+entry. See the exit supplement for that external receipt and exact identities.
+S2 is PLANNED, NOT STARTED; S3/S4 remain BLOCKED. Later packages remain planned,
+and no package or phase gate is closed. DEV-001/DEV-002 remain OPEN and
+FIND-S1-001 remains PENDING. This is not a claim that WP-002 through WP-036
+were executed or that ratification verifies implementation.
 
 The name follows the attached plan and remains provisional. No legal clearance
 or later assistant-suggested rename is inferred as a maintainer decision.

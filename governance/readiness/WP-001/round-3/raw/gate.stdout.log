@@ -1,0 +1,15 @@
+governance: PASS exit=0 (0.057s)
+{
+  "structural_check": "PASS",
+  "errors": [],
+  "approval_or_closure": false
+}
+hygiene: PASS exit=0 (0.040s)
+Hygiene: PASS (not security certification)
+syntax: PASS exit=0 (0.073s)
+Compiled 35 source files without executing them
+tests: PASS exit=0 (4.813s)
+COUNTS discovered=199 executed=199 skipped=0
+RUN_DIRECTORY=/home/themichael/PerplexityWorkspace/axiomlint/artifacts/gates/20261021T021659Z-041f70986662
+MANIFEST_SHA256=f1bc431628a37cf44e552d4a9037d010a3e16d5796dc993dab3c7e31df20356f
+LOCAL_GATE=PASS source_unchanged=True commit=846b0dcbae94b0eb268fe10571c395c90a4f1228 dirty=False

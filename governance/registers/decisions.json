@@ -73,5 +73,24 @@
     "disposition": "Constitutional authority activated; no historical session, finding, risk, benchmark or package retroactively accepted",
     "blocking_gate": "G0",
     "approval_ref": "governance/approvals/APR-001-constitutional-ratification.md"
+  },
+  {
+    "id": "DEC-006",
+    "category": "DECISION",
+    "status": "APPROVED",
+    "severity": "NA",
+    "owner": "Independent readiness reviewer context independent_wp_001_s1_readiness_decision_mvheckh1",
+    "summary": "Actual separate-context ordinary S1 exit approval for implementation commit 846b0dcbae94b0eb268fe10571c395c90a4f1228, subject to bounded recording and independent later-head verification",
+    "requirements": ["REQ-GOV-001", "REQ-GOV-003"],
+    "evidence": [
+      "governance/readiness/WP-001/round-3/review.md",
+      "governance/readiness/WP-001/round-3/decision.json",
+      "governance/readiness/WP-001/round-3/transition-probe.py",
+      "governance/execution/WP-001/S1/exit.json",
+      "governance/execution/WP-001/S1/exit.md"
+    ],
+    "disposition": "Records unchanged actual reviewer decision SHA256 364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338 under ratified AMD-002; does not create or widen authority. READINESS-WP001-001 independently verified. Actual later metadata head requires independent checks before transition completion/S2 entry. No S2 execution, package/G0 closure, inherited deviation/finding waiver or material-risk acceptance",
+    "blocking_gate": "S1_EXIT",
+    "approval_ref": "governance/readiness/WP-001/round-3/decision.json"
   }
 ]

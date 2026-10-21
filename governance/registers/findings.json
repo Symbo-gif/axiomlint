@@ -15,7 +15,7 @@
   {
     "id": "READINESS-WP001-001",
     "category": "FINDING",
-    "status": "PENDING",
+    "status": "VERIFIED",
     "severity": "D2",
     "owner": "Computer implementation author under APR-002",
     "summary": "Independent readiness review reproduced phase-freezing ratification and ordering fixtures that break lawful S1-exit verification",
@@ -24,11 +24,14 @@
       "governance/readiness/WP-001/round-1/review.md",
       "governance/readiness/WP-001/round-1/decision.json",
       "governance/readiness/WP-001/round-1/transition-probe.py",
+      "governance/readiness/WP-001/round-3/review.md",
+      "governance/readiness/WP-001/round-3/decision.json",
+      "governance/readiness/WP-001/round-3/transition-probe.py",
       "tests/test_wp_001_ratification.py",
       "tests/test_governance.py"
     ],
-    "disposition": "Scoped S1 fixture correction and positive stage-transition coverage implemented; actual fresh verification and independent re-review still required. Original BLOCK decision retained; no waiver or S2 claimed",
+    "disposition": "Independently VERIFIED by the actual separate reviewer at implementation commit 846b0dcbae94b0eb268fe10571c395c90a4f1228: 61 targeted and 199 full-suite tests, raw evidence verification and bounded next-state probe passed. Original BLOCK and access-block records retained. This resolves only the readiness-transition defect; no waiver, inherited finding disposition or S2 claimed",
     "blocking_gate": "S1_EXIT",
-    "approval_ref": ""
+    "approval_ref": "governance/readiness/WP-001/round-3/decision.json"
   }
 ]

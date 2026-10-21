@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "kind": "AUTHOR_S1_HANDOFF_PIN",
+  "source_commit": "846b0dcbae94b0eb268fe10571c395c90a4f1228",
+  "source_tree_sha256": "81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f",
+  "recorded_utc": "2026-10-21T01:07:08.104905+00:00",
+  "author_context": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+  "artifact_manifest_sha256": "ca8705a1e9b0dc1a5b62279ca8b6800b9f1f5bd25c5ed65153edd59167fcce3c",
+  "brief_sha256": "eaf84b61a397e2588ad4bc1724a3069c60c00efea0db45df24689f6a5cf1e7a6",
+  "scope_authorization": "governance/approvals/APR-002-wp001-s1-scope.md",
+  "author_checks": "PASS",
+  "formal_readiness": "PENDING_SEPARATE_CONTEXT",
+  "s1_formal_state": "IN_PROGRESS",
+  "s2": "NOT_PERFORMED",
+  "package_closure": "NOT_GRANTED",
+  "runs": [
+    {
+      "role": "MAIN_AUTHOR",
+      "run_id": "20261021T010655Z-7ac98da8c5ac",
+      "directory": "/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/gates/20261021T010655Z-7ac98da8c5ac",
+      "manifest_sha256": "2fa83b6f7aef5a8e5660774f64dde2f6a4f9c7fe512b074ca55a51012f1fdee7"
+    },
+    {
+      "role": "FRESH_LOCAL_CLONE_SAME_AUTHOR",
+      "run_id": "20261021T010702Z-010210e396fd",
+      "directory": "/home/themichael/PerplexityWorkspace/axiomlint/artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/fresh-copy/artifacts/gates/20261021T010702Z-010210e396fd",
+      "manifest_sha256": "01ca26f322152be71ef507261b112d91f79fa78c79ae0aec17501978d5875e34"
+    }
+  ],
+  "limitations": [
+    "Same author and laptop; not independent readiness, S2, authenticated provenance or scientific result",
+    "DEV-001/DEV-002 and FIND-S1-001 remain unverified; separate-context entry decision required",
+    "Verify this pin against actual Git/source before relying on it"
+  ]
+}

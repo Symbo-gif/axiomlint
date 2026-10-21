@@ -1,0 +1,188 @@
+{
+  "kind": "BYTE_PRESERVING_READINESS_EVIDENCE_ARCHIVE",
+  "decision_sha256": "364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338",
+  "implementation_commit": "846b0dcbae94b0eb268fe10571c395c90a4f1228",
+  "self_excluded": true,
+  "files": [
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/delivery.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/delivery.stdout.log",
+      "sha256": "0aaa5e232e961e772d72c59d56b5d94c5463c49809678809bda20dfe630e8fd2",
+      "bytes": 99
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/delivery.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/delivery.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/briefs.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/briefs.stdout.log",
+      "sha256": "a61fe6739c4f8732f433934c0b63ff8c4b1147e5992b6e2cbf1be56aafe81fc5",
+      "bytes": 129
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/briefs.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/briefs.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/targeted.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/targeted.stdout.log",
+      "sha256": "83563443bea0a583ad02aec5fb77458eb8a1015462a3b625965aeb616123ac73",
+      "bytes": 51
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/targeted.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/targeted.stderr.log",
+      "sha256": "7208d41bd9fe0cb3dca4936288969cf263f487d6e4e31bef7acb6cf92103af0c",
+      "bytes": 8657
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/gate.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/gate.stdout.log",
+      "sha256": "85baa49b039b0d78ae9d3cbb3b0f1c4590b7ac73aa58b207d976bef0d321c988",
+      "bytes": 623
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/gate.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/gate.stderr.log",
+      "sha256": "3db6b0638423ae72fd2a84baf39bd28bd6bdaf01732dad99d177782d749314b3",
+      "bytes": 24607
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-independent.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-independent.stdout.log",
+      "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043",
+      "bytes": 46
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-independent.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-independent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-author-root.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-author-root.stdout.log",
+      "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043",
+      "bytes": 46
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-author-root.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-author-root.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-author-main.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-author-main.stdout.log",
+      "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043",
+      "bytes": 46
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-author-main.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-author-main.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-author-clone.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-author-clone.stdout.log",
+      "sha256": "8f12cee136163f859f861bbf75a95e195382797992c9594693d78f028229b043",
+      "bytes": 46
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/verify-author-clone.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/verify-author-clone.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/transition-probe.stdout.log",
+      "sha256": "411eda9c7ade00d7a726d4f1eea9cd05ce69d0ae3345033b5755bdaf1c40f826",
+      "bytes": 916
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/independent_wp_001_s1_readiness_decision_mvheckh1/round-3/transition-probe.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/raw/transition-probe.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/governance.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/governance.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/governance.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/governance.stdout.log",
+      "sha256": "25f31c6553c86108593662ab587eed0ca09a876dd01c7c8e3ba2e277dc92083b",
+      "bytes": 81
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/hygiene.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/hygiene.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/hygiene.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/hygiene.stdout.log",
+      "sha256": "68bab1876908f721d2208e7c42fc579def817072a07032aabf7fca1ffb529f59",
+      "bytes": 43
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/manifest.json",
+      "archive": "governance/readiness/WP-001/round-3/gate/manifest.json",
+      "sha256": "f1bc431628a37cf44e552d4a9037d010a3e16d5796dc993dab3c7e31df20356f",
+      "bytes": 2667
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/manifest.schema.json",
+      "archive": "governance/readiness/WP-001/round-3/gate/manifest.schema.json",
+      "sha256": "1462261e123749549ae20e5c84db9eeea4e7554c616db2c256aa4ba504954904",
+      "bytes": 3619
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/manifest.sha256",
+      "archive": "governance/readiness/WP-001/round-3/gate/manifest.sha256",
+      "sha256": "afb31b5c3583ac01805a399310d5ef26a6d4a5d8843b72c57579cd335cea4386",
+      "bytes": 65
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/syntax.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/syntax.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/syntax.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/syntax.stdout.log",
+      "sha256": "ecedeeb3b7600d97a2087f304a834713ab9d22d4b5897559b6ac3e6c4fbb9c9c",
+      "bytes": 48
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/tests.stderr.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/tests.stderr.log",
+      "sha256": "3db6b0638423ae72fd2a84baf39bd28bd6bdaf01732dad99d177782d749314b3",
+      "bytes": 24607
+    },
+    {
+      "source": "artifacts/gates/20261021T021659Z-041f70986662/tests.stdout.log",
+      "archive": "governance/readiness/WP-001/round-3/gate/tests.stdout.log",
+      "sha256": "4ffe9db38e83a599145d677758b3dec0c2cefd4c32811515340a6ff1266d3a3b",
+      "bytes": 45
+    },
+    {
+      "source": "artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/wp001-s1/AUDIT-TARGET.json",
+      "archive": "governance/readiness/WP-001/round-3/author-target.json",
+      "sha256": "50ee7bc273411f7cb4129caee25c9bf500c4a8aacde5b25e1aea7e7f13b46e13",
+      "bytes": 1822
+    }
+  ]
+}

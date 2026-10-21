@@ -1,0 +1,53 @@
+{
+  "kind": "S1_EXIT_RECORDING_SUPPLEMENT",
+  "recording_state_at_creation": "RECORDED_PENDING_INDEPENDENT_LATER_HEAD_VERIFICATION",
+  "implementation_commit": "846b0dcbae94b0eb268fe10571c395c90a4f1228",
+  "implementation_source_tree_sha256": "81f219a370872e93bae912093f2d1b54396258aea2536b895b09dc037730de5f",
+  "implementation_author_context": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+  "readiness_reviewer_context": "independent_wp_001_s1_readiness_decision_mvheckh1",
+  "readiness_decision": "governance/readiness/WP-001/round-3/decision.json",
+  "readiness_decision_sha256": "364665f10a5202f5225550312e72eabe3bb935869287b2a8ce6d690c34d78338",
+  "readiness_report_sha256": "322368a167e4d71e09fbd55b64ffd928b46e57ec4ba2e0a38968ac4a5a547661",
+  "readiness_probe_sha256": "3522cf2a495116909f2bf040220c9ec4b9f67ccb25fac4a41fd69f403001fc0b",
+  "implementation_independent_gate": {
+    "run_id": "20261021T021659Z-041f70986662",
+    "manifest_sha256": "f1bc431628a37cf44e552d4a9037d010a3e16d5796dc993dab3c7e31df20356f",
+    "full_tests_executed": 199,
+    "targeted_tests_executed": 61,
+    "skipped": 0,
+    "covers_future_recording_head": false
+  },
+  "current_versioned_author_pin": {
+    "path": "artifacts/wp001-s1-readiness/round-2/candidate-copy/artifacts/wp001-s1/AUDIT-TARGET.json",
+    "sha256": "50ee7bc273411f7cb4129caee25c9bf500c4a8aacde5b25e1aea7e7f13b46e13"
+  },
+  "recorded_live_state": {
+    "S1": "CLOSED",
+    "S2": "PLANNED_NOT_STARTED",
+    "S3": "BLOCKED",
+    "S4": "BLOCKED",
+    "WP-001": "ACTIVE",
+    "all_gates": "BLOCKED",
+    "later_packages": "PLANNED_UNAPPROVED",
+    "READINESS-WP001-001": "VERIFIED",
+    "DEV-001": "OPEN",
+    "DEV-002": "OPEN",
+    "FIND-S1-001": "PENDING"
+  },
+  "later_head_verification": {
+    "mandatory": true,
+    "independent_context_required": true,
+    "before": "Transition completion or formal S2 entry",
+    "external_receipt": "artifacts/wp001-s1-exit/metadata-verification/decision.json",
+    "receipt_required_decision": "PASS",
+    "actual_recording_commit_recorded_after_creation": true,
+    "no_self_referential_commit_hash": true
+  },
+  "limits": [
+    "No product, test, schema, charter, acceptance-clause or brief changes",
+    "No S2 execution, S3/S4 execution, package/G0 closure or WP-002 activation",
+    "No inherited deviation/finding waiver, carry or material-risk acceptance",
+    "Historical author snapshots, pins, blocks and failed runs retained unchanged",
+    "Only laptop-local execution; no hosted CI, push, installation or subject/backend/model invocation"
+  ]
+}
