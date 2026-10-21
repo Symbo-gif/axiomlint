@@ -31,10 +31,12 @@ class GovernanceTests(unittest.TestCase):
         problems = check(self.root)
         self.assertTrue(any(phrase in p for p in problems), problems)
 
-    def test_current_draft_is_structurally_valid_not_approved(self):
+    def test_current_constitution_is_ratified_but_packages_are_not_closed(self):
         self.assertEqual(check(self.root), [])
         config = load_json(self.root / "config/project.json")
-        self.assertEqual(config["approval"], "PENDING")
+        self.assertEqual(config["approval"], "APPROVED")
+        packages = load_json(self.root / "governance/work-packages/index.json")
+        self.assertFalse(any(row["status"] == "CLOSED" for row in packages))
 
     def test_all_36_packages_present_only_first_active(self):
         packages = load_json(self.root / "governance/work-packages/index.json")

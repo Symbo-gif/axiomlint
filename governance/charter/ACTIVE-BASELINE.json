@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "state": "ACTIVE_RATIFIED_BASELINE",
+  "approval_record": "governance/approvals/APR-001-constitutional-ratification.json",
+  "approval_record_sha256": "25b4a0f31271c5653301e948931aaa45b6a3219137006b954419b5b6f95fd585",
+  "ratified_source_commit": "18facc06d4e37cb0629ec95c258cbe58da279dd4",
+  "snapshot_status_labels_are_historical": true,
+  "targets": [
+    {
+      "path": "governance/charter/CHARTER.md",
+      "sha256": "956739508a8bc8e3a5d6f6364c2e350066e3675eb9a313212fc482b344d2dd76"
+    },
+    {
+      "path": "governance/charter/AMD-001-local-only.md",
+      "sha256": "64fb2c98c8f63365dfc5815e93cb137cee4d14f5fa186f1690feda64fdb5d512"
+    },
+    {
+      "path": "governance/charter/AMD-002-delegated-decisions.md",
+      "sha256": "f97d8ed7e18d5cb8398f9fe304268506b1bd05a42f8540516546fdadaf220e13"
+    }
+  ],
+  "delegation_grant": "governance/decisions/delegated-authority.json",
+  "delegation_rule": "governance/charter/AMD-002-delegated-decisions.md"
+}

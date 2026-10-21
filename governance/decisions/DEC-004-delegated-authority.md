@@ -58,3 +58,11 @@ Use the accompanying review and exact-document packet for the one-time
 constitutional decision, then exercise only the authority actually granted.
 The user can revoke or narrow the delegation at any time.
 
+## Subsequent explicit decision
+
+The historical grant and its original reservations above remain unchanged.
+The user subsequently selected “Ratify bounded delegation” in the exact
+constitutional-packet question. APR-001 records the separate real principal
+decision; ACTIVE-BASELINE.json activates the three ratified document identities.
+The original grant record is intentionally still NOT_A_RATIFICATION because
+it did not itself constitute that later decision.

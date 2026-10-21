@@ -15,17 +15,18 @@
   {
     "id": "DEC-002",
     "category": "DECISION",
-    "status": "PENDING",
+    "status": "APPROVED",
     "severity": "NA",
     "owner": "Michael Maillet",
-    "summary": "Proposed authoritative local-only acceptance",
+    "summary": "Principal ratified AMD-001 local-only acceptance; package-specific evidence and independent review still required",
     "requirements": [],
     "evidence": [
-      "governance/charter/AMD-001-local-only.md"
+      "governance/charter/AMD-001-local-only.md",
+      "governance/approvals/APR-001-constitutional-ratification.json"
     ],
-    "disposition": "Await maintainer decision or later package evidence",
+    "disposition": "Actual principal ratification recorded in APR-001; not a passed package gate or unqualified upstream compliance claim",
     "blocking_gate": "G0",
-    "approval_ref": ""
+    "approval_ref": "governance/approvals/APR-001-constitutional-ratification.md"
   },
   {
     "id": "DEC-003",
@@ -52,8 +53,25 @@
       "governance/decisions/DEC-004-delegated-authority.md",
       "governance/decisions/delegated-authority.json"
     ],
-    "disposition": "The user's grant is recorded as actual authorization; reserved approvals and the proposed AMD-002 remain pending",
+    "disposition": "Original conditional grant remains historical and is not itself ratification; subsequent actual APR-001 separately ratifies AMD-002",
     "blocking_gate": "G0",
     "approval_ref": "governance/decisions/DEC-004-delegated-authority.md"
+  },
+  {
+    "id": "DEC-005",
+    "category": "DECISION",
+    "status": "APPROVED",
+    "severity": "NA",
+    "owner": "Michael Maillet",
+    "summary": "Actual principal ratification of the exact charter, AMD-001 and AMD-002; prospective activation only",
+    "requirements": ["REQ-GOV-003", "REQ-LOCAL-001"],
+    "evidence": [
+      "governance/approvals/APR-001-constitutional-ratification.json",
+      "governance/charter/ACTIVE-BASELINE.json",
+      "governance/decisions/authority-map.md"
+    ],
+    "disposition": "Constitutional authority activated; no historical session, finding, risk, benchmark or package retroactively accepted",
+    "blocking_gate": "G0",
+    "approval_ref": "governance/approvals/APR-001-constitutional-ratification.md"
   }
 ]

@@ -3,7 +3,7 @@
   "name": "AxiomLint",
   "maintainer": "Michael Maillet",
   "profile": "RESEARCH_HIGH_ASSURANCE",
-  "approval": "PENDING",
+  "approval": "APPROVED",
   "hosted_ci": false,
   "subject_execution": false,
   "telemetry": false,

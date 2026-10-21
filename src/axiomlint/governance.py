@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from axiomlint.authority import check_ratification
 from axiomlint.schema import InvalidRecord, check_schema, load_json, validate
 
 REGISTERS = (
@@ -51,6 +52,8 @@ def check(root: Path) -> list[str]:
             fail("Source plan differs from pinned baseline")
     except (InvalidRecord, KeyError, OSError, TypeError) as exc:
         return [f"Project/schema baseline: {exc}"]
+
+    errors.extend(check_ratification(root, config))
 
     def records(path: str, schema_name: str) -> list[dict[str, Any]]:
         try:
@@ -198,4 +201,3 @@ def check(root: Path) -> list[str]:
             ):
                 fail(f"{pid}: blocking finding/deviation unresolved")
     return errors
-

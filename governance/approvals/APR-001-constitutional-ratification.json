@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "id": "APR-001",
+  "decision": "APPROVED",
+  "decision_mode": "ACTUAL_PRINCIPAL_USER_RESPONSE",
+  "principal": "Michael Maillet",
+  "recorder": "Computer assistant, not impersonating the principal",
+  "conversation_id": "72131cdc-563c-4d43-a6b3-f37dd1253e0c",
+  "question": "Do you ratify the three identified documents and the bounded delegation described in the packet?",
+  "answer": "Ratify bounded delegation",
+  "response_time": "2026-10-20T21:12-03:00",
+  "response_time_precision": "MINUTE",
+  "synchronization_observed_at_utc": "2026-10-21T00:17:46Z",
+  "ratified_source_commit": "18facc06d4e37cb0629ec95c258cbe58da279dd4",
+  "packet": "governance/approvals/constitutional-ratification-packet.md",
+  "packet_sha256": "f1366760efbafc32b77f1221afdc1c77a945e295d16a5e4567a6563916880ee6",
+  "targets": [
+    {
+      "path": "governance/charter/CHARTER.md",
+      "sha256": "956739508a8bc8e3a5d6f6364c2e350066e3675eb9a313212fc482b344d2dd76"
+    },
+    {
+      "path": "governance/charter/AMD-001-local-only.md",
+      "sha256": "64fb2c98c8f63365dfc5815e93cb137cee4d14f5fa186f1690feda64fdb5d512"
+    },
+    {
+      "path": "governance/charter/AMD-002-delegated-decisions.md",
+      "sha256": "f97d8ed7e18d5cb8398f9fe304268506b1bd05a42f8540516546fdadaf220e13"
+    }
+  ],
+  "scope": "Ratify the identified constitutional texts and activate their bounded prospective authority; no substantive unreviewed changes",
+  "not_approved": [
+    "RETROACTIVE_APPROVAL_OR_FINDING_VERIFICATION",
+    "PACKAGE_OR_PHASE_CLOSURE",
+    "INDEPENDENT_AUDIT_OR_EXPERIMENT_RESULT",
+    "MATERIAL_RISK_ACCEPTANCE",
+    "RELEASE_OR_SENSITIVE_EXTERNAL_ACTION"
+  ],
+  "signature_claim": "NO_ELECTRONIC_SIGNATURE_ASSERTED"
+}

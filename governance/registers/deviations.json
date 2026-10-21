@@ -8,9 +8,10 @@
     "summary": "Scaffolding and charter drafts before formal baseline ratification",
     "requirements": [],
     "evidence": [
-      "governance/decisions/authorization.md"
+      "governance/decisions/authorization.md",
+      "governance/approvals/APR-001-constitutional-ratification.json"
     ],
-    "disposition": "Await maintainer decision or later package evidence",
+    "disposition": "Constitution now ratified in APR-001; historical bootstrap scope still needs actual independent S2/S3 disposition and is not retroactively verified",
     "blocking_gate": "G0",
     "approval_ref": ""
   },
@@ -23,9 +24,10 @@
     "summary": "Local-only override conflicts with upstream mandatory-CI tailoring wording",
     "requirements": [],
     "evidence": [
-      "governance/charter/AMD-001-local-only.md"
+      "governance/charter/AMD-001-local-only.md",
+      "governance/approvals/APR-001-constitutional-ratification.json"
     ],
-    "disposition": "Await maintainer decision or later package evidence",
+    "disposition": "Principal ratified the explicit project override in APR-001; implementation/coverage and limitation claims still need independent verification, so this D2 is not silently closed",
     "blocking_gate": "G0",
     "approval_ref": ""
   }

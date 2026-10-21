@@ -19,3 +19,15 @@ maintainer's behalf. This preserves the original plan's “WP-001 first” rule
 while distinguishing requested inert preparation from accepted implementation
 of downstream work packages.
 
+## Subsequent actual constitutional ratification
+
+The earlier paragraphs preserve the original authoring authority and its limits;
+they are not rewritten as though approval existed then. The principal later
+explicitly selected “Ratify bounded delegation” for the three exact documents
+in the constitutional packet. APR-001 records that actual decision and the
+active source-bound baseline.
+
+The charter, AMD-001 and AMD-002 are now ratified at the digests in
+`governance/charter/ACTIVE-BASELINE.json`. Current delegated decision rights are
+bounded by AMD-002; independent reviews and all scientific/session gates remain.
+This does not verify past deviations or complete a package.

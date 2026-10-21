@@ -37,8 +37,12 @@ closure, independent audit, release authorization, or a correctness proof.
 
 ## Governing entry points
 
+- [Active ratified authority](governance/charter/ACTIVE-BASELINE.json)
+- [Actual principal ratification](governance/approvals/APR-001-constitutional-ratification.md)
+- [Derived authority map](governance/decisions/authority-map.md)
 - [Charter](governance/charter/CHARTER.md)
 - [Local-only amendment](governance/charter/AMD-001-local-only.md)
+- [Bounded-delegation amendment](governance/charter/AMD-002-delegated-decisions.md)
 - [Methodology](governance/standards/methodology.md)
 - [Requirements](governance/requirements/requirements.json)
 - [Work-package register](governance/work-packages/index.json)
@@ -50,11 +54,14 @@ closure, independent audit, release authorization, or a correctness proof.
 - [Research and adoption rationale](docs/research/foundation-decisions.md)
 - [Original plan](docs/reference/axiomlint-plan.md)
 
-Only WP-001 is active. Later packages have draft declarations; no gate is closed.
-S1 contains charter drafts and development scaffolding under the user's current
-request. This is not a claim that WP-002 through WP-036 were executed. The
-charter, scope expansion, and authoritative local acceptance procedure still
-require recorded maintainer ratification; see the adoption deviation.
+The principal ratified the charter and AMD-001/AMD-002 in APR-001. Their exact
+reviewed bytes are preserved; historical DRAFT/PROPOSED labels in those snapshots
+do not supersede the active source-bound approval record.
+
+Only WP-001 is active and its S1 remains open. Later packages remain planned;
+no package or phase gate is closed. Bootstrap deviations, actual acceptance
+evidence and independent review remain required. This is not a claim that
+WP-002 through WP-036 were executed or that ratification verifies implementation.
 
 The name follows the attached plan and remains provisional. No legal clearance
 or later assistant-suggested rename is inferred as a maintainer decision.

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:axiomlint:governance:active-authority:0.1",
+  "title": "Active source-bound constitutional authority",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "state", "approval_record", "approval_record_sha256",
+               "ratified_source_commit", "snapshot_status_labels_are_historical",
+               "targets", "delegation_grant", "delegation_rule"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "state": {"const": "ACTIVE_RATIFIED_BASELINE"},
+    "approval_record": {"const": "governance/approvals/APR-001-constitutional-ratification.json"},
+    "approval_record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "ratified_source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "snapshot_status_labels_are_historical": {"const": true},
+    "targets": {
+      "type": "array", "minItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "delegation_grant": {"const": "governance/decisions/delegated-authority.json"},
+    "delegation_rule": {"const": "governance/charter/AMD-002-delegated-decisions.md"}
+  }
+}
