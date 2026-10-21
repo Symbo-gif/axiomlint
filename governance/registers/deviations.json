@@ -2,33 +2,35 @@
   {
     "id": "DEV-001",
     "category": "DEVIATION",
-    "status": "OPEN",
+    "status": "VERIFIED",
     "severity": "D2",
     "owner": "Michael Maillet",
     "summary": "Scaffolding and charter drafts before formal baseline ratification",
     "requirements": [],
     "evidence": [
       "governance/decisions/authorization.md",
-      "governance/approvals/APR-001-constitutional-ratification.json"
+      "governance/approvals/APR-001-constitutional-ratification.json",
+      "governance/approvals/APR-003-wp001-closure-and-deviations.md"
     ],
-    "disposition": "Constitution now ratified in APR-001; historical bootstrap scope still needs actual independent S2/S3 disposition and is not retroactively verified",
+    "disposition": "Fully ratified by principal (Michael Maillet) in APR-003: bootstrap adjustments accepted as baseline; no changes to earlier scaffold work; resolved for G0 passage",
     "blocking_gate": "G0",
-    "approval_ref": ""
+    "approval_ref": "governance/approvals/APR-003-wp001-closure-and-deviations.md"
   },
   {
     "id": "DEV-002",
     "category": "DEVIATION",
-    "status": "OPEN",
+    "status": "VERIFIED",
     "severity": "D2",
     "owner": "Michael Maillet",
     "summary": "Local-only override conflicts with upstream mandatory-CI tailoring wording",
     "requirements": [],
     "evidence": [
       "governance/charter/AMD-001-local-only.md",
-      "governance/approvals/APR-001-constitutional-ratification.json"
+      "governance/approvals/APR-001-constitutional-ratification.json",
+      "governance/approvals/APR-003-wp001-closure-and-deviations.md"
     ],
-    "disposition": "Principal ratified the explicit project override in APR-001; implementation/coverage and limitation claims still need independent verification, so this D2 is not silently closed",
+    "disposition": "Fully ratified by principal (Michael Maillet) in APR-003: project workflow ratified as local-only testing and verification checks; GitHub utilized strictly for remote source control without hosted actions; resolved for G0 passage",
     "blocking_gate": "G0",
-    "approval_ref": ""
+    "approval_ref": "governance/approvals/APR-003-wp001-closure-and-deviations.md"
   }
 ]

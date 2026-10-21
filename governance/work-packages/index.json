@@ -2,7 +2,7 @@
   {
     "id": "WP-001",
     "title": "Charter and authority",
-    "status": "ACTIVE",
+    "status": "CLOSED",
     "owner": "Michael Maillet",
     "approval": "APPROVED",
     "approval_ref": "governance/approvals/APR-002-wp001-s1-scope.md",
@@ -14,16 +14,18 @@
       "REQ-LIC-001"
     ],
     "declaration": "governance/work-packages/WP-001.md",
-    "acceptance_evidence": [],
-    "closure_approval_ref": ""
+    "acceptance_evidence": [
+      "governance/closures/WP-001-manifest.json"
+    ],
+    "closure_approval_ref": "governance/approvals/APR-003-wp001-closure-and-deviations.md"
   },
   {
     "id": "WP-002",
     "title": "Requirements and standards crosswalk",
-    "status": "PLANNED",
+    "status": "ACTIVE",
     "owner": "Michael Maillet",
-    "approval": "PENDING",
-    "approval_ref": "",
+    "approval": "APPROVED",
+    "approval_ref": "governance/approvals/APR-004-wp002-activation.md",
     "dependencies": [
       "WP-001"
     ],

@@ -31,21 +31,21 @@ class GovernanceTests(unittest.TestCase):
         problems = check(self.root)
         self.assertTrue(any(phrase in p for p in problems), problems)
 
-    def test_current_constitution_is_ratified_but_packages_are_not_closed(self):
+    def test_current_constitution_is_ratified_and_wp001_closed(self):
         self.assertEqual(check(self.root), [])
         config = load_json(self.root / "config/project.json")
         self.assertEqual(config["approval"], "APPROVED")
         packages = load_json(self.root / "governance/work-packages/index.json")
-        self.assertFalse(any(row["status"] == "CLOSED" for row in packages))
+        self.assertEqual([row["id"] for row in packages if row["status"] == "CLOSED"], ["WP-001"])
 
-    def test_all_36_packages_present_only_first_active(self):
+    def test_all_36_packages_present_and_wp002_active(self):
         packages = load_json(self.root / "governance/work-packages/index.json")
         self.assertEqual(len(packages), 36)
-        self.assertEqual([x["id"] for x in packages if x["status"] == "ACTIVE"], ["WP-001"])
-        self.assertFalse(any(x["status"] == "CLOSED" for x in packages))
+        self.assertEqual([x["id"] for x in packages if x["status"] == "ACTIVE"], ["WP-002"])
+        self.assertEqual([x["id"] for x in packages if x["status"] == "CLOSED"], ["WP-001"])
 
     def test_multiple_active_packages_fail(self):
-        self.mutate("governance/work-packages/index.json", lambda x: x[1].update(
+        self.mutate("governance/work-packages/index.json", lambda x: x[2].update(
             status="ACTIVE", approval="USER_AUTHORIZED_DRAFTS",
             approval_ref="governance/decisions/authorization.md",
         ))
@@ -119,7 +119,12 @@ class GovernanceTests(unittest.TestCase):
             rows[1].update(status="PLANNED", commit="", report="", actor="", context_id="", independent=False, reviewed_commit="")
             rows[2].update(status="BLOCKED", commit="", report="", actor="", context_id="", independent=False, reviewed_commit="")
             rows[3].update(status="BLOCKED", commit="", report="", actor="", context_id="", independent=False, reviewed_commit="")
+            rows[:] = rows[:4]
         self.mutate("governance/sessions/index.json", reset_to_s1_exit)
+        def reset_wps(rows):
+            rows[0].update(status="ACTIVE", acceptance_evidence=[], closure_approval_ref="")
+            rows[1].update(status="PLANNED", approval="PENDING", approval_ref="")
+        self.mutate("governance/work-packages/index.json", reset_wps)
         return fixture
 
     def test_source_bound_s1_exit_allows_s2_to_remain_blocked(self):
@@ -144,6 +149,7 @@ class GovernanceTests(unittest.TestCase):
 
     def test_s1_exit_does_not_waive_open_d2_package_closure_block(self):
         self.closed_s1_with_synthetic_readiness()
+        self.mutate("governance/registers/deviations.json", lambda rows: rows[0].update(status="OPEN"))
         self.mutate("governance/work-packages/index.json", lambda rows: rows[0].update(status="CLOSED"))
         self.assert_problem("blocking finding/deviation unresolved")
         self.assert_problem("CLOSED before S1-S4 complete")
@@ -181,9 +187,13 @@ class GovernanceTests(unittest.TestCase):
         self.assert_problem("audit reviewed wrong S1 commit")
 
     def test_premature_package_closure_fails(self):
-        # The live scope is actually authorized now; explicitly remove it in this negative fixture.
+        # Negative fixture establishing premature closure conditions.
         self.mutate("governance/work-packages/index.json",
-                    lambda x: x[0].update(status="CLOSED", approval="PENDING", approval_ref=""))
+                    lambda x: x[0].update(status="CLOSED", approval="PENDING", approval_ref="", acceptance_evidence=[]))
+        self.mutate("governance/sessions/index.json",
+                    lambda rows: rows[3].update(status="IN_PROGRESS", commit=""))
+        self.mutate("governance/registers/deviations.json",
+                    lambda rows: rows[0].update(status="OPEN"))
         self.assert_problem("CLOSED before S1-S4 complete")
         self.assert_problem("CLOSED without charter/scope approval")
         self.assert_problem("CLOSED without acceptance evidence")

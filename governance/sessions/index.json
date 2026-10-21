@@ -39,12 +39,60 @@
     "id": "SESSION-WP-001-S4",
     "package": "WP-001",
     "stage": "S4",
-    "status": "IN_PROGRESS",
+    "status": "CLOSED",
     "actor": "Documentation/closure owner",
     "context_id": "72128125-7e51-4832-93b2-09822b20cfb9",
     "independent": false,
-    "commit": "",
+    "commit": "b4626c6651bb2912674c3be1843e6a19cbc4ba25",
     "reviewed_commit": "0b4dfbf54663bd129e92b2e4819eb63959326117",
     "report": "governance/execution/WP-001/S4/handoff.md"
+  },
+  {
+    "id": "SESSION-WP-002-S1",
+    "package": "WP-002",
+    "stage": "S1",
+    "status": "IN_PROGRESS",
+    "actor": "Computer authoring context",
+    "context_id": "72128125-7e51-4832-93b2-09822b20cfb9",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "b4626c6651bb2912674c3be1843e6a19cbc4ba25",
+    "report": "governance/session-briefs/WP-002/S1.md"
+  },
+  {
+    "id": "SESSION-WP-002-S2",
+    "package": "WP-002",
+    "stage": "S2",
+    "status": "PLANNED",
+    "actor": "",
+    "context_id": "",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": ""
+  },
+  {
+    "id": "SESSION-WP-002-S3",
+    "package": "WP-002",
+    "stage": "S3",
+    "status": "BLOCKED",
+    "actor": "",
+    "context_id": "",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": ""
+  },
+  {
+    "id": "SESSION-WP-002-S4",
+    "package": "WP-002",
+    "stage": "S4",
+    "status": "BLOCKED",
+    "actor": "",
+    "context_id": "",
+    "independent": false,
+    "commit": "",
+    "reviewed_commit": "",
+    "report": ""
   }
 ]
