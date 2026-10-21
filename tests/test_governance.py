@@ -88,8 +88,62 @@ class GovernanceTests(unittest.TestCase):
         self.assert_problem("Expected top-level array")
 
     def test_s2_cannot_start_before_s1_closes(self):
-        self.mutate("governance/sessions/index.json", lambda x: x[1].update(status="IN_PROGRESS"))
+        # Explicitly establish the forbidden predecessor state, even when the
+        # actual project has legitimately progressed past S1.
+        def change(rows):
+            rows[0].update(status="IN_PROGRESS")
+            rows[1].update(status="IN_PROGRESS")
+        self.mutate("governance/sessions/index.json", change)
         self.assert_problem("started before predecessors closed")
+
+    def closed_s1_with_synthetic_readiness(self):
+        """Isolated stage-order fixture, not real approval authentication."""
+        sessions = load_json(self.root / "governance/sessions/index.json")
+        fixture = {
+            "fixture_only": True,
+            "decision": "APPROVE_S1_EXIT",
+            "reviewed_commit": "1" * 40,
+            "source_tree_sha256": "2" * 64,
+            "reviewer_context": "unit-fixture-independent-readiness-context",
+            "implementation_context": sessions[0]["context_id"],
+            "authority": "governance/charter/AMD-002-delegated-decisions.md",
+            "scope": "Synthetic S1 stage-order fixture; not S2 or package closure",
+        }
+        self.assertNotEqual(fixture["reviewer_context"], fixture["implementation_context"])
+        relative = "governance/readiness/unit-fixture-s1.json"
+        path = self.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(fixture))
+        self.mutate("governance/sessions/index.json", lambda rows: rows[0].update(
+            status="CLOSED", commit=fixture["reviewed_commit"], report=relative,
+        ))
+        return fixture
+
+    def test_source_bound_s1_exit_allows_s2_to_remain_blocked(self):
+        fixture = self.closed_s1_with_synthetic_readiness()
+        self.mutate("governance/sessions/index.json", lambda rows: rows[1].update(status="BLOCKED"))
+        self.assertEqual(check(self.root), [])
+        sessions = load_json(self.root / "governance/sessions/index.json")
+        self.assertEqual(sessions[0]["commit"], fixture["reviewed_commit"])
+        self.assertEqual(sessions[1]["status"], "BLOCKED")
+
+    def test_s2_can_start_after_s1_closes_without_merging_sessions(self):
+        self.closed_s1_with_synthetic_readiness()
+        self.mutate("governance/sessions/index.json", lambda rows: rows[1].update(
+            status="IN_PROGRESS", actor="unit-fixture-independent-auditor",
+            context_id="unit-fixture-s2-context", independent=True,
+        ))
+        self.assertEqual(check(self.root), [])
+        sessions = load_json(self.root / "governance/sessions/index.json")
+        self.assertNotEqual(sessions[0]["context_id"], sessions[1]["context_id"])
+        self.assertEqual(sessions[2]["status"], "BLOCKED")
+        self.assertEqual(sessions[3]["status"], "BLOCKED")
+
+    def test_s1_exit_does_not_waive_open_d2_package_closure_block(self):
+        self.closed_s1_with_synthetic_readiness()
+        self.mutate("governance/work-packages/index.json", lambda rows: rows[0].update(status="CLOSED"))
+        self.assert_problem("blocking finding/deviation unresolved")
+        self.assert_problem("CLOSED before S1-S4 complete")
 
     def test_self_audit_closed_fails(self):
         def change(x):

@@ -1,0 +1,6 @@
+S1_CLOSED_WITH_S2_BLOCKED_GOVERNANCE_ERRORS= []
+REPRODUCED_PHASE_FREEZING_ASSERTION= "'CLOSED' != 'IN_PROGRESS'\n- CLOSED\n+ IN_PROGRESS\n"
+REPRODUCED_NEGATIVE_FIXTURE_DEPENDS_ON_LIVE_S1_OPEN= 'False is not true : []'
+S1_CLOSED_S2_IN_PROGRESS_GOVERNANCE_ERRORS= []
+PROBE=PASS expected_assertion_failures=2 actual_source_unchanged=True
+All session state changes existed only in Python objects; no live records or tracked files edited.

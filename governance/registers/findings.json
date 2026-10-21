@@ -11,5 +11,24 @@
     "disposition": "Fixed in fe3be9da8f7b8ada431b4656ea8e9e1b7ab055c4; regression and local clone passed; independent S2 verification still pending",
     "blocking_gate": "G0",
     "approval_ref": ""
+  },
+  {
+    "id": "READINESS-WP001-001",
+    "category": "FINDING",
+    "status": "PENDING",
+    "severity": "D2",
+    "owner": "Computer implementation author under APR-002",
+    "summary": "Independent readiness review reproduced phase-freezing ratification and ordering fixtures that break lawful S1-exit verification",
+    "requirements": ["REQ-GOV-001", "REQ-GOV-003"],
+    "evidence": [
+      "governance/readiness/WP-001/round-1/review.md",
+      "governance/readiness/WP-001/round-1/decision.json",
+      "governance/readiness/WP-001/round-1/transition-probe.py",
+      "tests/test_wp_001_ratification.py",
+      "tests/test_governance.py"
+    ],
+    "disposition": "Scoped S1 fixture correction and positive stage-transition coverage implemented; actual fresh verification and independent re-review still required. Original BLOCK decision retained; no waiver or S2 claimed",
+    "blocking_gate": "S1_EXIT",
+    "approval_ref": ""
   }
 ]

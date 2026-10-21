@@ -123,10 +123,27 @@ class RatificationTests(unittest.TestCase):
         self.assertTrue(check_ratification(self.root, self.config))
 
     def test_adoption_does_not_close_live_sessions_or_packages(self):
-        sessions = load_json(self.root / "governance/sessions/index.json")
-        packages = load_json(self.root / "governance/work-packages/index.json")
-        self.assertEqual(sessions[0]["status"], "IN_PROGRESS")
-        self.assertFalse(any(x["status"] == "CLOSED" for x in sessions + packages))
+        # Ratification must not change live state, whatever the legitimate
+        # current stage is. Do not freeze the project's historical open state.
+        paths = [
+            self.root / "governance/sessions/index.json",
+            self.root / "governance/work-packages/index.json",
+        ]
+        before = [path.read_bytes() for path in paths]
+        self.assertEqual(check_ratification(self.root, self.config), [])
+        self.assertEqual([path.read_bytes() for path in paths], before)
+        self.assertIn("PACKAGE_OR_PHASE_CLOSURE", self.record()["not_approved"])
+
+    def test_ratification_check_preserves_already_closed_s1_fixture(self):
+        # This isolated fixture is not a real exit approval. It proves that
+        # constitution checking neither closes nor reopens legitimate stages.
+        path = self.root / "governance/sessions/index.json"
+        sessions = load_json(path)
+        sessions[0].update(status="CLOSED", commit="1" * 40)
+        path.write_text(json.dumps(sessions))
+        before = path.read_bytes()
+        self.assertEqual(check_ratification(self.root, self.config), [])
+        self.assertEqual(path.read_bytes(), before)
 
     def test_full_governance_gate_enforces_ratified_bytes(self):
         with (self.root / "governance/charter/AMD-002-delegated-decisions.md").open("a") as stream:
